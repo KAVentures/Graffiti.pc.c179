@@ -15,3 +15,7 @@
 6. Stars attain equality for every n>=3.
 
 The primary Atlas check ran locally with NetworkX 3.6.1: 995 graphs, 85 equalities, zero violations. The packaged independent verifier additionally checks direct spanning-tree enumeration and Floyd-Warshall distances; CI is configured to execute both. No formal certification or peer review is claimed.
+
+## Novelty recheck
+
+Targeted exact-number, invariant-expression, spanning-tree and GitHub searches on 2026-11-25 did not identify an earlier complete proof of the exact statement. The proof uses classical elementary ideas, so the result is a candidate resolution, not certified novel. Catalogue status is not proof of priority. See [NOVELTY.md](../../NOVELTY.md).

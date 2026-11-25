@@ -35,13 +35,16 @@ def invariants(n, edges):
             L = max(L, degrees.count(1))
             if L == max(2, n - 1):
                 break
-    return L, b, delta, gamma, lam
+    i = min(len(s) for s in independent if all(v in s or neighbors[v] & s for v in V))
+    Delta = max(map(len, neighbors.values()))
+    return L, b, delta, gamma, lam, Delta, i
 
 
 def main():
     from verify import invariants as primary
     counts = Counter()
     equality = 0
+    max_eq = 0
     for g in nx.graph_atlas_g():
         n = len(g)
         if n < 2:
@@ -57,16 +60,20 @@ def main():
         if len(seen) != n:
             continue
         got = invariants(n, edges)
-        if got != primary(g)[:5]:
+        if got[:5] != primary(g)[:5]:
             raise AssertionError((nx.to_graph6_bytes(g, header=False), got, primary(g)))
-        L, b, delta, gamma, lam = got
+        L, b, delta, gamma, lam, Delta, i = got
+        if not (b >= lam+i and L >= Delta and L+b >= Delta+i+lam >= Delta+gamma+lam):
+            raise AssertionError((edges, got))
+        max_eq += L+b == Delta+i+lam
         slack = L + b - delta - gamma - lam
         if slack < max(0, (lam + 1) // 2 - 2):
             raise AssertionError((edges, got))
         equality += slack == 0
         counts[n] += 1
-    if dict(counts) != {2: 1, 3: 2, 4: 6, 5: 21, 6: 112, 7: 853} or equality != 8:
+    if dict(counts) != {2: 1, 3: 2, 4: 6, 5: 21, 6: 112, 7: 853} or equality != 8 or max_eq != 453:
         raise AssertionError((counts, equality))
+    print(f"Maximum-degree independent-domination equality cases: {max_eq}; violations: 0")
     print(f"Independent exact cross-check: {sum(counts.values())} graphs, {equality} equality cases, 0 disagreements or violations")
 
 

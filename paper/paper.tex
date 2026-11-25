@@ -17,7 +17,7 @@ Graffiti.pc Conjecture 179, announced on 8 August 2005, asserts that every finit
 \[
 \ls(G)+b(G)\ge \delta(G)+\gamma(G)+\lam(G),
 \]
-where $\ls$ is the maximum number of leaves in a spanning tree, $b$ is the maximum order of an induced bipartite subgraph, $\delta$ is the minimum degree, $\gamma$ is the domination number, and $\lam$ is the maximum local independence number. We prove the conjecture by combining a two-vertex domination construction with a theorem of DeLaVi\~na and Waller and an analysis of equality in the elementary degree--domination bound. The proof also gives an additive improvement of $\max\{0,\lceil\lam(G)/2\rceil-2\}$. Complete graphs of order at least three show that the original bound is sharp. The proof is analytic and does not depend on computation.
+where $\ls$ is the maximum number of leaves in a spanning tree, $b$ is the maximum order of an induced bipartite subgraph, $\delta$ is the minimum degree, $\gamma$ is the domination number, and $\lam$ is the maximum local independence number. We prove both the minimum-degree statement in the catalogue and the maximum-degree version on West's REGS page. In fact, writing $i(G)$ for the independent domination number, we prove $\ls+b\ge\Delta+i(G)+\lam$ by an elementary construction. We also prove the catalogue's additive refinement by combining a two-vertex domination construction with a theorem of DeLaVi\~na and Waller and an analysis of equality in the elementary degree--domination bound. The proof also gives an additive improvement of $\max\{0,\lceil\lam(G)/2\rceil-2\}$. Complete graphs of order at least three show that the original bound is sharp. The proof is analytic and does not depend on computation.
 \end{abstract}
 \noindent\textbf{Keywords:} Graffiti.pc; spanning tree; domination; induced bipartite subgraph; local independence.\\
 \textbf{MSC 2020:} 05C35, 05C69, 05C05.
@@ -29,7 +29,7 @@ b=\max\{|S|:S\subseteq V,\ G[S]\text{ is bipartite}\}.
 \]
 Let $\delta$ and $\Delta$ be the minimum and maximum degrees, respectively. A dominating set $D$ satisfies $D\cup\bigcup_{v\in D}N(v)=V$; $\gamma$ is its minimum possible cardinality. Let $\ls$ be the maximum number of degree-one vertices among spanning trees of $G$. We omit the argument $G$ when unambiguous.
 
-Conjecture 179 of \emph{Written on the Wall II} \cite{wow}, announced on 8 August 2005, states $\ls+b\ge\delta+\gamma+\lam$. The catalogue dated 5 November 2026 lists it as open. Chellali and Favaron \cite{cf} record the equivalent connected-domination formulation for graphs of order at least three in their survey (Section 6, item 5). The catalogue's ancillary definition of maximum degree does not change the symbol $\delta$ in the displayed conjecture; throughout, $\delta$ denotes minimum degree.
+Conjecture 179 of \emph{Written on the Wall II} \cite{wow}, announced on 8 August 2005, states $\ls+b\ge\delta+\gamma+\lam$. The catalogue dated 5 November 2026 lists it as open. Chellali and Favaron \cite{cf} record the equivalent connected-domination formulation for graphs of order at least three in their survey (Section 6, item 5). The catalogue's ancillary definition of maximum degree does not change the symbol $\delta$ in the displayed conjecture; throughout, $\delta$ denotes minimum degree. West's REGS page \cite{west} explicitly states the maximum-degree version, so we prove both.
 
 \begin{theorem}\label{main}
 For every finite simple connected graph $G$ of order $n\ge2$,
@@ -39,6 +39,24 @@ For every finite simple connected graph $G$ of order $n\ge2$,
 \]
 \end{theorem}
 
+\section{Maximum degree and independent domination}
+Let $i(G)$ be the minimum cardinality of an independent dominating set, which exists because every maximal independent set is dominating.
+\begin{lemma}
+For a finite simple connected graph of order at least two, $b\ge \lambda+i(G)$.
+\end{lemma}
+\begin{proof}
+Choose $v$ and an independent set $A\subseteq N(v)$ with $|A|=\lambda$. Extend $\{v\}$ to a maximal independent set $B$ in $G-A$. Every vertex of $G-A$ belongs to $B$ or has a neighbor in $B$, by maximality. Every vertex of $A$ is adjacent to $v\in B$. Hence $B$ is an independent dominating set of $G$ and $|B|\ge i(G)$. Since $A$ and $B$ are disjoint independent sets, $G[A\cup B]$ is bipartite. Thus $b\ge|A|+|B|\ge\lambda+i(G)$.
+\end{proof}
+\begin{theorem}\label{maxdegree}
+For every finite simple connected graph of order at least two,
+\[
+ L_s+b\ge\Delta+i(G)+\lambda\ge\Delta+\gamma+\lambda.
+\]
+\end{theorem}
+\begin{proof}
+Start with the star at a maximum-degree vertex and extend it one vertex at a time to a spanning tree, preserving or increasing the number of leaves. For $\Delta=1$ the graph is $K_2$ and the star has two leaves; otherwise it has $\Delta$ leaves. Therefore $L_s\ge\Delta$. Combine with the lemma and $i(G)\ge\gamma$.
+\end{proof}
+Stars of order at least three and complete graphs of order at least three attain equality in Theorem \ref{maxdegree}. This proof needs no external theorem. Combined with Theorem \ref{main} below it gives both the maximum-degree strengthening and the independent minimum-degree additive refinement; we do not assert the two improvements can be added together.
 \section{Domination bounds}
 \begin{lemma}\label{dom}
 For every graph under consideration,
@@ -92,7 +110,7 @@ Let $\gamma_c$ be the minimum size of a connected dominating set. For $n\ge3$, $
 For $K_2$, the identity does not hold ($\gamma_c=1$ and $\ls=2$), but this displayed inequality is checked directly. This addresses the convention in the survey formulation.
 
 \section{Reproducibility and evidence boundary}
-The argument is a finite mathematical derivation from the published theorem \eqref{dw} and the elementary lemmas above. No finite search or unproved conjecture is used in that derivation. Supplementary code in \cite{repo} enumerates the connected graphs of orders two through seven in the NetworkX Graph Atlas, computes each invariant exactly by subset enumeration, checks the cited and derived bounds, and cross-checks the leaf count by direct enumeration of spanning trees for small graphs and equality cases. The Atlas contains respectively $1,2,6,21,112,853$ such graphs, totaling $995$. The exact baseline check yields eight equality cases and no violations. A second implementation computes all five invariants directly for every one of the 995 graphs, using disjoint independent sets for $b$ and acyclic edge-subset enumeration for $L_s$, without the connected-domination identity. It agrees on every invariant and every conjecture check. The repository gives commands, expected output, source provenance, and a CI workflow. These tests are sanity checks, not a proof for larger orders.
+The argument is a finite mathematical derivation from the published theorem \eqref{dw} and the elementary lemmas above. No finite search or unproved conjecture is used in that derivation. Supplementary code in \cite{repo} enumerates the connected graphs of orders two through seven in the NetworkX Graph Atlas, computes each invariant exactly by subset enumeration, checks the cited and derived bounds, and cross-checks the leaf count by direct enumeration of spanning trees for small graphs and equality cases. The Atlas contains respectively $1,2,6,21,112,853$ such graphs, totaling $995$. The exact minimum-degree baseline check yields eight equality cases and no violations. An additional exact check of Theorem \ref{maxdegree}, including the independent-domination number and a constructive witness, finds 453 equality cases and no violations on the same 995 graphs. A second implementation computes all five invariants directly for every one of the 995 graphs, using disjoint independent sets for $b$ and acyclic edge-subset enumeration for $L_s$, without the connected-domination identity. It agrees on every invariant and every conjecture check. The repository gives commands, expected output, source provenance, and a CI workflow. These tests are sanity checks, not a proof for larger orders.
 
 The catalogue status and targeted literature searches support presenting this as a proof of Conjecture 179; they do not establish exclusive priority. Independent peer review and formal proof-assistant verification have not been completed.
 
@@ -102,6 +120,7 @@ The catalogue status and targeted literature searches support presenting this as
 \bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, Conjecture 179, 8 August 2005; catalogue updated 5 November 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
 \bibitem{dw} E. DeLaVi\~na and B. Waller, Spanning trees with many leaves and average distance, \emph{Electronic Journal of Combinatorics} \textbf{15} (2008), Research Paper 33, Theorem 5. \url{https://www.combinatorics.org/ojs/index.php/eljc/article/view/v15i1r33}.
 \bibitem{cf} M. Chellali and O. Favaron, Connected domination, in T. W. Haynes, S. T. Hedetniemi and M. A. Henning (eds.), \emph{Topics in Domination in Graphs}, Springer, 2020, Section 6, item 5. \url{https://doi.org/10.1007/978-3-030-51117-3_4}.
+\bibitem{west} D. B. West, Some Conjectures of Graffiti.pc, REGS 2008, \url{https://dwest.web.illinois.edu/regs/graffiti.html}.
 \bibitem{repo} K. Afrasyab, \emph{Graffiti.pc Conjecture 179: proof and verification materials}, \url{https://github.com/KAVentures/Graffiti.pc.c179}.
 \end{thebibliography}
 \end{document}

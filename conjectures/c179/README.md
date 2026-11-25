@@ -2,13 +2,17 @@
 
 **A Proof of Graffiti.pc Conjecture 179: Spanning-Tree Leaves, Bipartite Number and Domination** — Koyar Afrasyab, November 2026. Research preprint for author review.
 
-For every finite simple connected graph of order at least two, the proof gives
+For every finite simple connected graph of order at least two, the elementary proof gives
+
+`L_s + b >= Delta + i + lambda >= Delta + gamma + lambda`.
+
+Here Delta is maximum degree and i is independent domination. This resolves the maximum-degree version recorded by Douglas West. The earlier proof also gives the separate additive minimum-degree refinement
 
 `L_s + b >= delta + gamma + lambda + max(0, ceil(lambda/2)-2)`.
 
 Here delta is minimum degree, gamma is ordinary domination number, and lambda is maximum neighborhood independence. See [manuscript](paper/paper.tex), [source audit](SOURCES.md), and [verification](verification/verify.py).
 
-The analytic proof uses DeLaViña and Waller (2008), Theorem 5, and elementary domination arguments. Finite tests are supplementary, not the proof. Independent peer review and formal proof-assistant verification are not claimed. AI assistance is disclosed in the manuscript.
+The maximum-degree proof is elementary and self-contained. The additive minimum-degree proof uses DeLaViña and Waller (2008), Theorem 5. The stronger maximum-degree inequality was locally checked on all 995 graphs, with 453 equalities and zero violations. Finite tests are supplementary, not the proof. Independent peer review and formal proof-assistant verification are not claimed. AI assistance is disclosed in the manuscript.
 
 ## Reproduce
 

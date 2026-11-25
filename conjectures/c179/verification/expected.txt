@@ -3,3 +3,4 @@ Equality cases: 8 {3: 1, 4: 2, 5: 2, 6: 2, 7: 1}
 Direct spanning-tree cross-checks: 143
 Sharpness family samples: 12
 Violations: 0
+Maximum-degree independent-domination equality cases: 453; violations: 0

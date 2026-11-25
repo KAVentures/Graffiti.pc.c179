@@ -24,7 +24,7 @@ def leaf_tree(g):
             best=max(best,deg.count(1))
             if best==max(2,n-1):break
     return best
-counts=Counter();eq=Counter();alt=Counter();first=None;strong=0
+counts=Counter();eq=Counter();alt=Counter();first=None;strong=0;max_eq=0
 for g in nx.graph_atlas_g():
     n=len(g)
     if n<2 or not nx.is_connected(g):continue
@@ -51,6 +51,13 @@ for g in nx.graph_atlas_g():
         t=nx.minimum_spanning_tree(g.subgraph(H));t.add_edges_from((s,min(N[s]&H)) for s in S)
         assert nx.is_tree(t) and all(t.degree(s)==1 for s in S)
     v=next(v for v in g if lamv[v]==lam);A=next(s for s in indep if len(s)==lam and s<=N[v])
+    B={v}
+    for w in sorted(V-A-B):
+        if not N[w]&B:B.add(w)
+    i=min(len(s) for s in indep if all(w in s or N[w]&s for w in V))
+    assert B in indep and not A&B and all(w in B or N[w]&B for w in V)
+    assert b>=len(A)+len(B)>=lam+i and L>=D and L+b>=D+i+lam
+    max_eq+=L+b==D+i+lam
     for a in A:
         dom=(V-A-N[a])|{v,a}
         assert len(dom)==n-lam-len(N[a])+2 and all(w in dom or N[w]&dom for w in g)
@@ -66,5 +73,7 @@ assert dict(counts)=={2:1,3:2,4:6,5:21,6:112,7:853}; assert dict(eq)=={161:44,16
 print('Graph counts:',dict(counts),'total',sum(counts.values()))
 print('Equality counts:',dict(eq),'(162 restricted to delta=1)')
 print('Strong c179 bound equality:',strong)
+assert not alt and max_eq==453
 print('Uppercase Delta variant failures:',dict(alt),'first:',first)
+print('Maximum-degree independent-domination equality cases:',max_eq)
 print('All invariant, inequality and constructive witness checks passed')

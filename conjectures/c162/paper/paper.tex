@@ -32,11 +32,14 @@ For every connected graph $G$ of order at least two,
 \begin{proof}
 If $\delta(G)\ge 2$, the right-hand side is zero. Otherwise $\delta(G)=1$. All neighborhoods are nonempty, and some vertex has degree one, so $\lambda_{\min}(G)=1$. The vertices attaining it are exactly the simplicial vertices. If $G$ is complete, then $G=K_2$ and both sides are two. Otherwise apply the preceding lemma to obtain $L_s(G)\ge |S|=f(G)$, as required.
 \end{proof}
+\section{Related work and novelty}
+De Caria Di Fonzo \cite[Proposition 3.1]{dc} proved a related all-simplicial-vertices-as-leaves result for noncomplete chordal graphs, in the more restrictive setting of optimizing spanning-tree cycle intersection. The exchange argument there does not need chordality to preserve existing leaves when transforming a simplicial nonleaf adjacent to a nonleaf. The present core-based construction is an elementary independent derivation; no priority for the structural fact is asserted.
 \section{Verification and limitations}
 Exact enumeration using NetworkX 3.6.1 and the Graph Atlas checks all 995 nonisomorphic connected simple graphs of orders two through seven. There are 90 equality cases restricted to graphs of minimum degree one. The order restriction ensures positive minimum degree so the expression is defined. The primary verifier computes leaf numbers via connected domination and local independence via subset enumeration. The independent verifier uses direct spanning-tree enumeration and bit-mask enumeration of local independent sets, checking agreement with the primary calculation. Finite checks are supplementary, not the universal proof.
 
 This AI-assisted research preprint is provided for author review. No independent peer review, proof-assistant certification, or guaranteed publication priority is claimed.
 \begin{thebibliography}{9}
 \bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 162, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{dc} P. De Caria Di Fonzo, Cycle intersection in spanning trees: A shorter proof of a conjecture and applications, \emph{Discrete Applied Mathematics} 350 (2024), 10--14. \url{https://doi.org/10.1016/j.dam.2024.01.018}.
 \end{thebibliography}
 \end{document}

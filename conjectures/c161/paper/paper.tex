@@ -2,7 +2,7 @@
 \usepackage{amsmath,amssymb,amsthm,hyperref}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
-\title{A Proof of Graffiti.pc Conjecture 161: Spanning-Tree Leaves and Complement Local Independence}
+\title{An Elementary Note on Graffiti.pc Conjecture 161: Spanning-Tree Leaves and Complement Local Independence}
 \author{Koyar Afrasyab}
 \date{November 2026}
 \begin{document}
@@ -25,6 +25,8 @@ For every connected graph $G$, $L_s(G)\ge\lambda_{\max}(\overline G)$.
 \begin{proof}
 Put $k=\lambda_{\max}(\overline G)$. If $k=0$ the result is immediate, including the singleton graph. Otherwise some vertex $v$ has an independent set $Q$ of $k$ neighbors in $\overline G$. In $G$, $Q$ is a clique not containing $v$, hence proper. Apply the lemma.
 \end{proof}
+\section{Prior implication and novelty}
+The October 2005 comment on Conjecture 159 in \cite{wow} records the stronger bound $L_s(G)\ge\lambda_{\max}(G)+\omega(G)-2$ for nontrivial connected graphs, where $\omega$ is the clique number. If $G$ is noncomplete, an internal vertex of a shortest path between nonadjacent vertices has two nonadjacent neighbors, so $\lambda_{\max}(G)\ge2$. Consequently $L_s(G)\ge\omega(G)\ge\lambda_{\max}(\overline G)$. For complete graphs the complement parameter is zero. The elementary maximum-degree bound also suffices, as a maximum proper clique has a vertex of degree at least its size. Thus this note is an independent derivation of a previously implied result, not a claim of a novel resolution.
 \section{Verification and limitations}
 Exact enumeration using NetworkX 3.6.1 and the Graph Atlas checks all 995 nonisomorphic connected simple graphs of orders two through seven. There are 44 equality cases at orders two through seven; the singleton is tested separately and also gives equality. The primary verifier computes leaf numbers via connected domination and local independence via subset enumeration. The independent verifier uses direct spanning-tree enumeration and bit-mask enumeration of local independent sets, checking agreement with the primary calculation. Finite checks are supplementary, not the universal proof.
 

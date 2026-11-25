@@ -39,3 +39,7 @@ The exact algorithms were cross-checked locally on 995 graphs; CI is configured 
 ## Additional reproducibility check
 
 The [cross-conjecture audit](../../audit/README.md) checks all three statements and proof constructions through direct enumeration, with recorded output. It supplements the standalone checks and is not needed for the proof.
+
+## Prior result and novelty
+
+The catalogue's October 2005 comment on conjecture 159 already records the stronger inequality L_s >= lambda_max(G)+omega(G)-2 for nontrivial graphs. For any connected noncomplete graph lambda_max(G)>=2 (use an internal vertex of a shortest path between nonadjacent vertices), hence L_s>=omega(G)>=lambda_max(complement(G)). For complete graphs the complement parameter is zero, including K1. In fact the elementary bound L_s>=Delta already suffices: a maximum proper clique has a boundary vertex of degree at least omega(G). This is therefore an independently presented proof of a previously implied result, not a claim of a new theorem.

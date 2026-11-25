@@ -71,10 +71,19 @@ def verify(graph):
     return slack, L
 
 
+def independent_domination(g):
+    for k in range(1, len(g)+1):
+        for s in combinations(g, k):
+            if all(not g.has_edge(u,v) for u,v in combinations(s,2)) and all(v in s or any(u in g[v] for u in s) for v in g):
+                return k
+    raise AssertionError('no independent dominating set')
+
+
 def main():
     counts = Counter()
     equalities = Counter()
     direct = 0
+    max_eq = 0
     for graph in nx.graph_atlas_g():
         n = len(graph)
         if n < 2 or not nx.is_connected(graph):
@@ -82,6 +91,10 @@ def main():
         graph = nx.convert_node_labels_to_integers(graph, ordering="sorted")
         counts[n] += 1
         slack, L = verify(graph)
+        _, b, _, gamma, lam, Delta, _ = invariants(graph)
+        i = independent_domination(graph)
+        check(b >= lam+i and L >= Delta and L+b >= Delta+i+lam >= Delta+gamma+lam, graph, 'maximum degree and independent domination')
+        max_eq += L+b == Delta+i+lam
         if slack == 0:
             equalities[n] += 1
         if n <= 6 or slack == 0:
@@ -102,7 +115,10 @@ def main():
     print("Equality cases:", sum(equalities.values()), dict(equalities))
     print("Direct spanning-tree cross-checks:", direct)
     print("Sharpness family samples: 12")
+    if max_eq != 453:
+        raise AssertionError(max_eq)
     print("Violations: 0")
+    print("Maximum-degree independent-domination equality cases: 453; violations: 0")
 
 
 if __name__ == "__main__":

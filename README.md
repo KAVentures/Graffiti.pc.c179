@@ -2,15 +2,19 @@
 
 Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-contained research package with its own manuscript, source audit, pinned dependencies, exact verification and reproducibility instructions. All five were announced on 8 August 2005.
 
+## Novelty and source status (2026-11-25)
+
+See [novelty audit](NOVELTY.md). Correctness, source fidelity and publication priority are separate questions. C161 is a rediscovery of an implication of a previously recorded bound, not a novel resolution. C162 is an elementary derivation closely related to earlier work; do not count it as established novel. C157 and C169 are candidate resolutions, with no exact prior proof found in a bounded search. C179 now proves the maximum-degree formulation (also strengthened by independent domination), as well as the catalogue's minimum-degree formulation. Priority is unconfirmed for all candidate results.
+
 ## Conjecture 157 — Spanning-tree leaves and edges in radial circles
 
 [Research package](conjectures/c157/) · [Paper](conjectures/c157/paper/paper.tex) · [Source audit](conjectures/c157/SOURCES.md) · [Verification](conjectures/c157/verification/)
 
-## Conjecture 161 — Spanning-tree leaves and complement local independence
+## Conjecture 161 (rediscovery) — Spanning-tree leaves and complement local independence
 
 [Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) · [Source audit](conjectures/c161/SOURCES.md) · [Verification](conjectures/c161/verification/)
 
-## Conjecture 162 — Spanning-tree leaves and simplicial vertices
+## Conjecture 162 (prior-related derivation) — Spanning-tree leaves and simplicial vertices
 
 [Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) · [Source audit](conjectures/c162/SOURCES.md) · [Verification](conjectures/c162/verification/)
 

@@ -18,3 +18,9 @@ Local cross-check of both exact algorithms found no disagreements or violations.
 ## Source recheck (2026-11-25)
 
 Catalogue entry 162, printed page 93 of 316, in the snapshot printed 6 November 2026. Historical catalogue index: https://cms.uhd.edu/faculty/delavinae/research/wowll/index.htm . A direct PDF fetch returned 404 on recheck; the indexed PDF snapshot was available. See the [cross-conjecture audit](../../audit/README.md) for additional checks.
+
+## Prior related work identified
+
+Pablo De Caria Di Fonzo, Cycle intersection in spanning trees: A shorter proof of a conjecture and applications, Discrete Applied Mathematics 350 (2024), 10–14, DOI 10.1016/j.dam.2024.01.018, Proposition 3.1, proves a related all-simplicial-vertices-as-leaves result for noncomplete chordal graphs, even for an optimal tree for a different objective. Its exchange argument uses no chordality beyond the proposition's stated domain when only leaf preservation is needed. Our core-based construction is an elementary independent derivation, not an assertion of priority for the underlying fact.
+
+Preprint posted October 2, 2023: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4589645 . Publication: https://doi.org/10.1016/j.dam.2024.01.018 . The exact catalogue formula remains listed open, but the structural argument has substantial prior overlap. Priority is not claimed.

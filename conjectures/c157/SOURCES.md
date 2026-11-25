@@ -17,3 +17,7 @@
 ## Limitations
 
 Both exact verifiers ran locally with NetworkX 3.6.1, with zero disagreements or violations on 996 graphs; the primary also checked 110 sharp-family cases. No independent peer review, proof-assistant certification, or exhaustive publication-priority determination is claimed. AI-assisted manuscript for author review.
+
+## Novelty recheck
+
+Targeted exact-number, invariant-expression, spanning-tree and GitHub searches on 2026-11-25 did not identify an earlier complete proof of the exact statement. The proof uses classical elementary ideas, so the result is a candidate resolution, not certified novel. Catalogue status is not proof of priority. See [NOVELTY.md](../../NOVELTY.md).
