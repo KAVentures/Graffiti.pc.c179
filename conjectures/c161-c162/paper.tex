@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Two Elementary Proofs of Graffiti.pc Conjectures 161 and 162}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove two inequalities concerning the maximum number of leaves of a spanning tree, listed as Conjectures 161 and 162 in Written on the Wall II. The first follows by extending a star on a proper clique; the second follows by constructing a spanning tree in which all simplicial vertices are leaves. We also provide supplementary exact finite verification.
+\end{abstract}
+\section{Notation and provenance}
+All graphs are finite and simple. For a connected graph $G$, let $L_s(G)$ be the maximum number of degree-one vertices among its spanning trees. Put $\lambda_G(v)=\alpha(G[N_G(v)])$, where $\alpha$ is the independence number and $\alpha(\varnothing)=0$. Write $\lambda_{\max}(G)$ and $\lambda_{\min}(G)$ for the extrema and $f(G)$ for the number of vertices attaining $\lambda_{\min}(G)$. Write $\delta(G)$ for minimum degree and $\overline G$ for the complement. Both conjectures were announced on August 8, 2005 and listed as open in the November 5, 2026 catalogue \cite{wow}. This does not establish publication priority.
+\section{Conjecture 161}
+\begin{lemma}
+If $Q$ is a nonempty proper clique in a connected graph $G$, then $L_s(G)\ge |Q|$.
+\end{lemma}
+\begin{proof}
+Connectedness supplies an edge $qw$ with $q\in Q$ and $w\notin Q$. The edges $qw$ and $qu$ for $u\in Q\setminus\{q\}$ form a star with at least $|Q|$ leaves (two if $|Q|=1$). Extend it to a spanning tree by repeatedly adjoining a new vertex along one edge. Each extension preserves or increases the number of leaves: attaching to a leaf replaces that leaf by the new vertex, and attaching to a nonleaf adds a leaf.
+\end{proof}
+\begin{theorem}[Conjecture 161]
+For every connected graph $G$, $L_s(G)\ge\lambda_{\max}(\overline G)$.
+\end{theorem}
+\begin{proof}
+Put $k=\lambda_{\max}(\overline G)$. If $k=0$ the result is immediate, including the singleton graph. Otherwise some vertex $v$ has an independent set $Q$ of $k$ neighbors in $\overline G$. In $G$, $Q$ is a clique not containing $v$, hence proper. Apply the lemma.
+\end{proof}
+\section{Conjecture 162}
+\begin{lemma}
+Every connected noncomplete graph has a spanning tree in which all simplicial vertices are leaves.
+\end{lemma}
+\begin{proof}
+Let $S$ be the simplicial vertices, those with clique neighborhoods, and $H=G-S$. A shortest path has no simplicial internal vertex, since its predecessor and successor would be adjacent. A shortest path between nonadjacent vertices shows that $H$ is nonempty; shortest paths between vertices of $H$ show it is connected.
+
+Every $s\in S$ has a neighbor in $H$. Otherwise every neighbor $t$ of $s$ is simplicial. Since $s\in N(t)$, all other neighbors of $t$ belong to $N(s)$. Thus no edge leaves $N[s]$; by connectedness $N[s]=V(G)$, contradicting noncompleteness since $N[s]$ is a clique.
+
+Take a spanning tree of $H$ (possibly a single vertex) and attach each $s\in S$ by one edge to $H$. The resulting spanning tree has all vertices in $S$ as leaves.
+\end{proof}
+\begin{theorem}[Conjecture 162]
+For every connected graph $G$ of order at least two,
+\[
+ L_s(G)\ge f(G)\left\lfloor \frac{1}{\delta(G)}\right\rfloor.
+\]
+\end{theorem}
+\begin{proof}
+If $\delta(G)\ge 2$, the right-hand side is zero. Otherwise $\delta(G)=1$. All neighborhoods are nonempty, and some vertex has degree one, so $\lambda_{\min}(G)=1$. The vertices attaining it are exactly the simplicial vertices. If $G$ is complete, then $G=K_2$ and both sides are two. Otherwise apply the preceding lemma to obtain $L_s(G)\ge |S|=f(G)$, as required.
+\end{proof}
+\section{Verification and limitations}
+Exact enumeration using the NetworkX Graph Atlas provides supplementary checks on 995 nonisomorphic connected graphs of order two through seven. The proof of Conjecture 161 also handles the singleton graph, whereas Conjecture 162 requires positive minimum degree for its expression to be defined. The inequalities have respectively 44 and 90 equality cases in the Atlas, the latter count restricted to minimum degree one. The companion verifier independently calculates leaf numbers via spanning-tree enumeration and connected domination. Finite checks are not the universal proof.
+
+This AI-assisted research preprint is provided for author review. No independent peer review, proof-assistant verification, or guaranteed publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entries 161 and 162, pp. 92--93, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\end{thebibliography}
+\end{document}

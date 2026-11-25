@@ -1,0 +1,9 @@
+# Source audit — conjectures 161 and 162
+
+Primary source: Ermelinda DeLaViña, *Written on the Wall II — Conjectures of Graffiti.pc*, [catalogue PDF](https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf), updated 2026-11-05, printed 2026-11-06, pp. 92–93. Both entries are dated 2005-08-08 and labeled open in this snapshot. The catalogue status alone does not establish novelty. The c161 statement was checked against the page image; c162 against the extracted source text (page image retrieval failed). The expression floor(1/delta) in c162 is undefined at delta=0; connected graphs of order at least two have delta>=1. The c161 singleton case uses degree-one leaves and alpha(empty)=0.
+
+Proofs are elementary and independent of the finite check. They use the facts that a subtree can be extended in a connected graph, and that internal vertices of a shortest path are nonsimplicial. No external theorem is required for the analytic arguments.
+
+Verification: NetworkX 3.6.1 Graph Atlas, all nonisomorphic simple connected graphs of order 2–7 (995), plus a singleton check for c161. Exact subset enumeration computes local independence; connected dominating sets compute L_s=n-gamma_c for n>=3, independently checked by direct enumeration of spanning trees. This identity follows because internal vertices of any spanning tree form a connected dominating set, and a spanning tree of any connected dominating set extends by attaching every outside vertex as a leaf. The two-vertex case is explicit. All checks use integer arithmetic.
+
+Limitations: no formal Lean certification, independent referee review, or comprehensive priority determination. The local check in this conversation confirmed the 995-graph counts using connected domination; the additional direct spanning-tree audit in the repository is intended to run in CI. AI assistance is disclosed. The manuscripts are drafts for author review, not evidence of journal acceptance.

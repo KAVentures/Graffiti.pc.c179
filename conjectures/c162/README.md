@@ -1,0 +1,27 @@
+# Conjecture 162 — frequency of minimum local independence
+
+Source: *Written on the Wall II*, conjecture 162, announced 2005-08-08; catalogue dated 2026-11-05, printed p. 93. See [source audit](../c161-c162/SOURCES.md).
+
+## Statement
+
+For finite simple connected G with at least two vertices, let lambda(v) = alpha(G[N_G(v)]), let f count vertices attaining min_v lambda(v), and let delta be minimum degree. Then
+
+**L_s(G) >= f floor(1/delta).**
+
+The order restriction is necessary for the expression to be defined.
+
+## Proof
+
+If delta >= 2 the right-hand side vanishes. If delta = 1, every vertex has a nonempty neighborhood and some vertex has degree one, so min_v lambda(v) = 1. The vertices attaining this minimum are exactly the simplicial vertices (vertices whose neighborhoods are cliques). Write S for their set.
+
+If G is complete and delta = 1, then G is K_2 and the two sides are both 2.
+
+Otherwise the subgraph H induced by V(G) minus S is nonempty: if every vertex were simplicial, a shortest path between two nonadjacent vertices would have an internal vertex with two nonadjacent neighbors, a contradiction. The same shortest-path argument between any two vertices of H shows H is connected, since all internal vertices on a shortest path are nonsimplicial.
+
+Each s in S has a neighbor in H. Indeed, if all its neighbors were simplicial, choose any neighbor t. Every neighbor of t other than s is adjacent to s, because N(t) is a clique containing s. Hence there is no edge from N[s] to its complement. Connectedness forces N[s] = V(G), and N[s] is a clique, contrary to G being noncomplete.
+
+Choose a spanning tree of H (a single vertex is allowed). Attach every s in S by one edge to H. The resulting graph is a spanning tree and each s is a leaf. Therefore L_s(G) >= |S| = f. Since floor(1/delta) = 1 in this case, the result follows.
+
+The argument establishes the stronger statement that every connected noncomplete graph admits a spanning tree in which all simplicial vertices are leaves. Equality occurs for K_2 and for every nontrivial tree of minimum degree one.
+
+[Joint manuscript](../c161-c162/paper.tex) · [Exact verification](../c161-c162/verify.py). AI-assisted research note; author and external review pending. Priority not established.
