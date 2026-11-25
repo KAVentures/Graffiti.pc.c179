@@ -1,0 +1,33 @@
+name: Reproduce proof companion
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: |
+          set -o pipefail
+          python verification/verify.py | tee /tmp/observed.txt
+          diff -u verification/expected.txt /tmp/observed.txt
+  paper:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+      - working-directory: paper
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error paper.tex
+          pdflatex -interaction=nonstopmode -halt-on-error paper.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manuscript-pdf
+          path: paper/paper.pdf
