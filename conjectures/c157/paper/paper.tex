@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{A Proof of Graffiti.pc Conjecture 157: Spanning-Tree Leaves and Radial Circles}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove Graffiti.pc Conjecture 157, a lower bound on the maximum number of leaves of a spanning tree in terms of the number of pendant vertices and the edge counts of radial circles. A breadth-first spanning tree gives a stronger structural bound for every root. An inverse binomial estimate gives a sharp integer refinement. Exact finite checks supplement the proof.
+\end{abstract}
+\section{Notation and provenance}
+All graphs are finite, simple, nonempty and connected. Let $L_s(G)$ denote the maximum number of degree-one vertices in a spanning tree, $P$ the set of degree-one vertices of $G$, and $f_1(G)=|P|$. For $v\in V(G)$, write $e(v)=\max_u d_G(v,u)$ for eccentricity and $F(v)=\{u:d_G(v,u)=e(v)\}$ for its last distance layer. The radius is $r=\min_v e(v)$, the center is $C=\{v:e(v)=r\}$, and for $v\in C$ the radial circle is $R(v)=F(v)$. For a vertex set $S$, write $E(S)=E(G[S])$. Put $M=\max_{v\in C}|E(R(v))|$. Conjecture 157 was announced on August 8, 2005 and is listed as open in the catalogue updated November 5, 2026 \cite{wow}. This does not establish publication priority.
+\section{Proof}
+\begin{theorem}
+For every graph $G$ of order at least two and every vertex $v$,
+\[
+ L_s(G)\ge f_1(G)+|F(v)\setminus P|.
+\]
+Moreover, $|E(F(v))|\le \binom{|F(v)\setminus P|}{2}$.
+\end{theorem}
+\begin{proof}
+Choose for each vertex other than $v$ a neighbor whose distance from $v$ is one smaller. These parent edges give a spanning tree: following parents reaches $v$, and there are exactly $|V(G)|-1$ edges. Since $e(v)\ge1$, each last-layer vertex is distinct from the root and has one parent and no children. Thus it has degree one in this tree. Each vertex of $P$ also has degree one in every spanning tree. Counting their union proves the first inequality.
+
+If $u\in P\cap F(v)$, a shortest path from $v$ to $u$ uses its unique incident edge, whose other endpoint is in the preceding layer. Hence all edges induced by $F(v)$ have both endpoints in $F(v)\setminus P$. Simplicity proves the second inequality.
+\end{proof}
+\begin{corollary}[Conjecture 157]
+For every graph $G$,
+\[
+ L_s(G)\ge f_1(G)+\sqrt{2M}.
+\]
+\end{corollary}
+\begin{proof}
+For order one all three quantities $L_s,f_1,M$ are zero. Otherwise choose a central vertex realizing $M$ and put $s=|R(v)\setminus P|$. The theorem gives $L_s(G)\ge f_1(G)+s$ and $2M\le s(s-1)\le s^2$. Taking nonnegative square roots proves the claim.
+\end{proof}
+\section{Sharp integer refinement}
+Define $b(0)=0$ and for positive integers $m$ let
+\[
+ b(m)=\left\lceil\frac{1+\sqrt{1+8m}}{2}\right\rceil.
+\]
+This is the least nonnegative integer $s$ with $s(s-1)/2\ge m$. The preceding proof yields $L_s(G)\ge f_1(G)+b(M)$ for every graph, including the singleton. For $M>0$ the unrounded inverse-binomial expression exceeds $\sqrt{2M}$; after integer rounding the bounds need not always differ.
+
+For integers $k\ge2$ and $t\ge1$, take a clique $K_{k+1}$ and attach $t$ pendant vertices to a distinguished clique vertex $v$. Its eccentricity is one; every other vertex has eccentricity two, so the center is $\{v\}$. Its radial circle consists of the other $k$ clique vertices and the $t$ pendant vertices. Thus $M=\binom{k}{2}$ and $f_1=t$. The spanning star centered at $v$ has $k+t$ leaves, the maximum possible in a tree of this order. Therefore $L_s=f_1+b(M)=k+t$, proving sharpness for infinitely many parameter pairs.
+\section{Verification and limitations}
+Two exact algorithms check all 996 connected nonisomorphic graphs of orders one through seven in the NetworkX 3.6.1 Graph Atlas. The primary calculation uses the connected domination identity for order at least three and explicit values for orders one and two. Indeed, the internal vertices of a spanning tree form a connected dominating set; conversely a tree of a connected dominating set can be extended by attaching every outside vertex as a leaf. The independent verifier enumerates spanning-tree edge sets with union-find and computes distances using Floyd--Warshall. Both check all roots. The primary verifier additionally verifies breadth-first tree certificates and 110 sharp-family instances. Local runs found no disagreements or violations. All comparisons are exact integer comparisons, not floating-point approximations. Finite checks supplement rather than replace the proof.
+
+This AI-assisted research preprint is provided for author review. No independent peer review, formal proof-assistant certification or guaranteed publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 157, printed p.~90, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\end{thebibliography}
+\end{document}

@@ -1,6 +1,10 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-contained research package with its own manuscript, source audit, pinned dependencies, exact verification and reproducibility instructions. All three were announced on 8 August 2005.
+Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-contained research package with its own manuscript, source audit, pinned dependencies, exact verification and reproducibility instructions. All four were announced on 8 August 2005.
+
+## Conjecture 157 — Spanning-tree leaves and edges in radial circles
+
+[Research package](conjectures/c157/) · [Paper](conjectures/c157/paper/paper.tex) · [Source audit](conjectures/c157/SOURCES.md) · [Verification](conjectures/c157/verification/)
 
 ## Conjecture 161 — Spanning-tree leaves and complement local independence
 

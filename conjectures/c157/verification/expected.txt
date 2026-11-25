@@ -1,0 +1,1 @@
+C157: 996 connected graphs (orders 1-7), 110 sharp-family cases; 0 violations
