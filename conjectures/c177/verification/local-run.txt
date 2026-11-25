@@ -1,0 +1,8 @@
+Python 3.13.5; NetworkX 3.6.1
+Primary and independent local checks:
+Graphs: 995 {2: 1, 3: 2, 4: 6, 5: 21, 6: 112, 7: 853}
+Equality cases: 147
+Constructive witnesses (independent subsets of size >=2; one star for each complete graph): 13067 {'baseline': 1321, 'cliques': 230, 'complete': 6, 'multi': 2900, 'slack': 8610}
+Strict degree-refinement witnesses: 845
+Violations: 0
+Independent exact check: 995 graphs, 147 equalities, 13067 witness domains, 845 strict degree-refinement witnesses; 0 violations

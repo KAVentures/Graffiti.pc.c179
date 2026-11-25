@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{The Second-Smallest Degree, Independence, and Spanning-Tree Leaves: A Proof of Graffiti.pc Conjecture 177}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+DeLaVi\~na and Waller proved in 2008 that the sum of the maximum spanning-tree leaf number and the bipartite number of a connected graph is at least twice its independence number plus one. Graffiti.pc Conjecture 177 replaces one by the second-smallest degree. We establish the conjectured bound using a constructive spanning-tree argument and prove a stronger inequality for every independent set of size at least two, using its own second-smallest vertex degree. Exact finite checks supplement the proof.
+\end{abstract}
+\section{Statement and prior work}
+Let $G$ be a finite simple connected graph on $n\ge2$ vertices. Denote by $L=L_s(G)$ the maximum number of degree-one vertices in a spanning tree, by $b=b(G)$ the largest order of an induced bipartite subgraph, and by $\alpha=\alpha(G)$ the independence number. Write $\sigma(G)$ for the second entry of the nondecreasing degree sequence, counting multiplicities.
+
+Conjecture 177 of \emph{Written on the Wall II} \cite{wow}, announced August 8, 2005, asserts
+\[
+L+b\ge 2\alpha+\sigma(G).
+\]
+DeLaVi\~na and Waller \cite[Theorem 3]{dw} established the weaker bound with $1$ replacing $\sigma(G)$ and explicitly identified the original problem as open. West's REGS list \cite{west} confirms the statement and the degree convention. The November 5, 2026 catalogue marks the entry open. This status is not evidence of exclusive publication priority.
+
+\section{The stronger theorem}
+For an independent set $A$ with $a=|A|\ge2$, let $s=\sigma_A$ be the second-smallest value in the multiset $\{\deg_G(u):u\in A\}$. Then $s\ge \sigma(G)$.
+\begin{theorem}\label{main}
+For every such independent set,
+\[
+ L+b\ge 2a+\sigma_A.
+\]
+\end{theorem}
+\begin{proof}
+Put $B=V(G)\setminus A$, and let $C_1,\dots,C_m$ be the components of $G[B]$. The set $B$ is nonempty because $G$ is connected and $n\ge2$. Let $\beta=\alpha(G[B])$. Taking the union of $A$ with a maximum independent set of $G[B]$ gives
+\begin{equation}\label{b}
+ b\ge a+\beta,\qquad \beta\ge m.
+\end{equation}
+Every vertex of $A$ has a neighbor in $B$. For $u\in A$ let $q(u)$ count the components of $G[B]$ containing a neighbor of $u$.
+
+We use the following connection operation. Suppose a tree already spans a union of components of $G[B]$ together with some vertices of $A$, and every component touched by an included vertex of $A$ is already covered. If any component remains uncovered, connectedness supplies an unused vertex of $A$ with neighbors in both a covered and an uncovered component. Indeed, contract the components of $G[B]$; the resulting incidence graph on the components and vertices of $A$ is connected. A path from a covered component to an uncovered one must cross through such an unused vertex. Attach this vertex by one edge to a covered component and attach a spanning tree of each newly touched component by exactly one edge to it. This extends the original tree without a cycle and covers at least one more component. At most one previously existing leaf in $B$ ceases to be a leaf in this operation; every new component contributes at least one new leaf in $B$. For a singleton component its vertex is that leaf, and for a larger tree at least one of its two or more leaves is not the attachment vertex.
+
+\medskip\noindent
+\textbf{Case 1: $s=1$.}
+Start with a spanning tree of one component of $G[B]$. Repeatedly apply the connection operation until all of $B$ is covered. At most $m-1$ vertices of $A$ have been included. Attach every remaining vertex of $A$ directly to a neighbor in $B$, giving a spanning tree with at least $a-m+1$ leaves. By \eqref{b} this yields $L+b\ge 2a+1$. This is the earlier component argument of DeLaVi\~na and Waller \cite{dw}.
+
+\medskip\noindent
+Assume henceforth $s\ge2$. All but at most one vertex of $A$ have degree at least $s$; call these vertices high. If a vertex $\ell\in A$ of smaller degree exists, call it the exceptional vertex. Choose a high vertex $x\in A$ maximizing $q(x)$ among the high vertices, and write $q=q(x)$.
+
+\medskip\noindent
+\textbf{Case 2: $q\ge2$ or $\beta\ge m+1$.}
+The star with center $x$ and its neighbors lies in the connected graph induced by $x$ together with the $q$ components it touches. Since $\deg(x)\ge s\ge2$, the star has at least $s$ leaves, all in $B$. Extend the star to a spanning tree of that induced graph by adding one vertex of $B$ at a time along one edge. The number of leaves in $B$ never decreases: adding at a leaf replaces it with the new vertex, and adding elsewhere creates a new leaf. Thus there remain at least $s$ leaves in $B$.
+
+Apply the connection operation until all $m$ components are covered. At most $m-q$ additional vertices of $A$ are used, and the number of leaves in $B$ does not decrease. The resulting tree $T$ spans $B$ together with a subset $U\subseteq A$, where $|U|\le m-q+1$, and has at least $s$ leaves belonging to $B$.
+
+If the exceptional vertex $\ell$ exists, protect one of its neighbors in $B$. Select $s-1$ leaves of $T$ belonging to $B$, avoiding this protected vertex if present, and call their set $X$. Delete $X$ from $T$. The remaining tree $T'$ is connected and contains $U$ and $B\setminus X$. Each member of $X$ has its unique former tree neighbor in $T'$: $T$ contains at least three vertices because it contains the initial star, and two leaves cannot be adjacent in such a tree. Every high vertex in $A\setminus U$ has at least $s$ neighbors in $B$, so at least one lies outside $X$. The exceptional vertex, if outside $U$, has a protected neighbor outside $X$. Consequently the vertex set of $T'$ dominates $G$.
+
+Attach every vertex outside $T'$ by exactly one edge to a vertex of $T'$ (not to a previously attached vertex). The resulting spanning tree has all $a-|U|+|X|$ vertices outside the core as leaves. In particular
+\[
+ L\ge a-m+q+s-2.
+\]
+Together with \eqref{b} this gives $L+b\ge2a+s+(\beta-m)+(q-2)\ge2a+s$, in either subcase.
+
+\medskip\noindent
+\textbf{Case 3: $q=1$ and $\beta=m$.}
+Every component of $G[B]$ is a clique: the independence numbers of the nonempty components sum to $m$, so each is one. Furthermore every high vertex of $A$ touches exactly one component, by the maximal choice of $x$. The component $C$ touched by $x$ has at least $s$ vertices. If $m>1$, connectedness of the incidence graph implies that the exceptional vertex exists and touches all $m$ components: no high vertex can connect two distinct components, and there is at most one exceptional vertex.
+
+Choose $X\subset C$ with $|X|=s-1$, keeping a neighbor of the exceptional vertex in $C$ if it has one there. This is possible because $|C|\ge s$. Every component still has a nonempty clique after deletion. If $m=1$, take $B\setminus X$ as a connected core. If $m>1$, add the exceptional vertex to $B\setminus X$; it has a neighbor in every remaining clique and makes this core connected. In either case it dominates $G$: each removed member of the clique $C$ has a neighbor in its remainder, every high vertex has at least $s$ neighbors in $B$ and therefore survives the loss of only $s-1$ potential neighbors, and the exceptional vertex is either included or has a protected neighbor. A spanning tree of the core can thus be extended by attaching all vertices outside it individually as leaves. At most $m-1$ vertices of $A$ are included in the core, giving
+\[
+ L\ge a-(m-1)+(s-1)=a-m+s.
+\]
+Combining with \eqref{b} proves the theorem in the final case.
+\end{proof}
+\begin{corollary}[Conjecture 177]
+Every finite simple connected graph of order at least two satisfies
+\[
+ L_s(G)+b(G)\ge 2\alpha(G)+\sigma(G).
+\]
+\end{corollary}
+\begin{proof}
+For $\alpha\ge2$ apply Theorem \ref{main} to a maximum independent set, noting that $\sigma_A\ge\sigma(G)$. If $\alpha=1$, the graph is complete. For $n\ge3$, $L=n-1$, $b=2$ and $\sigma=n-1$, so equality holds. For $K_2$, $L=b=2$ and the right side is three.
+\end{proof}
+\section{Sharpness and connected domination}
+Complete graphs on at least three vertices and stars on at least three vertices attain equality in the conjecture. In the latter case, $L=n-1$, $b=n$, $\alpha=n-1$, and $\sigma=1$. The strengthened inequality for an arbitrary independent set uses degrees in the original graph, not in the induced independent subgraph. For $n\ge3$, the familiar identity $L=n-\gamma_c(G)$ follows by taking the internal vertices of a spanning tree or extending a tree of a connected dominating set by individually attaching the other vertices. Hence the theorem also gives $\gamma_c(G)\le n+b-2|A|-\sigma_A$.
+
+\section{Reproducibility and limitations}
+The companion programs use NetworkX 3.6.1 and all 995 connected nonisomorphic graphs of orders two through seven in the Graph Atlas. The primary verifier constructs spanning-tree witnesses for every independent subset of size at least two and one star for each complete graph, and computes the maximum leaf number by connected domination. The independent implementation enumerates spanning-tree edge sets using union-find, and computes the bipartite number by enumerating disjoint pairs of independent sets, with no reliance on the constructive algorithm. Both local runs found 147 equality cases for the original conjecture, 13,067 witness domains and 845 maximum-independent-set choices for which the stronger degree parameter exceeds the original one. No violations were found. These finite computations are supplementary, not a universal proof.
+
+A bounded literature search located the 2008 partial result and the original statement, but no earlier full proof; this is not a priority certification. This AI-assisted research preprint is provided for author review. No independent peer review or formal proof-assistant certification is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 177, August 8, 2005; catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{dw} E. DeLaVi\~na and B. Waller, Spanning Trees with Many Leaves and Average Distance, \emph{Electronic Journal of Combinatorics} 15 (2008), R33. \url{https://doi.org/10.37236/757}.
+\bibitem{west} D. B. West, Some Conjectures of Graffiti.pc, REGS 2009. \url{https://dwest.web.illinois.edu/regs/graffiti.html}.
+\end{thebibliography}
+\end{document}
