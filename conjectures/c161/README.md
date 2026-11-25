@@ -1,6 +1,6 @@
 # Conjecture 161 — maximum local independence of the complement
 
-Source: *Written on the Wall II*, conjecture 161, announced 2005-08-08; catalogue dated 2026-11-05, printed p. 92. See [source audit](../c161-c162/SOURCES.md).
+Source: *Written on the Wall II*, conjecture 161, announced 2005-08-08; catalogue dated 2026-11-05, printed p. 92. See [source audit](SOURCES.md).
 
 ## Statement
 
@@ -16,4 +16,22 @@ Set k = lambda_max(complement(G)). If k = 0 the desired inequality follows from 
 
 The bound is sharp: for a path on three vertices, the two end vertices each have a single complement neighbor and the bound is strict; for a path on four vertices, a complement neighborhood contains a two-vertex independent set, so both sides equal two.
 
-[Joint manuscript](../c161-c162/paper.tex) · [Exact verification](../c161-c162/verify.py). AI-assisted research note; author and external review pending. Priority not established.
+
+## Research package
+
+**A Proof of Graffiti.pc Conjecture 161: Spanning-Tree Leaves and Complement Local Independence** — Koyar Afrasyab, November 2026. [Standalone manuscript](paper/paper.tex), [source audit](SOURCES.md), [primary verifier](verification/verify.py), [independent verifier](verification/independent.py), [expected output](verification/expected.txt).
+
+## Reproduce
+
+From this folder, Python 3.12 and TeX Live:
+
+```sh
+python -m pip install -r requirements.txt
+python verification/verify.py
+python verification/independent.py
+cd paper
+pdflatex -interaction=nonstopmode -halt-on-error paper.tex
+pdflatex -interaction=nonstopmode -halt-on-error paper.tex
+```
+
+The exact algorithms were cross-checked locally on 995 graphs; CI is configured to reproduce the standalone package and build its PDF. No claim of external peer review, formal certification or priority is made. AI assistance is disclosed.

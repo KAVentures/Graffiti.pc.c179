@@ -1,63 +1,21 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints for author review, November 2026. This collection contains three complete analytic arguments for conjectures announced on 8 August 2005 in Ermelinda DeLaViña's *Written on the Wall II*. The repository retains its original name and c179 file paths for compatibility.
+Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-contained research package with its own manuscript, source audit, pinned dependencies, exact verification and reproducibility instructions. All three were announced on 8 August 2005.
 
-| Conjecture | Result | Manuscript / proof |
-| --- | --- | --- |
-| 161 | Maximum spanning-tree leaf number is at least the maximum local independence of the complement | [Proof](conjectures/c161/README.md) |
-| 162 | A lower bound involving minimum local independence and minimum degree | [Proof](conjectures/c162/README.md) |
-| 179 | Spanning-tree leaves, bipartite number and domination; strengthened inequality | [Original manuscript](paper/paper.tex) · [Entry](conjectures/c179/README.md) |
+## Conjecture 161 — Spanning-tree leaves and complement local independence
 
-[Joint manuscript for 161 and 162](conjectures/c161-c162/paper.tex) · [Source audit for 161/162](conjectures/c161-c162/SOURCES.md) · [Original c179 source audit](SOURCES.md).
+[Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) · [Source audit](conjectures/c161/SOURCES.md) · [Verification](conjectures/c161/verification/)
 
-**Status:** complete elementary or literature-dependent mathematical arguments, not claims of peer review, formal proof-assistant certification, or established publication priority. AI assistance is disclosed. Finite computation supports, but does not replace, the proofs.
+## Conjecture 162 — Spanning-tree leaves and simplicial vertices
 
-## Reproduce the new results
+[Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) · [Source audit](conjectures/c162/SOURCES.md) · [Verification](conjectures/c162/verification/)
 
-From the repository root, Python 3.12:
+## Conjecture 179 — Spanning-tree leaves, bipartite number and domination
 
-```sh
-python -m pip install -r requirements.txt
-python conjectures/c161-c162/verify.py
-```
+[Research package](conjectures/c179/) · [Paper](conjectures/c179/paper/paper.tex) · [Source audit](conjectures/c179/SOURCES.md) · [Verification](conjectures/c179/verification/)
 
-The verifier computes local independence exactly and compares two independent leaf-number algorithms (connected domination and direct spanning-tree enumeration). See [expected output](conjectures/c161-c162/expected.txt). To build the joint manuscript:
+## Reproducibility and status
 
-```sh
-cd conjectures/c161-c162
-pdflatex -interaction=nonstopmode -halt-on-error paper.tex
-pdflatex -interaction=nonstopmode -halt-on-error paper.tex
-```
+Each package uses Python 3.12, pinned NetworkX and TeX Live. See its README for instructions. The matrix GitHub Actions workflow independently verifies and builds each paper, uploading separate PDF artifacts. Original root-level c179 files remain as compatibility copies; the workflow checks that these match the canonical package. The former joint 161/162 manuscript remains in Git history, superseded by the two standalone papers.
 
-## Original c179 entry
-
-
-**A Proof of Graffiti.pc Conjecture 179: Spanning-Tree Leaves, Bipartite Number and Domination** — Koyar Afrasyab, November 2026. Research preprint for author review.
-
-For every finite simple connected graph of order at least two, the proof gives
-
-`L_s + b >= delta + gamma + lambda + max(0, ceil(lambda/2)-2)`.
-
-Here delta is minimum degree, gamma is ordinary domination number, and lambda is maximum neighborhood independence. See [manuscript](paper/paper.tex), [source audit](SOURCES.md), and [verification](verification/verify.py).
-
-The analytic proof uses DeLaViña and Waller (2008), Theorem 5, and elementary domination arguments. Finite tests are supplementary, not the proof. Independent peer review and formal proof-assistant verification are not claimed. AI assistance is disclosed in the manuscript.
-
-## Reproduce
-
-Python 3.12 or later:
-
-```sh
-python -m pip install -r requirements.txt
-python verification/verify.py
-python verification/independent.py
-```
-
-Compare with [expected output](verification/expected.txt). Build the paper with TeX Live:
-
-```sh
-cd paper
-pdflatex -interaction=nonstopmode -halt-on-error paper.tex
-pdflatex -interaction=nonstopmode -halt-on-error paper.tex
-```
-
-Both exact implementations passed locally, with zero disagreements on all 995 graphs. GitHub Actions is configured to check both calculations and build a downloadable PDF artifact when workflow permissions permit. See SOURCES.md for provenance and review limitations.
+Complete mathematical arguments are provided for author review; AI assistance is disclosed. No claim of independent peer review, formal proof-assistant verification, or established publication priority is made. Finite tests supplement the proofs rather than replacing them.

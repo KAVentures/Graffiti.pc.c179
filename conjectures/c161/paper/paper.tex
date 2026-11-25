@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{A Proof of Graffiti.pc Conjecture 161: Spanning-Tree Leaves and Complement Local Independence}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove a lower bound on the maximum number of leaves of a spanning tree in terms of the maximum local independence number of the complement, listed as Conjecture 161 in Written on the Wall II. The proof follows from extending a star on a proper clique. We also give exact supplementary finite checks.
+\end{abstract}
+\section{Notation and provenance}
+All graphs are finite and simple. For a connected graph $G$, let $L_s(G)$ be the maximum number of degree-one vertices among its spanning trees. Put $\lambda_G(v)=\alpha(G[N_G(v)])$, where $\alpha$ is the independence number and $\alpha(\varnothing)=0$. Write $\lambda_{\max}(G)$ and $\lambda_{\min}(G)$ for the extrema and $f(G)$ for the number of vertices attaining $\lambda_{\min}(G)$. Write $\delta(G)$ for minimum degree and $\overline G$ for the complement. The conjecture was announced on August 8, 2005 and listed as open in the November 5, 2026 catalogue \cite{wow}. This does not establish publication priority.
+\section{Conjecture 161}
+\begin{lemma}
+If $Q$ is a nonempty proper clique in a connected graph $G$, then $L_s(G)\ge |Q|$.
+\end{lemma}
+\begin{proof}
+Connectedness supplies an edge $qw$ with $q\in Q$ and $w\notin Q$. The edges $qw$ and $qu$ for $u\in Q\setminus\{q\}$ form a star with at least $|Q|$ leaves (two if $|Q|=1$). Extend it to a spanning tree by repeatedly adjoining a new vertex along one edge. Each extension preserves or increases the number of leaves: attaching to a leaf replaces that leaf by the new vertex, and attaching to a nonleaf adds a leaf.
+\end{proof}
+\begin{theorem}[Conjecture 161]
+For every connected graph $G$, $L_s(G)\ge\lambda_{\max}(\overline G)$.
+\end{theorem}
+\begin{proof}
+Put $k=\lambda_{\max}(\overline G)$. If $k=0$ the result is immediate, including the singleton graph. Otherwise some vertex $v$ has an independent set $Q$ of $k$ neighbors in $\overline G$. In $G$, $Q$ is a clique not containing $v$, hence proper. Apply the lemma.
+\end{proof}
+\section{Verification and limitations}
+Exact enumeration using NetworkX 3.6.1 and the Graph Atlas checks all 995 nonisomorphic connected simple graphs of orders two through seven. There are 44 equality cases at orders two through seven; the singleton is tested separately and also gives equality. The primary verifier computes leaf numbers via connected domination and local independence via subset enumeration. The independent verifier uses direct spanning-tree enumeration and bit-mask enumeration of local independent sets, checking agreement with the primary calculation. Finite checks are supplementary, not the universal proof.
+
+This AI-assisted research preprint is provided for author review. No independent peer review, proof-assistant certification, or guaranteed publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 161, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\end{thebibliography}
+\end{document}

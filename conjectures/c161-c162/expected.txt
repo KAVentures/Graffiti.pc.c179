@@ -1,4 +1,0 @@
-995 connected graphs (orders 2–7); singleton checked separately
-C161: 44 equality cases; 0 violations
-C162: 90 equality cases with minimum degree 1; 0 violations
-0 leaf-number disagreements

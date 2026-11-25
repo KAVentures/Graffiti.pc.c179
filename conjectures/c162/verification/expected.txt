@@ -1,0 +1,1 @@
+C162: 995 connected graphs (orders 2–7); 90 equality cases with minimum degree 1; 0 violations

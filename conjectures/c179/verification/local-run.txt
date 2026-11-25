@@ -1,0 +1,13 @@
+Local verification on 2026-11-25, NetworkX 3.6.1
+$ python verification/verify.py
+Graphs checked: 995 {2: 1, 3: 2, 4: 6, 5: 21, 6: 112, 7: 853}
+Equality cases: 8 {3: 1, 4: 2, 5: 2, 6: 2, 7: 1}
+Direct spanning-tree cross-checks: 143
+Sharpness family samples: 12
+Violations: 0
+$ python verification/independent.py
+Independent exact cross-check: 995 graphs, 8 equality cases, 0 disagreements or violations
+
+Git blob IDs of the locally executed sources:
+verify.py: 4e1892133c302e84c9f5b600587a16c6070d518a
+independent.py: e48f3f8cbbe93cb1fb26342e94623c56d61ace66

@@ -1,0 +1,107 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\ls}{L_s}
+\newcommand{\lam}{\lambda}
+\title{A Proof of Graffiti.pc Conjecture 179:\\ Spanning-Tree Leaves, Bipartite Number and Domination}
+\author{Koyar Afrasyab}
+\date{November 25, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Graffiti.pc Conjecture 179, announced on 8 August 2005, asserts that every finite simple connected graph $G$ of order at least two satisfies
+\[
+\ls(G)+b(G)\ge \delta(G)+\gamma(G)+\lam(G),
+\]
+where $\ls$ is the maximum number of leaves in a spanning tree, $b$ is the maximum order of an induced bipartite subgraph, $\delta$ is the minimum degree, $\gamma$ is the domination number, and $\lam$ is the maximum local independence number. We prove the conjecture by combining a two-vertex domination construction with a theorem of DeLaVi\~na and Waller and an analysis of equality in the elementary degree--domination bound. The proof also gives an additive improvement of $\max\{0,\lceil\lam(G)/2\rceil-2\}$. Complete graphs of order at least three show that the original bound is sharp. The proof is analytic and does not depend on computation.
+\end{abstract}
+\noindent\textbf{Keywords:} Graffiti.pc; spanning tree; domination; induced bipartite subgraph; local independence.\\
+\textbf{MSC 2020:} 05C35, 05C69, 05C05.
+\section{Introduction}
+Let $G=(V,E)$ be a finite simple connected graph of order $n\ge2$. Write $N(v)$ for the open neighborhood of $v$, $N[v]=N(v)\cup\{v\}$, and $\alpha(H)$ for the independence number of a graph $H$. Define
+\[
+\lam=\max_{v\in V}\alpha(G[N(v)]),\qquad
+b=\max\{|S|:S\subseteq V,\ G[S]\text{ is bipartite}\}.
+\]
+Let $\delta$ and $\Delta$ be the minimum and maximum degrees, respectively. A dominating set $D$ satisfies $D\cup\bigcup_{v\in D}N(v)=V$; $\gamma$ is its minimum possible cardinality. Let $\ls$ be the maximum number of degree-one vertices among spanning trees of $G$. We omit the argument $G$ when unambiguous.
+
+Conjecture 179 of \emph{Written on the Wall II} \cite{wow}, announced on 8 August 2005, states $\ls+b\ge\delta+\gamma+\lam$. The catalogue dated 5 November 2026 lists it as open. Chellali and Favaron \cite{cf} record the equivalent connected-domination formulation for graphs of order at least three in their survey (Section 6, item 5). The catalogue's ancillary definition of maximum degree does not change the symbol $\delta$ in the displayed conjecture; throughout, $\delta$ denotes minimum degree.
+
+\begin{theorem}\label{main}
+For every finite simple connected graph $G$ of order $n\ge2$,
+\[
+\ls+b\ge\delta+\gamma+\lam+
+\max\left\{0,\left\lceil\frac{\lam}{2}\right\rceil-2\right\}.
+\]
+\end{theorem}
+
+\section{Domination bounds}
+\begin{lemma}\label{dom}
+For every graph under consideration,
+\[
+\gamma\le n-\lam-\delta+2,\qquad
+\gamma\le n-\Delta.
+\]
+\end{lemma}
+\begin{proof}
+Choose $v\in V$ and an independent set $A\subseteq N(v)$ of size $\lam$. Since $G$ is connected and $n\ge2$, $\lam\ge1$; fix $a\in A$. Put $B=V\setminus A$. Independence of $A$ implies $N(a)\subseteq B$. Moreover, $v\in N(a)$ and $a\notin B$. Consequently
+\[
+D=(B\setminus N(a))\cup\{v,a\}
+\]
+has cardinality $n-\lam-\deg(a)+2$. It dominates $G$: vertices of $A$ are adjacent to $v$, vertices of $N(a)$ are adjacent to $a$, and all remaining vertices belong to $D$. This proves the first bound. For the second, take a vertex $w$ of degree $\Delta$. The set $\{w\}\cup(V\setminus N[w])$ dominates and has cardinality $n-\Delta$.
+\end{proof}
+
+\begin{lemma}\label{exception}
+If $\gamma=n-\delta$ and $\lam=2$, then $G$ is complete multipartite with at least two parts, each of size two.
+\end{lemma}
+\begin{proof}
+Lemma \ref{dom} gives $n-\delta=\gamma\le n-\Delta\le n-\delta$, so $\delta=\Delta$ and $G$ is regular. For every $v$, the set $D_v=\{v\}\cup(V\setminus N[v])$ is dominating and has size $\gamma$. If $x,y\in V\setminus N[v]$ are adjacent, then $D_v\setminus\{x\}$ still dominates: the neighbors of $v$ are dominated by $v$, the removed vertex $x$ by $y$, and the other vertices belong to the set. This is impossible. Thus the nonneighbors of every vertex, excluding the vertex itself, are independent in $G$.
+
+In the complement $\overline G$, every open neighborhood is therefore a clique. Each connected component of $\overline G$ must be complete: otherwise a shortest path between two nonadjacent vertices in a component has an initial induced path of length two, whose middle vertex has two nonadjacent neighbors. Regularity implies that all these cliques have the same order $r$. Therefore $G$ is complete multipartite with equal parts of size $r$, and connectedness and $n\ge2$ imply at least two parts. For any vertex, its neighborhood is the union of the other parts, with all possible edges between distinct parts and none within parts; hence its local independence number equals $r$. Since $\lam=2$, $r=2$.
+\end{proof}
+
+\section{Proof of the main theorem}
+We invoke DeLaVi\~na and Waller \cite[Theorem 5]{dw}, whose local independence parameter $\mu$ is precisely our $\lam$. Their theorem states, in our notation,
+\begin{equation}\label{dw}
+\ls+b\ge n+\left\lceil\frac{\lam}{2}\right\rceil.
+\end{equation}
+For $n=2$, $G=K_2$ and $(\ls,b,\delta,\gamma,\lam)=(2,2,1,1,1)$, so the theorem holds directly. Assume henceforth that $n\ge3$.
+\begin{proof}[Proof of Theorem \ref{main}]
+If $\lam\ge3$, Lemma \ref{dom} gives $\delta+\gamma+\lam\le n+2$. Subtracting from \eqref{dw} proves
+\[
+\ls+b-(\delta+\gamma+\lam)\ge
+\left\lceil\frac{\lam}{2}\right\rceil-2\ge0.
+\]
+If $\lam=1$, the second bound in Lemma \ref{dom} gives $\delta+\gamma+\lam\le n+1$, and \eqref{dw} suffices.
+
+Suppose $\lam=2$. If $\gamma<n-\delta$, integrality gives $\delta+\gamma+\lam\le n+1$, so again \eqref{dw} suffices. Otherwise $\gamma=n-\delta$ by Lemma \ref{dom}, and Lemma \ref{exception} applies. Choose two distinct parts. Their union induces $K_{2,2}$, so $b\ge4$. Choose a vertex $x$ in the first part and $y$ in the second. The edge $xy$ exists, and every other vertex is adjacent to at least one of $x,y$. Attach each of those vertices by exactly one such edge to the two-vertex tree $xy$. The resulting subgraph is a spanning tree, and its $n-2$ attached vertices are leaves. Hence $\ls+b\ge n-2+4=n+2=\delta+\gamma+\lam$. Since $\lam=2$, the additive term in the theorem is zero. This exhausts the possibilities.
+\end{proof}
+
+\section{Sharpness and connected domination}
+For $G=K_n$, $n\ge3$, we have $\ls=n-1$, $b=2$, $\delta=n-1$, $\gamma=1$, and $\lam=1$. Both sides of Conjecture 179 equal $n+1$. Thus its additive constant cannot be increased uniformly. Complete multipartite graphs with at least two parts of order two also give equality: $\delta=n-2$, $\gamma=2$, $\lam=2$, $b=4$, and $\ls=n-2$ (no universal vertex, so no spanning star). No assertion of a complete equality classification for the main theorem is needed.
+
+Let $\gamma_c$ be the minimum size of a connected dominating set. For $n\ge3$, $\ls=n-\gamma_c$: the nonleaves of any spanning tree form a nonempty connected dominating set, and a spanning tree of any connected dominating set extends by attaching every remaining vertex as a leaf. Theorem \ref{main} therefore implies
+\[
+\gamma_c\le n+b-\delta-\gamma-\lam
+-\max\{0,\lceil\lam/2\rceil-2\}.
+\]
+For $K_2$, the identity does not hold ($\gamma_c=1$ and $\ls=2$), but this displayed inequality is checked directly. This addresses the convention in the survey formulation.
+
+\section{Reproducibility and evidence boundary}
+The argument is a finite mathematical derivation from the published theorem \eqref{dw} and the elementary lemmas above. No finite search or unproved conjecture is used in that derivation. Supplementary code in \cite{repo} enumerates the connected graphs of orders two through seven in the NetworkX Graph Atlas, computes each invariant exactly by subset enumeration, checks the cited and derived bounds, and cross-checks the leaf count by direct enumeration of spanning trees for small graphs and equality cases. The Atlas contains respectively $1,2,6,21,112,853$ such graphs, totaling $995$. The exact baseline check yields eight equality cases and no violations. A second implementation computes all five invariants directly for every one of the 995 graphs, using disjoint independent sets for $b$ and acyclic edge-subset enumeration for $L_s$, without the connected-domination identity. It agrees on every invariant and every conjecture check. The repository gives commands, expected output, source provenance, and a CI workflow. These tests are sanity checks, not a proof for larger orders.
+
+The catalogue status and targeted literature searches support presenting this as a proof of Conjecture 179; they do not establish exclusive priority. Independent peer review and formal proof-assistant verification have not been completed.
+
+\paragraph{AI assistance.} Generative AI assisted with the discovery of the argument, drafting and computational checks. The manuscript is supplied for author review; the author is responsible for the final mathematical and scholarly claims.
+
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, Conjecture 179, 8 August 2005; catalogue updated 5 November 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{dw} E. DeLaVi\~na and B. Waller, Spanning trees with many leaves and average distance, \emph{Electronic Journal of Combinatorics} \textbf{15} (2008), Research Paper 33, Theorem 5. \url{https://www.combinatorics.org/ojs/index.php/eljc/article/view/v15i1r33}.
+\bibitem{cf} M. Chellali and O. Favaron, Connected domination, in T. W. Haynes, S. T. Hedetniemi and M. A. Henning (eds.), \emph{Topics in Domination in Graphs}, Springer, 2020, Section 6, item 5. \url{https://doi.org/10.1007/978-3-030-51117-3_4}.
+\bibitem{repo} K. Afrasyab, \emph{Graffiti.pc Conjecture 179: proof and verification materials}, \url{https://github.com/KAVentures/Graffiti.pc.c179}.
+\end{thebibliography}
+\end{document}

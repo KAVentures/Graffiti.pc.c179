@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{A Proof of Graffiti.pc Conjecture 162: Spanning-Tree Leaves and Simplicial Vertices}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove Conjecture 162 in Written on the Wall II, a lower bound on the maximum number of leaves of a spanning tree in terms of the frequency of minimum local independence and the minimum degree. The proof establishes the stronger statement that all simplicial vertices of a connected noncomplete graph can simultaneously be leaves of a spanning tree. We give exact supplementary finite checks.
+\end{abstract}
+\section{Notation and provenance}
+All graphs are finite and simple. For a connected graph $G$, let $L_s(G)$ be the maximum number of degree-one vertices among its spanning trees. Put $\lambda_G(v)=\alpha(G[N_G(v)])$, where $\alpha$ is the independence number and $\alpha(\varnothing)=0$. Write $\lambda_{\max}(G)$ and $\lambda_{\min}(G)$ for the extrema and $f(G)$ for the number of vertices attaining $\lambda_{\min}(G)$. Write $\delta(G)$ for minimum degree and $\overline G$ for the complement. The conjecture was announced on August 8, 2005 and listed as open in the November 5, 2026 catalogue \cite{wow}. This does not establish publication priority.
+\section{Conjecture 162}
+\begin{lemma}
+Every connected noncomplete graph has a spanning tree in which all simplicial vertices are leaves.
+\end{lemma}
+\begin{proof}
+Let $S$ be the simplicial vertices, those with clique neighborhoods, and $H=G-S$. A shortest path has no simplicial internal vertex, since its predecessor and successor would be adjacent. A shortest path between nonadjacent vertices shows that $H$ is nonempty; shortest paths between vertices of $H$ show it is connected.
+
+Every $s\in S$ has a neighbor in $H$. Otherwise every neighbor $t$ of $s$ is simplicial. Since $s\in N(t)$, all other neighbors of $t$ belong to $N(s)$. Thus no edge leaves $N[s]$; by connectedness $N[s]=V(G)$, contradicting noncompleteness since $N[s]$ is a clique.
+
+Take a spanning tree of $H$ (possibly a single vertex) and attach each $s\in S$ by one edge to $H$. The resulting spanning tree has all vertices in $S$ as leaves.
+\end{proof}
+\begin{theorem}[Conjecture 162]
+For every connected graph $G$ of order at least two,
+\[
+ L_s(G)\ge f(G)\left\lfloor \frac{1}{\delta(G)}\right\rfloor.
+\]
+\end{theorem}
+\begin{proof}
+If $\delta(G)\ge 2$, the right-hand side is zero. Otherwise $\delta(G)=1$. All neighborhoods are nonempty, and some vertex has degree one, so $\lambda_{\min}(G)=1$. The vertices attaining it are exactly the simplicial vertices. If $G$ is complete, then $G=K_2$ and both sides are two. Otherwise apply the preceding lemma to obtain $L_s(G)\ge |S|=f(G)$, as required.
+\end{proof}
+\section{Verification and limitations}
+Exact enumeration using NetworkX 3.6.1 and the Graph Atlas checks all 995 nonisomorphic connected simple graphs of orders two through seven. There are 90 equality cases restricted to graphs of minimum degree one. The order restriction ensures positive minimum degree so the expression is defined. The primary verifier computes leaf numbers via connected domination and local independence via subset enumeration. The independent verifier uses direct spanning-tree enumeration and bit-mask enumeration of local independent sets, checking agreement with the primary calculation. Finite checks are supplementary, not the universal proof.
+
+This AI-assisted research preprint is provided for author review. No independent peer review, proof-assistant certification, or guaranteed publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 162, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\end{thebibliography}
+\end{document}
