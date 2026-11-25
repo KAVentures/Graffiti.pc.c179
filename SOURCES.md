@@ -22,3 +22,7 @@
 ## Data
 
 NetworkX Graph Atlas is included in the pinned NetworkX distribution. It contains all nonisomorphic simple graphs up to order 7. No proprietary data, random seeds, solvers, floating-point tolerances or external APIs are used in verification.
+
+## Independent computational audit
+
+`verification/independent.py` uses NetworkX only for Atlas input and diagnostic graph6 output, not graph algorithms. It checks connectivity by reachability, computes the bipartite number by disjoint independent-set pairs, ordinary domination by direct subset tests, and the leaf number by enumerating acyclic sets of n-1 edges. It compares all five invariants to the primary implementation for all 995 graphs. Both passed in a local Python environment with NetworkX 3.6.1. See `verification/local-run.txt`.

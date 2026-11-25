@@ -17,6 +17,7 @@ Python 3.12 or later:
 ```sh
 python -m pip install -r requirements.txt
 python verification/verify.py
+python verification/independent.py
 ```
 
 Compare with [expected output](verification/expected.txt). Build the paper with TeX Live:
@@ -27,4 +28,4 @@ pdflatex -interaction=nonstopmode -halt-on-error paper.tex
 pdflatex -interaction=nonstopmode -halt-on-error paper.tex
 ```
 
-GitHub Actions checks the calculations and builds the PDF when workflow permissions permit. See SOURCES.md for provenance and review limitations.
+Both exact implementations passed locally, with zero disagreements on all 995 graphs. GitHub Actions is configured to check both calculations and build a downloadable PDF artifact when workflow permissions permit. See SOURCES.md for provenance and review limitations.

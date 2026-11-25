@@ -18,6 +18,7 @@ jobs:
           set -o pipefail
           python verification/verify.py | tee /tmp/observed.txt
           diff -u verification/expected.txt /tmp/observed.txt
+          python verification/independent.py
   paper:
     runs-on: ubuntu-24.04
     steps:
