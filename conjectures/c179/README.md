@@ -29,3 +29,7 @@ pdflatex -interaction=nonstopmode -halt-on-error paper.tex
 ```
 
 Both exact implementations passed locally, with zero disagreements on all 995 graphs. GitHub Actions is configured to check both calculations and build a downloadable PDF artifact when workflow permissions permit. See SOURCES.md for provenance and review limitations.
+
+## Additional reproducibility check
+
+The [cross-conjecture audit](../../audit/README.md) checks all three statements and proof constructions through direct enumeration, with recorded output. It supplements the standalone checks and is not needed for the proof.

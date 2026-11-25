@@ -52,3 +52,15 @@ jobs:
           diff -u requirements.txt conjectures/c179/requirements.txt
           diff -r paper conjectures/c179/paper
           diff -r verification conjectures/c179/verification
+  cross-conjecture-audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: |
+          set -o pipefail
+          python audit/audit_all.py | tee /tmp/audit-observed.txt
+          diff -u audit/expected.txt /tmp/audit-observed.txt

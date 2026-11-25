@@ -43,3 +43,7 @@ pdflatex -interaction=nonstopmode -halt-on-error paper.tex
 ```
 
 The exact algorithms were cross-checked locally on 995 graphs; CI is configured to reproduce the standalone package and build its PDF. No claim of external peer review, formal certification or priority is made. AI assistance is disclosed.
+
+## Additional reproducibility check
+
+The [cross-conjecture audit](../../audit/README.md) checks all three statements and proof constructions through direct enumeration, with recorded output. It supplements the standalone checks and is not needed for the proof.

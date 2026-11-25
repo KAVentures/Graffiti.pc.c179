@@ -23,3 +23,7 @@ Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-
 Each package uses Python 3.12, pinned NetworkX and TeX Live. See its README for instructions. The matrix GitHub Actions workflow independently verifies and builds each paper, uploading separate PDF artifacts. Original root-level c179 files remain as compatibility copies; the workflow checks that these match the canonical package. The former joint 161/162 manuscript remains in Git history, superseded by the two standalone papers.
 
 Complete mathematical arguments are provided for author review; AI assistance is disclosed. No claim of independent peer review, formal proof-assistant verification, or established publication priority is made. Finite tests supplement the proofs rather than replacing them.
+
+## Additional audit
+
+The [cross-conjecture audit](audit/README.md) independently checks the three inequalities, proof constructions, and equality counts on all 995 connected Atlas graphs of orders two through seven. It records the source recheck, environment and limitations. The CI workflow checks its expected output separately.

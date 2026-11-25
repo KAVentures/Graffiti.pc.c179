@@ -26,3 +26,7 @@ NetworkX Graph Atlas is included in the pinned NetworkX distribution. It contain
 ## Independent computational audit
 
 `verification/independent.py` uses NetworkX only for Atlas input and diagnostic graph6 output, not graph algorithms. It checks connectivity by reachability, computes the bipartite number by disjoint independent-set pairs, ordinary domination by direct subset tests, and the leaf number by enumerating acyclic sets of n-1 edges. It compares all five invariants to the primary implementation for all 995 graphs. Both passed in a local Python environment with NetworkX 3.6.1. See `verification/local-run.txt`.
+
+## Source recheck (2026-11-25)
+
+The formula was visually checked on printed page 104 of the catalogue PDF snapshot printed 6 November 2026; it uses lowercase delta. The dependency was visually checked on printed page 4 of the published 2008 paper. Stable DOI: https://doi.org/10.37236/757 . The uppercase-Delta interpretation is not a theorem claimed by this manuscript. A supplementary finite check found no violations for that alternative on the Atlas, which does not resolve it. See the repository-wide audit for details.

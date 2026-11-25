@@ -14,3 +14,7 @@
 ## Limitations
 
 Local cross-check of both exact algorithms found no disagreements or violations. No peer review, proof-assistant certification or exhaustive priority determination is claimed. AI-assisted preprint for author review.
+
+## Source recheck (2026-11-25)
+
+Catalogue entry 162, printed page 93 of 316, in the snapshot printed 6 November 2026. Historical catalogue index: https://cms.uhd.edu/faculty/delavinae/research/wowll/index.htm . A direct PDF fetch returned 404 on recheck; the indexed PDF snapshot was available. See the [cross-conjecture audit](../../audit/README.md) for additional checks.
