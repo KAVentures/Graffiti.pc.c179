@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\title{Infinite Tree Counterexamples to Graffiti.pc Conjecture 171}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We disprove Graffiti.pc Conjecture 171, a proposed lower bound on the maximum leaf number of a spanning tree in terms of even-distance counts and the average distance within the periphery. We construct an infinite family of trees on which the proposed lower bound exceeds the leaf number by unbounded additive and multiplicative factors. Two exact computational checks supplement the symbolic argument.
+\end{abstract}
+\section{Statement and provenance}
+Let $G$ be a finite simple connected graph of order at least two. Write $L_s(G)$ for the maximum number of degree-one vertices of a spanning tree, $d(u,v)$ for graph distance, and $e(v)=\max_{u\in V(G)}d(u,v)$ for eccentricity. Define
+\[
+ E(G)=\max_{v\in V(G)}|\{u:d(u,v)\equiv0\pmod2\}|,
+ \quad B=\{v:e(v)=\operatorname{diam}(G)\}.
+\]
+Let
+\[
+ D_B(G)=\frac{\sum_{\{u,v\}\subseteq B}d(u,v)}{\binom{|B|}{2}},
+\]
+where the sum is over unordered pairs of distinct vertices. Every connected graph of order at least two has two peripheral vertices and $D_B>0$. The conjecture, announced August 8, 2005 and listed open in the November 2026 catalogue \cite{wow}, asserts
+\begin{equation}
+ L_s(G)\ge\frac{E(G)-1}{D_B(G)}. \label{conj}
+\end{equation}
+The indexed catalogue definition averages distances within $B$, not distances from $B$ to all vertices. The latter distinct invariant occurs in \cite{dw}. Our source audit records the unavailability of the direct PDF image and the limits of the priority search.
+\section{Construction and exact disproof}
+For an even integer $r\ge22$, construct $T_r$ from a vertex $c$ as follows. Attach a path of length $r$ with endpoint $x$, a path of length $r-1$ with endpoint $h$, and $r$ further paths of length $r-1$. All paths meet only at $c$. Attach $r$ new vertices $y_1,\ldots,y_r$ by single edges to $h$. This is a tree.
+\begin{theorem}
+For every even integer $r\ge22$, $T_r$ violates \eqref{conj}, even if the root is excluded from the even-distance count.
+\end{theorem}
+\begin{proof}
+Counting the root, paths and new vertices gives
+\[
+ n=1+r+(r-1)+r(r-1)+r=r(r+2).
+\]
+The leaves are $x$, the $r$ vertices $y_i$ and the $r$ shorter-arm endpoints. Since $T_r$ is its own unique spanning tree, $L_s(T_r)=2r+1$.
+
+The two bipartition classes are the vertices at even and odd distance from $c$. Because $r$ is even, the number at even distance is
+\[
+ 1+\frac r2+\left(\frac r2-1\right)
+ +r\left(\frac r2-1\right)+r=\frac{r(r+2)}2.
+\]
+Thus the classes have equal size. In any connected bipartite graph, even-distance vertices from a root are precisely its own class, so $E(T_r)=n/2$.
+
+Every vertex lies at depth at most $r$ from $c$. The only depth-$r$ vertices are $x$ and the $y_i$. Since $d(x,y_i)=2r$, the diameter is $2r$ and these vertices are peripheral. A vertex of depth at most $r-1$ has distance at most $2r-1$ from every vertex, so there are no other peripheral vertices. Distances among distinct $y_i$ are two. Therefore
+\[
+ D_B(T_r)=\frac{2r^2+2\binom r2}{\binom{r+1}2}
+ =\frac{6r-2}{r+1}.
+\]
+The strict reverse of \eqref{conj} follows from
+\begin{align*}
+ &(E(T_r)-1)(r+1)-(2r+1)(6r-2)\\
+ &\qquad=\tfrac12 r^2(r-21)-2r+1\\
+ &\qquad\ge \tfrac12r^2-2r+1>0
+ \qquad(r\ge22).
+\end{align*}
+If the root is excluded, replace $E$ by $E-1$ and subtract $r+1$ from this expression. The result is at least $r^2/2-3r>0$ for $r\ge22$. This proves both conventions.
+\end{proof}
+\begin{corollary}
+Both the additive gap and the ratio of the conjectured lower bound to the actual leaf number are unbounded among trees.
+\end{corollary}
+\begin{proof}
+As even $r$ tends to infinity, $D_B(T_r)\to6$, $E(T_r)\sim r^2/2$, and $L_s(T_r)\sim2r$. Hence $(E-1)/D_B\sim r^2/12$ and its ratio to $L_s$ is asymptotic to $r/24$.
+\end{proof}
+\section{Explicit witnesses and verification}
+The following values use exact fractions:
+\[
+\begin{array}{r|r|r|r|r}
+r& n& L_s & D_B & (E-1)/D_B\\\hline
+22&528&45&130/23&6049/130\\
+24&624&49&142/25&7775/142\\
+30&960&61&178/31&14849/178\\
+40&1680&81&238/41&34399/238
+\end{array}
+\]
+The first row is a concrete counterexample; no assertion of smallest order is made. Both independently constructed adjacency representations and exact traversal algorithms were run locally on these four trees. The primary verifier uses NetworkX 3.6.1 all-pairs shortest paths and the independent verifier uses only standard-library queues and rational arithmetic. The finite checks supplement the proof rather than replace it.
+
+This AI-assisted research preprint is supplied for author review. No independent peer review, formal proof-assistant certification or guaranteed publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 171, catalogue snapshot printed November 6, 2026, pp.~98--99. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{dw} E. DeLaVi\~na and B. Waller, Spanning Trees with Many Leaves and Average Distance, \emph{Electronic Journal of Combinatorics} 15 (2008), \url{https://doi.org/10.37236/757}.
+\end{thebibliography}
+\end{document}

@@ -1,6 +1,6 @@
 # Novelty and correctness screening — 2026-11-25
 
-Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all six open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
+Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all seven open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
 
 | Entry | Classification | Evidence |
 |---|---|---|
@@ -8,6 +8,7 @@ Searches covered exact conjecture numbers and statements, nearby invariant formu
 | 161 | Rediscovery / prior implication; excluded from novel count | Entry 159 October 2005 stronger bound, also elementary maximum-degree bound; see c161 source audit. |
 | 162 | Prior-related elementary derivation; excluded from established novel count | De Caria Di Fonzo 2024, Prop. 3.1 and exchange argument; see c162 source audit. |
 | 169 | Candidate resolution; priority unconfirmed | Exact statement printed p. 97; singleton convention explicit; no exact prior proof located. |
+| 171 | Candidate disproof; priority unconfirmed | Indexed catalogue formula and definitions (pp. 98–99) agree; infinite counterexample family, even among trees. Targeted searches found no earlier exact disproof. Direct PDF image retrieval failed. See c171 source audit. |
 | 177 | Candidate resolution; priority unconfirmed | Catalogue and REGS statement confirmed; DeLaViña–Waller 2008 Theorem 3 proves only the weaker additive 1 bound. New constructive argument proves the degree term and strengthens it to any independent set. No earlier full proof identified. |
 | 179 | Candidate resolution of both readings; priority unconfirmed | Catalogue p. 104 uses delta; West REGS uses Delta. New proof gives Delta+i+lambda and the prior paper's separate additive minimum-degree refinement. Kuberwastaken/c5-k4 reports incomplete trial, not proof. |
 

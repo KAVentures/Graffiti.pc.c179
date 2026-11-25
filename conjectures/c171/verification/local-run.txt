@@ -1,0 +1,6 @@
+Local execution, 2026-11-25, NetworkX 3.6.1.
+r=22: n=528, L=45, even=264, B=23, D=130/23, RHS=6049/130
+r=24: n=624, L=49, even=312, B=25, D=142/25, RHS=7775/142
+r=30: n=960, L=61, even=480, B=31, D=178/31, RHS=14849/178
+r=40: n=1680, L=81, even=840, B=41, D=238/41, RHS=34399/238
+C171: independent standard-library check passed for 4 trees

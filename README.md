@@ -1,10 +1,10 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-contained research package with its own manuscript, source audit, pinned dependencies, exact verification and reproducibility instructions. All six were announced on 8 August 2005.
+Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-contained research package with its own manuscript, source audit, pinned dependencies, exact verification and reproducibility instructions. All seven were announced on 8 August 2005.
 
 ## Novelty and source status (2026-11-25)
 
-See [novelty audit](NOVELTY.md). Correctness, source fidelity and publication priority are separate questions. C161 is a rediscovery of an implication of a previously recorded bound, not a novel resolution. C162 is an elementary derivation closely related to earlier work; do not count it as established novel. C157, C169 and C177 are candidate resolutions, with no exact prior proof found in a bounded search. C179 now proves the maximum-degree formulation (also strengthened by independent domination), as well as the catalogue's minimum-degree formulation. Priority is unconfirmed for all candidate results.
+See [novelty audit](NOVELTY.md). Correctness, source fidelity and publication priority are separate questions. C161 is a rediscovery of an implication of a previously recorded bound, not a novel resolution. C162 is an elementary derivation closely related to earlier work; do not count it as established novel. C157, C169, C171 and C177 are candidate resolutions, with no exact prior proof found in a bounded search. C179 now proves the maximum-degree formulation (also strengthened by independent domination), as well as the catalogue's minimum-degree formulation. Priority is unconfirmed for all candidate results.
 
 ## Conjecture 157 — Spanning-tree leaves and edges in radial circles
 
@@ -21,6 +21,10 @@ See [novelty audit](NOVELTY.md). Correctness, source fidelity and publication pr
 ## Conjecture 169 — Spanning-tree leaves and distance parity
 
 [Research package](conjectures/c169/) · [Paper](conjectures/c169/paper/paper.tex) · [Source audit](conjectures/c169/SOURCES.md) · [Verification](conjectures/c169/verification/)
+
+## Conjecture 171 — Infinite tree counterexamples to the peripheral-distance bound
+
+[Research package](conjectures/c171/) · [Paper](conjectures/c171/paper/paper.tex) · [Source audit](conjectures/c171/SOURCES.md) · [Verification](conjectures/c171/verification/)
 
 ## Conjecture 177 — Second-smallest degree, independence and spanning-tree leaves
 
