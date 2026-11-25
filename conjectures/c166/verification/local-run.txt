@@ -1,0 +1,14 @@
+Local verification, 2026-11-25, NetworkX 3.6.1
+$ python verification/verify.py
+n=22 m=24 Delta=3 |M|=7 boundary=15 radius=6 diameter=12
+spanning trees=64 leaf histogram={6: 64}
+exact squared violation=9
+$ python verification/independent.py
+Independent exact verification: 64 spanning trees, 6 leaves each, squared violation 9
+
+Locally tested git blob hashes:
+verification/verify.py 8a880263338626238726bd67222920c91d4a61f5
+verification/independent.py 1a403d9099512a5c09bb430653da08ab2f752b45
+paper/paper.tex 4695f9020d6c957b8fa9019857b61a2d32d615f7
+
+The manuscript compiled twice using pdflatex without warnings or overfull boxes; two pages visually inspected.

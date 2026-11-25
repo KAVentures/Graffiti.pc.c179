@@ -1,0 +1,3 @@
+n=22 m=24 Delta=3 |M|=7 boundary=15 radius=6 diameter=12
+spanning trees=64 leaf histogram={6: 64}
+exact squared violation=9

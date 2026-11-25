@@ -1,5 +1,7 @@
 # Conjecture 161 — maximum local independence of the complement
 
+**Status: NOT NOVEL — rediscovery of a previously implied bound. Excluded from the novel-resolution count.** See [novelty audit](../../NOVELTY.md).
+
 Source: *Written on the Wall II*, conjecture 161, announced 2005-08-08; catalogue dated 2026-11-05, printed p. 92. See [source audit](SOURCES.md).
 
 ## Statement
@@ -19,7 +21,7 @@ The bound is sharp: for a path on three vertices, the two end vertices each have
 
 ## Research package
 
-**A Proof of Graffiti.pc Conjecture 161: Spanning-Tree Leaves and Complement Local Independence** — Koyar Afrasyab, November 2026. [Standalone manuscript](paper/paper.tex), [source audit](SOURCES.md), [primary verifier](verification/verify.py), [independent verifier](verification/independent.py), [expected output](verification/expected.txt).
+**An Elementary Note on Graffiti.pc Conjecture 161: Spanning-Tree Leaves and Complement Local Independence** — Koyar Afrasyab, November 2026. [Standalone manuscript](paper/paper.tex), [source audit](SOURCES.md), [primary verifier](verification/verify.py), [independent verifier](verification/independent.py), [expected output](verification/expected.txt).
 
 ## Reproduce
 

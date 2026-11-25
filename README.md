@@ -1,45 +1,37 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Each conjecture has a self-contained research package with its own manuscript, source audit, pinned dependencies, exact verification and reproducibility instructions. All seven were announced on 8 August 2005.
+Research preprints by Koyar Afrasyab, November 2026. Eight conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. All eight were announced on 8 August 2005.
 
-## Novelty and source status (2026-11-25)
+## Status at a glance (2026-11-25)
 
-See [novelty audit](NOVELTY.md). Correctness, source fidelity and publication priority are separate questions. C161 is a rediscovery of an implication of a previously recorded bound, not a novel resolution. C162 is an elementary derivation closely related to earlier work; do not count it as established novel. C157, C169, C171 and C177 are candidate resolutions, with no exact prior proof found in a bounded search. C179 now proves the maximum-degree formulation (also strengthened by independent domination), as well as the catalogue's minimum-degree formulation. Priority is unconfirmed for all candidate results.
+**Six candidate resolutions (priority unconfirmed); two prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
 
-## Conjecture 157 — Spanning-tree leaves and edges in radial circles
+## Candidate resolutions — no exact earlier resolution identified in bounded searches
 
-[Research package](conjectures/c157/) · [Paper](conjectures/c157/paper/paper.tex) · [Source audit](conjectures/c157/SOURCES.md) · [Verification](conjectures/c157/verification/)
+| Entry | Result | Package |
+|---|---|---|
+| 157 | Proof and strengthening: radial circles | [Research package](conjectures/c157/) · [Paper](conjectures/c157/paper/paper.tex) |
+| 166 | Disproof: 22-vertex counterexample; Foster's earlier diamond-chain construction acknowledged | [Research package](conjectures/c166/) · [Paper](conjectures/c166/paper/paper.tex) |
+| 169 | Proof for order at least two; singleton convention documented | [Research package](conjectures/c169/) · [Paper](conjectures/c169/paper/paper.tex) |
+| 171 | Disproof: infinite family of trees | [Research package](conjectures/c171/) · [Paper](conjectures/c171/paper/paper.tex) |
+| 177 | Proof and strengthening: second-smallest degree | [Research package](conjectures/c177/) · [Paper](conjectures/c177/paper/paper.tex) |
+| 179 | Proof of both degree interpretations and two separate strengthenings | [Research package](conjectures/c179/) · [Paper](conjectures/c179/paper/paper.tex) |
 
-## Conjecture 161 (rediscovery) — Spanning-tree leaves and complement local independence
+## Prior-related notes — NOT counted as novel resolutions
 
-[Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) · [Source audit](conjectures/c161/SOURCES.md) · [Verification](conjectures/c161/verification/)
+| Entry | Classification | Package |
+|---|---|---|
+| 161 | **Not novel:** rediscovery of an implication of a stronger bound recorded in October 2005; also follows from an elementary degree bound. | [Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) |
+| 162 | **Prior-related:** closely related to a 2024 published theorem and its exchange argument. Priority not claimed; excluded from novel count. | [Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) |
 
-## Conjecture 162 (prior-related derivation) — Spanning-tree leaves and simplicial vertices
-
-[Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) · [Source audit](conjectures/c162/SOURCES.md) · [Verification](conjectures/c162/verification/)
-
-## Conjecture 169 — Spanning-tree leaves and distance parity
-
-[Research package](conjectures/c169/) · [Paper](conjectures/c169/paper/paper.tex) · [Source audit](conjectures/c169/SOURCES.md) · [Verification](conjectures/c169/verification/)
-
-## Conjecture 171 — Infinite tree counterexamples to the peripheral-distance bound
-
-[Research package](conjectures/c171/) · [Paper](conjectures/c171/paper/paper.tex) · [Source audit](conjectures/c171/SOURCES.md) · [Verification](conjectures/c171/verification/)
-
-## Conjecture 177 — Second-smallest degree, independence and spanning-tree leaves
-
-[Research package](conjectures/c177/) · [Paper](conjectures/c177/paper/paper.tex) · [Source audit](conjectures/c177/SOURCES.md) · [Verification](conjectures/c177/verification/)
-
-## Conjecture 179 — Spanning-tree leaves, bipartite number and domination
-
-[Research package](conjectures/c179/) · [Paper](conjectures/c179/paper/paper.tex) · [Source audit](conjectures/c179/SOURCES.md) · [Verification](conjectures/c179/verification/)
+These two notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
 
 ## Reproducibility and status
 
-Each package uses Python 3.12, pinned NetworkX and TeX Live. See its README for instructions. The matrix GitHub Actions workflow independently verifies and builds each paper, uploading separate PDF artifacts. Original root-level c179 files remain as compatibility copies; the workflow checks that these match the canonical package. The former joint 161/162 manuscript remains in Git history, superseded by the two standalone papers.
+Each package uses Python 3.12, pinned NetworkX and TeX Live. See its README for instructions. The matrix GitHub Actions workflow verifies and builds each paper, uploading separate PDF artifacts when the jobs run successfully. Original root-level c179 files remain as compatibility copies; the workflow checks that these match the canonical package. The former joint 161/162 manuscript remains in Git history, superseded by the two standalone papers.
 
 Complete mathematical arguments are provided for author review; AI assistance is disclosed. No claim of independent peer review, formal proof-assistant verification, or established publication priority is made. Finite tests supplement the proofs rather than replacing them.
 
 ## Additional audit
 
-The [cross-conjecture audit](audit/README.md) independently checks the three inequalities, proof constructions, and equality counts on all 995 connected Atlas graphs of orders two through seven. It records the source recheck, environment and limitations. The CI workflow checks its expected output separately.
+The [cross-conjecture audit](audit/README.md) independently checks three inequalities, proof constructions, and equality counts on all 995 connected Atlas graphs of orders two through seven. The individual packages provide their own verification. CI checks the expected outputs.

@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A 22-Vertex Counterexample to Graffiti.pc Conjecture 166}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We disprove Graffiti.pc Conjecture 166, proposed on 8 August 2005, by exhibiting a connected subcubic graph of order 22 and radius six. Its maximum spanning-tree leaf number is six, whereas the conjectured lower bound is $15/\sqrt6>6$. All 64 spanning trees have six leaves. The proof is exact and independent of computation. The construction is related to Craig Foster's diamond-chain examples recorded in the catalogue under Conjecture 165. Priority for the disproof is unconfirmed.
+\end{abstract}
+\section{Statement and provenance}
+Let $G$ be a finite simple connected graph of order at least two. Write $L_s(G)$ for the maximum number of degree-one vertices in a spanning tree, $M=\{v:\deg_G(v)=\Delta(G)\}$ for the maximum-degree vertices, $N(M)=\bigcup_{v\in M}N_G(v)$ for their open-neighborhood union, and $\operatorname{rad}(G)=\min_v\max_w d_G(v,w)$ for its radius. Conjecture 166 in \emph{Written on the Wall II} \cite{wow} asserts
+\begin{equation}\label{conj}
+ L_s(G)\ge\frac{|N(M)\setminus M|}{\sqrt{\operatorname{rad}(G)}}.
+\end{equation}
+The catalogue announces it on 8 August 2005 and labels it open in the indexed snapshot printed 6 November 2026, p.~95. The positive-radius restriction avoids division by zero for the singleton. Catalogue status is not proof of publication priority.
+\section{Construction and disproof}
+Start with a central vertex $c$. For each $i\in\{1,2,3\}$ introduce seven distinct new vertices
+$a_i$, $b_i$, $u_i$, $x_i$, $y_i$, $v_i$, $z_i$ and the eight edges
+\[
+ ca_i,\ a_ib_i,\ b_iu_i,\ u_ix_i,\ x_iv_i,\ v_iy_i,\ y_iu_i,\ v_iz_i.
+\]
+There are no other edges. The three arms meet only at $c$. Each arm contains one four-cycle with opposite vertices $u_i,v_i$.
+\begin{theorem}
+The graph just defined violates \eqref{conj}.
+\end{theorem}
+\begin{proof}
+The graph has 22 vertices and 24 edges. Its maximum degree is three. The maximum-degree set is
+\[M=\{c,u_1,u_2,u_3,v_1,v_2,v_3\}.\] Each of the remaining 15 vertices is adjacent to a member of $M$: in arm $i$, $a_i$ is adjacent to $c$, $b_i$ to $u_i$, $x_i,y_i$ to $u_i$ and $v_i$, and $z_i$ to $v_i$. Thus $|N(M)\setminus M|=15$.
+
+The distances from $c$ to $a_i,b_i,u_i,x_i,y_i,v_i,z_i$ are respectively $1,2,3,4,4,5,6$. Hence the eccentricity of $c$ is six. For $i\ne j$, every path from $z_i$ to $z_j$ passes through $c$, giving distance 12. Every pair of vertices is at distance at most 12 by the walk through $c$, so the diameter is 12. The triangle inequality implies every eccentricity is at least half the diameter; therefore the radius is exactly six.
+
+Every spanning tree contains all 12 bridges, namely the four non-cycle edges of each arm. Its restriction to each four-cycle must be connected because there is no external path between distinct vertices of that cycle. It must also be acyclic. Thus it contains exactly three of the four cycle edges in each arm. Conversely deleting any one edge from each cycle leaves a connected acyclic graph, so precisely $4^3=64$ spanning trees exist.
+
+Each deleted cycle edge has one degree-three endpoint and one degree-two endpoint. The deletions affect disjoint arms; each removes exactly one degree-three vertex from the degree-three class, and none affects the central vertex. Every spanning tree therefore has $7-3=4$ degree-three vertices. In a tree of maximum degree at most three and order at least two, the degree sum identity implies that the number of degree-one vertices is two plus the number of degree-three vertices. Every spanning tree consequently has six leaves, so $L_s(G)=6$.
+
+The conjecture would imply $6\ge15/\sqrt6$. Since both sides are positive, this is equivalent to $216\ge225$, which is false.
+\end{proof}
+\section{Prior work and reproducibility}
+The comment on Conjecture 165 in \cite{wow}, pp.~94--95, credits Craig Foster's 2005 research with a chain of diamond gadgets controlling $L_s$ and $|N(M)\setminus M|$. The present graph arranges three four-cycles around a central vertex and uses the radius to obtain the strict violation. We do not claim novelty for the diamond gadget itself, minimum counterexample order, or exclusive priority for the disproof. A bounded search did not identify an earlier disproof of this exact WOW-II conjecture; similarly numbered WOW-I entries and unrelated project counters are not the same statement.
+
+The companion programs enumerate every $21$-edge subset of the 24 edges, equivalently all $\binom{24}{3}=2024$ possible three-edge deletions. The primary program uses NetworkX 3.6.1; the independent program uses a literal edge list, Floyd--Warshall distances and union--find, without NetworkX. Both obtain 64 spanning trees, all with six leaves, and exact squared violation $225-216=9$. These checks supplement the analytical proof.
+
+This AI-assisted research preprint is supplied for author review. No independent peer review, formal proof-assistant certification or guaranteed publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entries 165--166, announced 8 August 2005, indexed snapshot printed 6 November 2026, pp.~94--95. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\end{thebibliography}
+\end{document}
