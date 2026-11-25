@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\title{A Counterexample to Graffiti.pc Conjecture 76: Recursive Square Cacti and Induced Trees}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give an explicit 43-vertex connected bipartite counterexample to Graffiti.pc Conjecture 76 (April 4, 2004), as well as an infinite family of maximum degree four for which the proposed lower bound exceeds the largest induced-tree order by an unbounded amount. The construction uses one-vertex sums of squares, related to the recursive bridge construction of Matou\v{s}ek and \v{S}\'amal (2008). Their earlier method also implies an asymptotic disproof, so we do not claim novelty for the resolution in the strong sense of a result not implied by prior work. We give exact formulas and independent computational verification of the explicit witnesses.
+\end{abstract}
+\section{Statement}
+For a finite simple connected graph $G$ with at least two vertices, let $t(G)$ be the maximum order of an induced tree, $d_{\rm avg}(G)=2|E(G)|/|V(G)|$, and $T(v)$ the number of triangles containing $v$. Write $F(G)$ for the number of vertices attaining $\max_v T(v)$. Conjecture 76 in \emph{Written on the Wall II} \cite{wow}, announced April 4, 2004 and listed as open in the November 5, 2026 catalogue, states
+\[
+t(G)\ge \frac{F(G)}{\lfloor d_{\rm avg}(G)\rfloor}.
+\]
+The denominator is positive for connected graphs of order at least two. In a triangle-free graph, every vertex attains the maximum triangle count of zero, so $F(G)=|V(G)|$.
+
+\section{Rooted square cacti}
+Let $Q_0$ be a singleton with root $r$. Construct $Q_h$ for $h\ge1$ from a square with vertices $r,a,b,c$ in cyclic order and three disjoint copies of $Q_{h-1}$, identifying their roots with $a,b,c$, respectively. All new edges belong to squares, and the copies meet the square only at their attachment vertices. The graph is a connected bipartite cactus. Every vertex belongs to at most two squares, so the maximum degree is at most four. Write $N_h=|V(Q_h)|$, $M_h=|E(Q_h)|$, $R_h$ for the maximum order of an induced tree containing its root, and $U_h=t(Q_h)$.
+\begin{lemma}
+For $h\ge0$,
+\[
+ N_h=(3^{h+1}-1)/2,\quad M_h=2(3^h-1),\quad R_h=2^{h+1}-1,
+\]
+and $U_0=1$, $U_h=3(2^h-1)$ for $h\ge1$.
+\end{lemma}
+\begin{proof}
+The construction gives $N_h=1+3N_{h-1}$ and $M_h=4+3M_{h-1}$, with $N_0=1$ and $M_0=0$.
+
+A connected induced tree containing the root can enter a child copy only through that child's root. It cannot contain all four vertices of the top square, because they induce a cycle. It thus uses at most two child copies, each contributing at most $R_{h-1}$ vertices, including its attachment vertex. This bound is attained by choosing two children adjacent to the top root and taking a largest rooted induced tree in each. The two chosen child roots are nonadjacent in the square. Hence $R_h=1+2R_{h-1}$, as claimed.
+
+For an induced tree omitting the root, either it meets one or more of the other three top-square vertices, in which case it contains at most $3R_{h-1}$ vertices, or it lies in a single child copy and contains at most $U_{h-1}$ vertices. Taking all three child roots gives an induced three-vertex path; adjoining maximum rooted trees in their copies attains $3R_{h-1}$. Consequently
+\[
+ U_h=\max(R_h,3R_{h-1},U_{h-1}).
+\]
+The stated formula follows by induction, since $3(2^h-1)\ge 2^{h+1}-1$ for $h\ge1$ and $3(2^h-1)\ge U_{h-1}$.
+\end{proof}
+
+\section{The explicit counterexamples}
+Let $H(h_1,h_2,h_3,h_4)$ consist of a central square, with a copy of $Q_{h_i}$ attached at each of its four vertices by identifying the two roots. As above it is bipartite, connected and has maximum degree at most four.
+\begin{theorem}
+Writing $H=H(h_1,h_2,h_3,h_4)$, its vertex and edge counts are
+\[
+n=\sum_{i=1}^4N_{h_i},\qquad m=4+\sum_{i=1}^4M_{h_i}.
+\]
+Its exact induced-tree number is
+\[
+ t(H)=\max\left\{\max_{1\le i\le4}U_{h_i},
+ \ \max_{\substack{I\subseteq\{1,2,3,4\}\\|I|=3}}\sum_{i\in I}R_{h_i}\right\}.
+\]
+\end{theorem}
+\begin{proof}
+The order and size follow because each attachment identifies exactly one vertex and no edges. A tree meeting the central square must have a connected intersection with the square: distinct attached copies have no edges between them outside the square. The intersection cannot contain all four central vertices, since they induce a cycle. Each occupied copy contributes a rooted induced tree of order at most $R_{h_i}$. All weights are positive and any three central vertices induce a path, so the largest sum of three weights is both an upper bound and attainable. A tree not meeting the central square is contained in a single copy. The formula follows, because all induced trees of any individual copy also occur in the full graph.
+\end{proof}
+\begin{corollary}
+Conjecture 76 is false. In particular, $H(2,2,2,1)$ has $n=43$, $m=56$, $F=43$, $\lfloor d_{\rm avg}\rfloor=2$ and $t=21$.
+\end{corollary}
+\begin{proof}
+The above formulas yield the parameters. All triangle counts are zero and $2m/n=112/43\in[2,3)$. Thus $t=21<43/2$, as required.
+\end{proof}
+For $h\ge2$ the symmetric family $H_h=H(h,h,h,h)$ satisfies
+\[
+ n_h=2(3^{h+1}-1),\quad m_h=8\cdot3^h-4,\quad
+ t(H_h)=3(2^{h+1}-1).
+\]
+Its average degree is in $[2,3)$, so the conjectured right side is $n_h/2$. The deficit is
+\[
+ n_h/2-t(H_h)=3^{h+1}-3\cdot2^{h+1}+2,
+\]
+positive for $h=2$ and increasing without bound: its increment is $2\cdot3^{h+1}-3\cdot2^{h+1}>0$ for $h\ge2$. In fact the ratio of the actual induced-tree order to the conjectured lower bound tends to zero. The first symmetric example has order 52 and induced-tree number 21. We do not assert minimal counterexample order.
+
+\section{Prior art and verification}
+Matou\v{s}ek and \v{S}\'amal \cite[Lemma 2.2]{ms} used a related recursive construction joining disjoint copies of a graph by bridges along a rooted branching tree. Their method specialized to the four-cycle gives bounded-degree bipartite graphs with order $\Theta(3^h)$ and largest induced tree of order $O(2^h)$; the average degree is less than three (there are $4k$ vertices and $5k-1$ edges for $k$ copies). Thus their previously published construction already implies an asymptotic refutation of Conjecture 76. The present one-vertex-sum variant, exact formulas, and explicit finite counterexample are provided as a documented application and are not claimed to constitute a novel resolution independent of prior work. Targeted searches did not identify a publication explicitly applying that construction to entry 76.
+
+The companion primary program constructs the 43-vertex graph and symmetric family through height six and checks the counts, bipartiteness, degree bound and inequality. A separate exact dynamic program decomposes the actual graph into biconnected blocks and enumerates all induced-tree subsets of each block, propagating rooted optimum sizes along the block-cut tree. For each possible root, it maximizes the sum of the independent branch contributions subject to the block subset inducing a tree. Maximizing over roots gives the global optimum. Its correctness follows because blocks meet only at articulation vertices and their incidence structure is a tree: connectivity and acyclicity are equivalent to those of the occupied rooted block pieces. The implementation agrees with exhaustive vertex-subset enumeration on all 143 connected Atlas graphs of orders one through six, and independently verifies the exact induced-tree order of the 43-vertex witness and four symmetric examples through height five. These computations supplement the analytic certificate.
+
+This AI-assisted research note is provided for author review. No formal proof-assistant certification, independent peer review, or priority for the explicit finite construction is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 76, April 4, 2004; catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{ms} J. Matou\v{s}ek and R. \v{S}\'amal, Induced Trees in Triangle-Free Graphs, \emph{Electronic Journal of Combinatorics} 15 (2008), R41. \url{https://doi.org/10.37236/765}. Preprint \url{https://arxiv.org/abs/0711.4829}.
+\end{thebibliography}
+\end{document}

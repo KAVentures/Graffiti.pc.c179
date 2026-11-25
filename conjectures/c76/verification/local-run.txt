@@ -1,0 +1,14 @@
+Python 3.13.5; NetworkX 3.6.1
+Primary and independent execution:
+(2, 2, 2, 1): n=43, m=56, t=21, freq=43, floor_avg=2, deficit=1/2
+(2, 2, 2, 2): n=52, m=68, t=21, freq=52, floor_avg=2, deficit=10/2
+(3, 3, 3, 3): n=160, m=212, t=45, freq=160, floor_avg=2, deficit=70/2
+(4, 4, 4, 4): n=484, m=644, t=93, freq=484, floor_avg=2, deficit=298/2
+(5, 5, 5, 5): n=1456, m=1940, t=189, freq=1456, floor_avg=2, deficit=1078/2
+(6, 6, 6, 6): n=4372, m=5828, t=381, freq=4372, floor_avg=2, deficit=3610/2
+Block-cut DP versus exhaustive subsets: 143 connected Atlas graphs of order 1-6
+(2, 2, 2, 1): independently verified t=21, n=43
+(2, 2, 2, 2): independently verified t=21, n=52
+(3, 3, 3, 3): independently verified t=45, n=160
+(4, 4, 4, 4): independently verified t=93, n=484
+(5, 5, 5, 5): independently verified t=189, n=1456

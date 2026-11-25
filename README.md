@@ -1,10 +1,10 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Eight conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. All eight were announced on 8 August 2005.
+Research preprints by Koyar Afrasyab, November 2026. Nine conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004.
 
 ## Status at a glance (2026-11-25)
 
-**Six candidate resolutions (priority unconfirmed); two prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
+**Six candidate resolutions (priority unconfirmed); three prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
 
 ## Candidate resolutions — no exact earlier resolution identified in bounded searches
 
@@ -21,10 +21,11 @@ Research preprints by Koyar Afrasyab, November 2026. Eight conjecture packages, 
 
 | Entry | Classification | Package |
 |---|---|---|
+| 76 | **Prior implication:** exact 43-vertex disproof and infinite family; Matoušek–Šámal's 2008 construction already implies an asymptotic refutation. | [Research package](conjectures/c76/) · [Paper](conjectures/c76/paper/paper.tex) |
 | 161 | **Not novel:** rediscovery of an implication of a stronger bound recorded in October 2005; also follows from an elementary degree bound. | [Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) |
 | 162 | **Prior-related:** closely related to a 2024 published theorem and its exchange argument. Priority not claimed; excluded from novel count. | [Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) |
 
-These two notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
+These three notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
 
 ## Reproducibility and status
 
