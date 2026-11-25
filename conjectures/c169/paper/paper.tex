@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{A Proof of Graffiti.pc Conjecture 169:\\ Spanning-Tree Leaves and Distance Parity}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We resolve Graffiti.pc Conjecture 169, announced on August 8, 2005, for all finite simple connected graphs of order at least two. Breadth-first spanning trees and a bipartition degree count give a stronger pointwise bound on the number of vertices at even distance from each root. The conjecture is sharp on stars. We explicitly discuss the singleton convention and give supplementary exact verification.
+\end{abstract}
+\section{Notation and statement}
+For a finite simple connected graph $G$ of order $n$, write $L_s(G)$ for the maximum number of degree-one vertices in any spanning tree, and define
+\[
+ e(v)=|\{u\in V(G):d_G(u,v)\equiv 0\pmod 2\}|.
+\]
+Distance zero is included. Excluding it for every root would not affect the range $\max e-\min e$. Conjecture 169 in \emph{Written on the Wall II} \cite{wow}, announced August 8, 2005 and listed as open in the catalogue updated November 5, 2026, asserts
+\[
+ L_s(G)\ge 1+\max_{v\in V(G)}e(v)-\min_{v\in V(G)}e(v).
+\]
+The catalogue status does not establish publication priority.
+\section{Proof}
+\begin{theorem}
+If $G$ has order $n\ge 2$, then for every vertex $v$,
+\[
+ |2e(v)-n|\le L_s(G)-1.
+\]
+\end{theorem}
+\begin{proof}
+Fix a root $v$. For every other vertex choose one neighbor whose distance from $v$ is one less, and retain these parent edges. The resulting graph $T$ is a spanning tree, since following parent edges reaches the root and there are exactly $n-1$ edges. Its bipartition $(A,B)$ consists of the vertices at even and odd distance from $v$, respectively, because every parent edge joins successive distance layers. Let $a=|A|=e(v)$ and $b=|B|=n-e(v)$. Write $\ell_A$ and $\ell_B$ for the degree-one vertex counts in the two parts.
+Since $n\ge2$, every vertex of $T$ has positive degree, and each nonleaf has degree at least two. Each edge is incident to exactly one vertex of $A$ and exactly one of $B$. Consequently
+\[
+ n-1=\sum_{x\in A}\deg_T(x)\ge 2a-\ell_A,\qquad
+ n-1=\sum_{x\in B}\deg_T(x)\ge 2b-\ell_B.
+\]
+Rearranging gives $a-b\le \ell_A-1$ and $b-a\le\ell_B-1$. Both $\ell_A$ and $\ell_B$ are at most the leaf number of $T$, which is at most $L_s(G)$. This proves the assertion.
+\end{proof}
+\begin{corollary}[Conjecture 169]
+For every finite simple connected graph of order at least two,
+\[
+ L_s(G)\ge 1+\max_v e(v)-\min_v e(v).
+\]
+\end{corollary}
+\begin{proof}
+The theorem places every $e(v)$ in the interval
+$[(n-L_s(G)+1)/2,(n+L_s(G)-1)/2]$.
+Its length is $L_s(G)-1$, proving the bound.
+\end{proof}
+\section{Sharpness and the singleton}
+For the star $K_{1,n-1}$ with $n\ge3$, the center realizes $e(v)=1$ and each leaf realizes $e(v)=n-1$. The graph is itself a tree with $n-1$ leaves, giving equality in the conjecture. Thus the additive constant cannot be increased for the stated class.
+The source gives no explicit order restriction. If a leaf is defined strictly as a degree-one vertex, $K_1$ has zero leaves and its distance-parity range is zero; it is a counterexample to the literal unrestricted statement. The theorem above proves that it is the only exception. If the singleton tree is conventionally assigned one leaf, the original statement holds without exception.
+\section{Verification and limitations}
+The companion programs use NetworkX 3.6.1 and all 995 nonisomorphic connected graphs of orders two through seven in the Graph Atlas. The primary calculation uses the connected domination identity $L_s=n-\gamma_c$ for $n\ge3$, explicit smaller cases, and breadth-first tree witnesses. The identity follows because the internal vertices of any spanning tree form a connected dominating set, while a spanning tree of a connected dominating set extends by attaching all other vertices as leaves. The independent implementation enumerates spanning trees directly using union-find and computes distances by Floyd--Warshall. The expected equality count is 85, and no violations are expected on this domain. The singleton is checked separately; the primary verifier also checks 98 star examples. These finite checks supplement the analytic proof.
+ 
+This AI-assisted research preprint is supplied for author review. No external peer review, formal proof-assistant certification, or exclusive publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 169, printed page 97 of 316, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\end{thebibliography}
+\end{document}

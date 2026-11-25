@@ -1,0 +1,2 @@
+C169: 995 connected graphs (orders 2-7), 85 equality cases; 0 violations
+Singleton convention checked; 98 sharp star examples checked
