@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A Subcubic Tree Counterexample Family to Graffiti.pc Conjecture 138}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We disprove Graffiti.pc Conjecture 138, dated July 12, 2005, using an explicit tree of order 19 with a unique maximum independent set. A family of double-ended trees gives an unbounded additive violation, even when distance is measured in the square graph. For that metric, the best universal multiplicative constant is two, including on trees with a unique maximum independent set. The argument is analytic; two exact computational implementations verify representative examples.
+\end{abstract}
+\section{Statement}
+For a connected simple graph $G$, let $p(G)$ be the maximum number of vertices in an induced path, $G^2$ its square, and $M(G^2)$ the set of vertices of maximum degree in the square. Let $u(G)$ be the indicator that the maximum independent set is unique. Conjecture 138 in \emph{Written on the Wall II} \cite{wow} asserts
+\[
+p(G)\ge (2+u(G))\operatorname{dist}_{\min}(M(G^2)).
+\]
+The minimum is taken over distinct vertices of the designated set. Our witnesses have exactly two such vertices and violate the claim for either original-graph or square-graph distances. The catalogue lists the conjecture as open in its November 2026 snapshot; this does not by itself establish priority.
+
+\section{Construction and exact invariants}
+\begin{theorem}
+For each integer $k\ge7$ there is a connected tree $T_k$ of order $2k+5$ and maximum degree three with a unique maximum independent set, such that
+\[
+p(T_k)=2k+3,\quad
+M(T_k^2)=\{x_1,x_{2k-1}\},\quad
+d_{T_k^2}(x_1,x_{2k-1})=k-1.
+\]
+Consequently the conjectured bound fails by $k-6$ when distances are measured in the square.
+\end{theorem}
+\begin{proof}
+Take the path $x_0,x_1,\ldots,x_{2k}$, and attach two new pendant vertices to each of $x_0$ and $x_{2k}$. These four leaves are distinct. The resulting graph is a tree with $2k+5$ vertices and maximum degree three. Its diameter is $2k+2$ edges, attained between leaves at opposite ends. Every path in a tree is induced, hence $p(T_k)=2k+3$.
+
+Any maximum independent set must exclude $x_0$: otherwise replacing it with its two pendant neighbors strictly increases cardinality. The same argument excludes $x_{2k}$. All four leaves must then belong to every maximum independent set, since none can have a neighbor in it. On the remaining path $x_1,\ldots,x_{2k-1}$, an independent set of size $j$ has indices separated by at least two. Thus $j\le k$, and equality forces the indices $1,3,\ldots,2k-1$, the only way to fit $k$ indices in the interval. Those indices are independent, so the unique maximum independent set of $T_k$ consists of them and the four leaves, and has size $k+4$.
+
+In $T_k^2$ each pendant vertex has degree three; each of $x_0,x_{2k}$ has degree four; each of $x_1,x_{2k-1}$ has degree five; and every other path vertex has degree four. In particular the designated set has exactly two members. Their distance in $T_k$ is $2k-2$. In any graph the distance in the square between distinct vertices at distance $d$ in the original graph is $\lceil d/2\rceil$: a shortest original path gives the upper bound by grouping edges in pairs, and a square path of length $r$ gives an original walk of length at most $2r$, proving the lower bound. Thus the square distance here is $k-1$.
+
+The conjectured right hand side in the square metric is $3(k-1)$. Subtracting $p(T_k)=2k+3$ gives $k-6>0$. In the original metric the right hand side is even larger. This proves the claimed disproof.
+\end{proof}
+
+For $k=7$ the order is $19$, the independence number is $11$, and the maximum induced path has $17$ vertices; the square distance is $6$, so the proposed inequality is $17\ge18$. The original distance is $12$, giving an even stronger violation. No minimal-order claim is made.
+
+\section{Sharp coefficient for the square metric}
+\begin{theorem}
+For every connected graph with at least two designated vertices in $M(G^2)$,
+\[
+p(G)\ge 2\operatorname{dist}_{\min,G^2}(M(G^2)).
+\]
+The coefficient $2$ cannot be improved, even when restricted to subcubic trees with a unique maximum independent set.
+\end{theorem}
+\begin{proof}
+For two distinct designated vertices at original distance $d$, any shortest path between them is induced and has $d+1$ vertices. Since $d+1\ge2\lceil d/2\rceil$, the first inequality follows, including for a pair attaining the minimum square distance. On the trees of the preceding theorem the ratio is $(2k+3)/(k-1)=2+5/(k-1)$, tending to $2$ from above. Thus every constant strictly greater than two fails for sufficiently large $k$.
+\end{proof}
+The lower bound itself is an elementary shortest-path observation; the family demonstrates its sharpness on the restricted class relevant to the conjecture.
+
+\section{Prior art and reproducibility}
+The double-ended tree gadget is classical; no priority for the gadget itself is claimed. Targeted searches of the exact conjecture, its graph-square expression and public research repositories did not identify an earlier disproof of this exact catalogue entry. A public computational project recovered entries 136--138 and reported tests, not a resolution of entry 138 \cite{trial}. This is a bounded search, not proof of novelty.
+
+The primary verifier uses NetworkX 3.6.1, graph-square distances and exact tree dynamic programming for independence size and multiplicity. The separate implementation uses only Python's standard library, adjacency sets, breadth-first distances and memoized include/exclude subset recursion to obtain the independence size and multiplicity. Both independently verified six examples with $k=7,8,10,20,50,100$, through order 205. The universal argument above does not depend on those computations.
+
+AI-assisted research preprint for author review. Independent peer review, proof-assistant certification and publication priority are not established.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 138, July 12, 2005, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{trial} Kuberwastaken, \emph{c5-k4}, public computational research repository, \url{https://github.com/Kuberwastaken/c5-k4}.
+\end{thebibliography}
+\end{document}

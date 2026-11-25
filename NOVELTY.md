@@ -1,10 +1,11 @@
 # Novelty and correctness screening — 2026-11-25
 
-Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all nine open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
+Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all ten open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
 
 | Entry | Classification | Evidence |
 |---|---|---|
 | 76 | Prior implication / explicit counterexample; excluded from novel count | 43-vertex bipartite cactus, exact t=21 versus 43/2, and unbounded family. Matoušek–Šámal (2008), Lemma 2.2 specialized to C4, already implies an asymptotic disproof via a related bridge construction; no prior priority asserted. |
+| 138 | Candidate disproof; priority unconfirmed | Exact catalogue statement and page image checked; 19-vertex witness and infinite subcubic tree family, sharp coefficient for square distance. Classical gadget acknowledged. No earlier exact disproof identified in bounded searches. |
 | 157 | Candidate resolution; priority unconfirmed | Exact statement checked on printed p. 90; no exact prior proof located. Classical BFS ingredients. |
 | 161 | Rediscovery / prior implication; excluded from novel count | Entry 159 October 2005 stronger bound, also elementary maximum-degree bound; see c161 source audit. |
 | 162 | Prior-related elementary derivation; excluded from established novel count | De Caria Di Fonzo 2024, Prop. 3.1 and exchange argument; see c162 source audit. |
@@ -16,7 +17,7 @@ Searches covered exact conjecture numbers and statements, nearby invariant formu
 
 ## Counting policy
 
-Six candidates (157, 166, 169, 171, 177, 179); three excluded notes (76, 161, 162). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
+Seven candidates (138, 157, 166, 169, 171, 177, 179); three excluded notes (76, 161, 162). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
 
 ## Sources
 

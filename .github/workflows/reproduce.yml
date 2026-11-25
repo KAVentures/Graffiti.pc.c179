@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        conjecture: [c76, c157, c161, c162, c166, c169, c171, c177, c179]
+        conjecture: [c76, c138, c157, c161, c162, c166, c169, c171, c177, c179]
     runs-on: ubuntu-24.04
     defaults:
       run:
@@ -30,7 +30,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        conjecture: [c76, c157, c161, c162, c166, c169, c171, c177, c179]
+        conjecture: [c76, c138, c157, c161, c162, c166, c169, c171, c177, c179]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4

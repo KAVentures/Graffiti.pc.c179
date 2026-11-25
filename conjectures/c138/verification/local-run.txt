@@ -1,0 +1,14 @@
+Python 3.13.5; NetworkX 3.6.1
+Primary and independent execution:
+k=7: n=19, alpha=11, MIS count=1, path=17, square distance=6, deficit=1
+k=8: n=21, alpha=12, MIS count=1, path=19, square distance=7, deficit=2
+k=10: n=25, alpha=14, MIS count=1, path=23, square distance=9, deficit=4
+k=20: n=45, alpha=24, MIS count=1, path=43, square distance=19, deficit=14
+k=50: n=105, alpha=54, MIS count=1, path=103, square distance=49, deficit=44
+k=100: n=205, alpha=104, MIS count=1, path=203, square distance=99, deficit=94
+k=7: independently verified 17 < 18
+k=8: independently verified 19 < 21
+k=10: independently verified 23 < 27
+k=20: independently verified 43 < 57
+k=50: independently verified 103 < 147
+k=100: independently verified 203 < 297

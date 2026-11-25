@@ -1,15 +1,16 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Nine conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004.
+Research preprints by Koyar Afrasyab, November 2026. Ten conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 and entry 138 to 12 July 2005.
 
 ## Status at a glance (2026-11-25)
 
-**Six candidate resolutions (priority unconfirmed); three prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
+**Seven candidate resolutions (priority unconfirmed); three prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
 
 ## Candidate resolutions — no exact earlier resolution identified in bounded searches
 
 | Entry | Result | Package |
 |---|---|---|
+| 138 | Disproof: infinite family of subcubic trees with unique maximum independent sets; sharp coefficient for square distance | [Research package](conjectures/c138/) · [Paper](conjectures/c138/paper/paper.tex) |
 | 157 | Proof and strengthening: radial circles | [Research package](conjectures/c157/) · [Paper](conjectures/c157/paper/paper.tex) |
 | 166 | Disproof: 22-vertex counterexample; Foster's earlier diamond-chain construction acknowledged | [Research package](conjectures/c166/) · [Paper](conjectures/c166/paper/paper.tex) |
 | 169 | Proof for order at least two; singleton convention documented | [Research package](conjectures/c169/) · [Paper](conjectures/c169/paper/paper.tex) |
