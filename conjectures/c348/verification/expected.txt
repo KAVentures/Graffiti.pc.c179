@@ -1,0 +1,1 @@
+C348: 2286 nonisomorphic trees (orders 3–13); 103 strengthened equality cases; 0 violations

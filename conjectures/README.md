@@ -8,7 +8,7 @@
 - Spanning-tree leaves and related invariants: [#157](c157/), [#161](c161/), [#162](c162/), [#166](c166/), [#169](c169/), [#171](c171/), [#177](c177/), [#179](c179/).
 - Hamiltonian paths and matchings: [#208](c208/).
 - Total domination in general graphs: [#268](c268/), [#271](c271/).
-- Total domination in trees: [#361](c361/), [#362](c362/), [#365](c365/).
+- Total domination in trees: [#348](c348/), [#361](c361/), [#362](c362/), [#365](c365/).
 
 ## By number
 
@@ -28,6 +28,7 @@
 | [208](c208/) | Proof | Candidate; priority unconfirmed | Catalogue: indexed text checked; image unavailable | [TeX](c208/paper/paper.tex) |
 | [268](c268/) | Proof | Prior-related; excluded from novel count | Catalogue: indexed text checked; image unavailable | [TeX](c268/paper/paper.tex) |
 | [271](c271/) | Proof | Prior-related; excluded from novel count | Catalogue: indexed text checked; image unavailable | [TeX](c271/paper/paper.tex) |
+| [348](c348/) | Proof + strengthening | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c348/paper/paper.tex) |
 | [361](c361/) | Proof + characterization | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c361/paper/paper.tex) |
 | [362](c362/) | Proof + sharp strengthening | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c362/paper/paper.tex) |
 | [365](c365/) | Proof + sharp strengthening | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c365/paper/paper.tex) |

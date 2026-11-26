@@ -12,7 +12,7 @@ Three independent questions must be kept separate:
 |---|---|
 | Catalogue: page image checked | The source audit records visual inspection of the original catalogue entry as well as its statement. Historical snapshot only. |
 | Catalogue: indexed text checked; image unavailable | Indexed primary-source text was examined; direct page image retrieval failed or was not confirmed. Historical snapshot only. |
-| Archived open marker only; current primary entry unverified | Statement and open marker were recovered from a secondary archive. The latest official entry could not be independently retrieved. These entries are #361, #362 and #365. |
+| Archived open marker only; current primary entry unverified | Statement and open marker were recovered from a secondary archive. The latest official entry could not be independently retrieved. These entries are #348, #361, #362 and #365. |
 
 | Priority class | Meaning |
 |---|---|

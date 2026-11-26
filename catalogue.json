@@ -139,6 +139,15 @@
       "priority_certified": false
     },
     {
+      "id": 348,
+      "topic": "Total domination in trees / degree-two neighborhoods",
+      "result": "Proof + strengthening",
+      "priority": "candidate",
+      "source": "archive_only",
+      "summary": "Component-sensitive incidence counting improves the coefficient from 2/3 to 3/4.",
+      "priority_certified": false
+    },
+    {
       "id": 361,
       "topic": "Total domination in trees / isolated supports",
       "result": "Proof + characterization",
