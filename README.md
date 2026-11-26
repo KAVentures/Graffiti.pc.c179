@@ -1,10 +1,10 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Fourteen conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 entries 137 and 138 to 12 July 2005, entry 208 to 12 January 2006, and entries 268 and 271 to 23 February 2007.
+Research preprints by Koyar Afrasyab, November 2026. Fifteen conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004, entries 137 and 138 to 12 July 2005, entry 208 to 12 January 2006, entries 268 and 271 to 23 February 2007, and entry 361 to 18 February 2009.
 
 ## Status at a glance (2026-11-26)
 
-**Eight candidate resolutions (priority unconfirmed); six prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
+**Nine candidate resolutions (priority unconfirmed); six prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue and archived conjecture data label the entries open (the latest primary-source status of 361 could not be independently retrieved), but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
 
 ## Candidate resolutions — no exact earlier resolution identified in bounded searches
 
@@ -19,6 +19,8 @@ Research preprints by Koyar Afrasyab, November 2026. Fourteen conjecture package
 | 179 | Proof of both degree interpretations and two separate strengthenings | [Research package](conjectures/c179/) · [Paper](conjectures/c179/paper/paper.tex) |
 
 | 208 | Proof: sharp matching-number and missing-edge threshold for traceability | [Research package](conjectures/c208/) · [Paper](conjectures/c208/paper/paper.tex) |
+
+| 361 | Proof: total domination, isolated support vertices and tree centers; characterizes the minimal excess case | [Research package](conjectures/c361/) · [Paper](conjectures/c361/paper/paper.tex) |
 
 ## Prior-related notes — NOT counted as novel resolutions
 
