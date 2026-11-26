@@ -182,6 +182,24 @@
       "source": "archive_only",
       "summary": "Component-sensitive counting; optimal coefficient.",
       "priority_certified": false
+    },
+    {
+      "id": 376,
+      "topic": "Total domination in trees / isolated maximum-degree vertices and distance medians",
+      "result": "Proof + structural refinement",
+      "priority": "candidate",
+      "source": "archive_only",
+      "summary": "Isolated maximum-degree count plus distance medians; exceptional excess-one case classified.",
+      "priority_certified": false
+    },
+    {
+      "id": 377,
+      "topic": "Total domination in trees / isolated maximum-degree vertices and upper median degree",
+      "result": "Proof + structural refinement",
+      "priority": "candidate",
+      "source": "archive_only",
+      "summary": "Isolated maximum-degree count plus upper median degree; exceptional excess-one case classified.",
+      "priority_certified": false
     }
   ]
 }

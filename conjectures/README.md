@@ -8,7 +8,7 @@
 - Spanning-tree leaves and related invariants: [#157](c157/), [#161](c161/), [#162](c162/), [#166](c166/), [#169](c169/), [#171](c171/), [#177](c177/), [#179](c179/).
 - Hamiltonian paths and matchings: [#208](c208/).
 - Total domination in general graphs: [#268](c268/), [#271](c271/).
-- Total domination in trees: [#348](c348/), [#351](c351/), [#361](c361/), [#362](c362/), [#365](c365/).
+- Total domination in trees: [#348](c348/), [#351](c351/), [#361](c361/), [#362](c362/), [#365](c365/), [#376](c376/), [#377](c377/).
 
 ## By number
 
@@ -33,5 +33,7 @@
 | [361](c361/) | Proof + characterization | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c361/paper/paper.tex) |
 | [362](c362/) | Proof + sharp strengthening | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c362/paper/paper.tex) |
 | [365](c365/) | Proof + sharp strengthening | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c365/paper/paper.tex) |
+| [376](c376/) | Proof + structural refinement | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c376/paper/paper.tex) |
+| [377](c377/) | Proof + structural refinement | Candidate; priority unconfirmed | Archived open marker only; current primary entry unverified | [TeX](c377/paper/paper.tex) |
 
 The original catalogue is *Written on the Wall II*, not the separately numbered WOW-I conjectures. Every link opens a self-contained research package.

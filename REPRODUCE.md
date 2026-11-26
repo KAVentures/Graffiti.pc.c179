@@ -14,7 +14,7 @@ conjectures/cNNN/
   verification/local-run.txt   # where an execution log was retained
 ```
 
-All 19 packages use the same required paths. Run commands from a chosen numbered directory (for example c362). Root-level paper, verification, requirements and SOURCES files are legacy copies of #179; do not use them for other conjectures.
+All 21 packages use the same required paths. Run commands from a chosen numbered directory (for example c362). Root-level paper, verification, requirements and SOURCES files are legacy copies of #179; do not use them for other conjectures.
 
 ## Run one package
 

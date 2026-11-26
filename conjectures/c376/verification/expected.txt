@@ -1,0 +1,1 @@
+C376: 985 trees (orders 3–12); 70 equalities; 35 excess-one cases; no violations

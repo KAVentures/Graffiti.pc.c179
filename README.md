@@ -2,7 +2,7 @@
 
 An AI-assisted research collection of proofs, counterexamples and sharpened bounds for numbered conjectures from *Written on the Wall II* (Graffiti.pc). Manuscripts are drafts for human author and referee review, not peer-reviewed publications.
 
-**19 research packages:** 8 candidate resolutions with primary-catalogue evidence, 5 candidate resolutions with archived-only open evidence, and 6 prior-related notes. **Zero independently certified first resolutions.** All counts distinguish mathematical resolution, catalogue status and publication priority.
+**21 research packages:** 8 candidate resolutions with primary-catalogue evidence, 7 candidate resolutions with archived-only open evidence, and 6 prior-related notes. **Zero independently certified first resolutions.** All counts distinguish mathematical resolution, catalogue status and publication priority.
 
 ## Start here
 
@@ -39,6 +39,8 @@ These proofs and strengthenings are retained, but the latest official primary-so
 | **361** | Total domination in trees / isolated supports — Proof + characterization. Minimal-excess structural characterization. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c361/) · [Paper](conjectures/c361/paper/paper.tex) · [Sources](conjectures/c361/SOURCES.md) |
 | **362** | Total domination in trees / radius and diameter — Proof + sharp strengthening. Radius-two ball covering; optimal diameter and radius coefficients. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c362/) · [Paper](conjectures/c362/paper/paper.tex) · [Sources](conjectures/c362/SOURCES.md) |
 | **365** | Total domination in trees / degree-two edges — Proof + sharp strengthening. Component-sensitive counting; optimal coefficient. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c365/) · [Paper](conjectures/c365/paper/paper.tex) · [Sources](conjectures/c365/SOURCES.md) |
+| **376** | Total domination in trees / distance medians — Proof + structural refinement. Excess-one case classified; 2016 prior-art lead unresolved. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c376/) · [Paper](conjectures/c376/paper/paper.tex) · [Sources](conjectures/c376/SOURCES.md) |
+| **377** | Total domination in trees / upper median degree — Proof + structural refinement. Excess-one case classified; 2016 prior-art lead unresolved. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c377/) · [Paper](conjectures/c377/paper/paper.tex) · [Sources](conjectures/c377/SOURCES.md) |
 
 ## Prior-related notes — excluded from candidate novelty count
 
