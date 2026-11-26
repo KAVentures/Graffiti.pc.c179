@@ -1,5 +1,9 @@
 # Graffiti.pc Conjecture 271 — Total Domination and Distance Between Maximum-Degree Vertices
 
+> **Research status:** Prior-related; excluded from novel count. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 **Prior-related documented resolution; priority unconfirmed. Excluded from novel count.** The catalogue lists this entry open, announced February 23, 2007. The proof uses the published total-domination spanning-tree diameter estimate (2007) with an additional small-total-domination argument. No prior exact numbered resolution identified in the bounded literature search; this does not certify novelty.
 
 ## Statement

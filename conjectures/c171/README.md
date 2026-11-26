@@ -1,5 +1,9 @@
 # Conjecture 171 — Infinite tree counterexamples
 
+> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 Source: Ermelinda DeLaViña, *Written on the Wall II*, entry 171, announced 2005-08-08; November 2026 snapshot, listed open. See [source audit](SOURCES.md).
 
 For a finite simple connected graph of order at least two, let L_s be its maximum spanning-tree leaf count, E the maximum number of vertices at even distance from any vertex, and D the average nonzero distance between peripheral vertices (vertices of maximum eccentricity). The conjecture asserts L_s >= (E-1)/D.

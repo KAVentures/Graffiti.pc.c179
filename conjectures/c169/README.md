@@ -1,5 +1,9 @@
 # Graffiti.pc Conjecture 169
 
+> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: page image checked. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 **A Proof of Graffiti.pc Conjecture 169: Spanning-Tree Leaves and Distance Parity** — Koyar Afrasyab, November 2026.
 
 For a connected simple graph of order at least two, let e(v) count vertices at even distance from v and L_s be the maximum spanning-tree leaf number. We prove the stronger pointwise inequality

@@ -1,6 +1,6 @@
 # Novelty and correctness screening — 2026-11-26
 
-Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue and archived data mark the sixteen entries open (latest primary-source status of 361 and 365 not independently retrieved) but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
+This ledger consolidates the recorded per-package bounded searches, not an exhaustive fresh literature review. Eight candidates have primary-catalogue evidence, three (#361, #362, #365) rely on archived open markers, and six are prior-related notes. See [STATUS.md](STATUS.md) for evidence levels and [catalogue.json](catalogue.json) for the machine-readable classifications.
 
 | Entry | Classification | Evidence |
 |---|---|---|
@@ -16,19 +16,19 @@ Searches covered exact conjecture numbers and statements, nearby invariant formu
 | 177 | Candidate resolution; priority unconfirmed | Catalogue and REGS statement confirmed; DeLaViña–Waller 2008 Theorem 3 proves only the weaker additive 1 bound. New constructive argument proves the degree term and strengthens it to any independent set. No earlier full proof identified. |
 | 179 | Candidate resolution of both readings; priority unconfirmed | Catalogue p. 104 uses delta; West REGS uses Delta. New proof gives Delta+i+lambda and the prior paper's separate additive minimum-degree refinement. Kuberwastaken/c5-k4 reports incomplete trial, not proof. |
 | 208 | Candidate resolution; priority unconfirmed | Catalogue statement and Stong's 2010 comment checked in indexed text; image fetch failed. Proof uses Chvatal's degree criterion plus explicit matching arguments for the small exceptional orders; sharp threshold. No earlier exact resolution found in bounded searches. |
-
 | 268 | Prior-related resolution; excluded from novel count | Catalogue open on 2026-11-06. DeLaVina et al. (2007), Lemmas 2–3, equation (5) and Theorem 3 already provide the spanning-tree machinery. Additional center-pair argument gives the exact floor bound. No earlier exact resolution located in bounded searches. |
 | 271 | Prior-related resolution; excluded from novel count | Catalogue open on 2026-11-06. Same published diameter bound, retaining the component count for k=3, and a dominating-edge degree argument for k=2. No earlier exact resolution located in bounded searches. |
-
 | 361 | Candidate resolution; priority unconfirmed | Archived dataset gives exact statement, date and open marker. August 2026 research report records finite screening of 361, not a proof. Related DeLaViña et al. paper gives different bounds. No earlier exact proof identified in bounded searches. Current catalogue entry image unavailable (404). Elementary structural proof and exhaustive tree check. |
-
+| 362 | Candidate resolution and sharp strengthening; archived-only open status; priority unconfirmed | Archived statement and O marker checked. August 2026 public report records screening without resolution. Original entry unavailable; no earlier exact proof or stronger bound located in bounded searches. Radius-two covering argument and infinite sharp family; fresh exact check. |
 | 365 | Candidate resolution and sharp strengthening; priority unconfirmed | Archived statement and open marker checked. August 24, 2026 report records screening of 365 without a resolution; related report on 364 says 365 survives. No earlier exact proof or sharp strengthening located. Original catalogue page unavailable. Exact block-counting proof and infinite sharp family; two local exhaustive checkers agree. |
 
 ## Counting policy
 
-Ten candidates (138, 157, 166, 169, 171, 177, 179, 208, 361, 365); six excluded notes (76, 137, 161, 162, 268, 271). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
+Eleven candidates (138, 157, 166, 169, 171, 177, 179, 208, 361, 362, 365), of which 361, 362 and 365 have archived-only open-status evidence; six excluded notes (76, 137, 161, 162, 268, 271). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
 
 ## Sources
+
+- Archived entry 362: https://github.com/Kuberwastaken/c5-k4/blob/e2cee93231eefb91c41e35450f7eeb19fd9c8c75/data/wowii-conjectures.json ; August 2026 screening report: https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four . Current official entry unverified. See [c362 source audit](conjectures/c362/SOURCES.md).
 
 - Archived entry 365: https://github.com/Kuberwastaken/c5-k4/blob/main/data/wowii-conjectures.json ; August 24, 2026 screening report: https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four ; related 364 report: https://ai-village-news-cb5c4b.gitlab.io/articles/s1765.html . Related tree bounds in https://www.uhd.edu/documents/academics/sciences/boca2009-dlpw.pdf and https://math1um.github.io/Research/r08.pdf . Neither inspected result gives the exact 365 inequality.
 

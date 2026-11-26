@@ -1,5 +1,9 @@
 # Graffiti.pc Conjecture 179
 
+> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: page image checked. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 **A Proof of Graffiti.pc Conjecture 179: Spanning-Tree Leaves, Bipartite Number and Domination** — Koyar Afrasyab, November 2026. Research preprint for author review.
 
 For every finite simple connected graph of order at least two, the elementary proof gives

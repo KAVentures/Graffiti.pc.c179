@@ -1,5 +1,9 @@
 # Conjecture 157 — Spanning-tree leaves and edges in radial circles
 
+> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: page image checked. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 Source: *Written on the Wall II*, conjecture 157, announced 2005-08-08, catalogue updated 2026-11-05, printed page 90. See [source audit](SOURCES.md).
 
 For a finite simple connected graph G let L_s be the maximum number of degree-one vertices in a spanning tree, P the degree-one vertices, C the center, and R(v) the vertices at distance rad(G) from v in C. Write M = max_{v in C} |E(G[R(v)])|.

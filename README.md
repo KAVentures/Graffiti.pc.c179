@@ -1,49 +1,58 @@
-# Graffiti.pc conjectures — proofs and reproducibility
+# Graffiti.pc — conjecture resolutions and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Sixteen conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004, entries 137 and 138 to 12 July 2005, entry 208 to 12 January 2006, entries 268 and 271 to 23 February 2007, and entries 361 and 365 to 18 February 2009.
+An AI-assisted research collection of proofs, counterexamples and sharpened bounds for numbered conjectures from *Written on the Wall II* (Graffiti.pc). Manuscripts are drafts for human author and referee review, not peer-reviewed publications.
 
-## Status at a glance (2026-11-26)
+**17 research packages:** 8 candidate resolutions with primary-catalogue evidence, 3 candidate resolutions with archived-only open evidence, and 6 prior-related notes. **Zero independently certified first resolutions.** All counts distinguish mathematical resolution, catalogue status and publication priority.
 
-**Ten candidate resolutions (priority unconfirmed); six prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue and archived conjecture data label the entries open (the latest primary-source status of 361 and 365 could not be independently retrieved), but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
+## Start here
 
-## Candidate resolutions — no exact earlier resolution identified in bounded searches
+- [Browse by number and subject](conjectures/README.md) — compact alphabetical subject index and numerical directory.
+- [Status and evidence policy](STATUS.md) — what each label means, including the distinction between an open catalogue and genuinely novel mathematics.
+- [Novelty and source audit](NOVELTY.md) — detailed prior-art notes and limitations for every entry.
+- [Reproduce the results](REPRODUCE.md) — commands, package structure, and CI artifacts.
+- [Cross-conjecture audit](audit/README.md) — additional checks of selected inequalities.
+- [Machine-readable catalogue](catalogue.json) — metadata for all packages.
 
-| Entry | Result | Package |
-|---|---|---|
-| 138 | Disproof: infinite family of subcubic trees with unique maximum independent sets; sharp coefficient for square distance | [Research package](conjectures/c138/) · [Paper](conjectures/c138/paper/paper.tex) |
-| 157 | Proof and strengthening: radial circles | [Research package](conjectures/c157/) · [Paper](conjectures/c157/paper/paper.tex) |
-| 166 | Disproof: 22-vertex counterexample; Foster's earlier diamond-chain construction acknowledged | [Research package](conjectures/c166/) · [Paper](conjectures/c166/paper/paper.tex) |
-| 169 | Proof for order at least two; singleton convention documented | [Research package](conjectures/c169/) · [Paper](conjectures/c169/paper/paper.tex) |
-| 171 | Disproof: infinite family of trees | [Research package](conjectures/c171/) · [Paper](conjectures/c171/paper/paper.tex) |
-| 177 | Proof and strengthening: second-smallest degree | [Research package](conjectures/c177/) · [Paper](conjectures/c177/paper/paper.tex) |
-| 179 | Proof of both degree interpretations and two separate strengthenings | [Research package](conjectures/c179/) · [Paper](conjectures/c179/paper/paper.tex) |
+## Candidate resolutions — primary catalogue checked
 
-| 208 | Proof: sharp matching-number and missing-edge threshold for traceability | [Research package](conjectures/c208/) · [Paper](conjectures/c208/paper/paper.tex) |
+No earlier exact resolution was identified in the recorded bounded searches. Priority remains unconfirmed. Indexed text and visually inspected pages are distinguished.
 
-| 361 | Proof: total domination, isolated support vertices and tree centers; characterizes the minimal excess case | [Research package](conjectures/c361/) · [Paper](conjectures/c361/paper/paper.tex) |
+| Entry | Topic and result | Open-status evidence | Links |
+|---|---|---|---|
+| **138** | Independent sets / distance — Disproof. Infinite subcubic tree family; sharp square-distance coefficient. | Catalogue: page image checked | [Overview](conjectures/c138/) · [Paper](conjectures/c138/paper/paper.tex) · [Sources](conjectures/c138/SOURCES.md) |
+| **157** | Spanning-tree leaves / radial circles — Proof + strengthening. Breadth-first spanning tree; sharp integer refinement. | Catalogue: page image checked | [Overview](conjectures/c157/) · [Paper](conjectures/c157/paper/paper.tex) · [Sources](conjectures/c157/SOURCES.md) |
+| **166** | Spanning-tree leaves / degree neighborhoods — Disproof. 22-vertex witness; earlier diamond-chain gadget credited. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c166/) · [Paper](conjectures/c166/paper/paper.tex) · [Sources](conjectures/c166/SOURCES.md) |
+| **169** | Spanning-tree leaves / even distances — Proof (n ≥ 2); K1 exception. Singleton convention explicitly documented. | Catalogue: page image checked | [Overview](conjectures/c169/) · [Paper](conjectures/c169/paper/paper.tex) · [Sources](conjectures/c169/SOURCES.md) |
+| **171** | Spanning-tree leaves / boundary distances — Disproof. Infinite tree counterexample family. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c171/) · [Paper](conjectures/c171/paper/paper.tex) · [Sources](conjectures/c171/SOURCES.md) |
+| **177** | Spanning-tree leaves / induced bipartite subgraphs — Proof + strengthening. Second-smallest degree; prior weaker theorem credited. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c177/) · [Paper](conjectures/c177/paper/paper.tex) · [Sources](conjectures/c177/SOURCES.md) |
+| **179** | Spanning-tree leaves / domination — Proof + strengthening. Both minimum- and maximum-degree interpretations. | Catalogue: page image checked | [Overview](conjectures/c179/) · [Paper](conjectures/c179/paper/paper.tex) · [Sources](conjectures/c179/SOURCES.md) |
+| **208** | Hamiltonian paths / matchings — Proof. Sharp matching and missing-edge threshold. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c208/) · [Paper](conjectures/c208/paper/paper.tex) · [Sources](conjectures/c208/SOURCES.md) |
 
-| 365 | Proof and sharp strengthening: isolated support vertices and edges between degree-two vertices | [Research package](conjectures/c365/) · [Paper](conjectures/c365/paper/paper.tex) |
+## Candidate resolutions — archived open marker only
 
-## Prior-related notes — NOT counted as novel resolutions
+These proofs and strengthenings are retained, but the latest official primary-source entry could not be independently retrieved. They must not be presented as confirmed-open or independently certified first resolutions.
 
-| Entry | Classification | Package |
-|---|---|---|
-| 76 | **Prior implication:** exact 43-vertex disproof and infinite family; Matoušek–Šámal's 2008 construction already implies an asymptotic refutation. | [Research package](conjectures/c76/) · [Paper](conjectures/c76/paper/paper.tex) |
-| 137 | **Prior implication:** proof by Seinsche's 1974 cograph characterization; literal singleton exception and sharp bound documented. | [Research package](conjectures/c137/) · [Paper](conjectures/c137/paper/paper.tex) |
-| 161 | **Not novel:** rediscovery of an implication of a stronger bound recorded in October 2005; also follows from an elementary degree bound. | [Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) |
-| 162 | **Prior-related:** closely related to a 2024 published theorem and its exchange argument. Priority not claimed; excluded from novel count. | [Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) |
+| Entry | Topic and result | Open-status evidence | Links |
+|---|---|---|---|
+| **361** | Total domination in trees / isolated supports — Proof + characterization. Minimal-excess structural characterization. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c361/) · [Paper](conjectures/c361/paper/paper.tex) · [Sources](conjectures/c361/SOURCES.md) |
+| **362** | Total domination in trees / radius and diameter — Proof + sharp strengthening. Radius-two ball covering; optimal diameter and radius coefficients. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c362/) · [Paper](conjectures/c362/paper/paper.tex) · [Sources](conjectures/c362/SOURCES.md) |
+| **365** | Total domination in trees / degree-two edges — Proof + sharp strengthening. Component-sensitive counting; optimal coefficient. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c365/) · [Paper](conjectures/c365/paper/paper.tex) · [Sources](conjectures/c365/SOURCES.md) |
 
-| 268 | **Prior-related:** total domination versus average center distance; proof uses a classical spanning-tree bound and its equality case. | [Research package](conjectures/c268/) · [Paper](conjectures/c268/paper/paper.tex) |
-| 271 | **Prior-related:** total domination versus maximum-degree vertex distance; diameter bound and a separate dominating-edge argument. | [Research package](conjectures/c271/) · [Paper](conjectures/c271/paper/paper.tex) |
+## Prior-related notes — excluded from candidate novelty count
 
-These six notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
+These entries remain available to document proofs, disproofs or implications of previously published results. The catalogue's open label may be stale.
 
-## Reproducibility and status
+| Entry | Topic and result | Open-status evidence | Links |
+|---|---|---|---|
+| **76** | Induced trees / triangles — Disproof. 43-vertex witness and unbounded family; earlier Matoušek–Šámal theorem implies refutation. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c76/) · [Paper](conjectures/c76/paper/paper.tex) · [Sources](conjectures/c76/SOURCES.md) |
+| **137** | Induced paths / path covers — Proof (n ≥ 2); K1 exception. Seinsche’s cograph characterization. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c137/) · [Paper](conjectures/c137/paper/paper.tex) · [Sources](conjectures/c137/SOURCES.md) |
+| **161** | Spanning-tree leaves / local independence — Proof. Earlier stronger bound and elementary degree bound. | Catalogue: page image checked | [Overview](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) · [Sources](conjectures/c161/SOURCES.md) |
+| **162** | Spanning-tree leaves / support vertices — Proof. Related 2024 published exchange argument. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) · [Sources](conjectures/c162/SOURCES.md) |
+| **268** | Total domination / center distances — Proof. 2007 diameter estimate and additional center-pair argument. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c268/) · [Paper](conjectures/c268/paper/paper.tex) · [Sources](conjectures/c268/SOURCES.md) |
+| **271** | Total domination / maximum-degree distances — Proof. 2007 diameter estimate and dominating-edge argument. | Catalogue: indexed text checked; image unavailable | [Overview](conjectures/c271/) · [Paper](conjectures/c271/paper/paper.tex) · [Sources](conjectures/c271/SOURCES.md) |
 
-Each package uses Python 3.12, pinned NetworkX and TeX Live. See its README for instructions. The matrix GitHub Actions workflow verifies and builds each paper, uploading separate PDF artifacts when the jobs run successfully. Original root-level c179 files remain as compatibility copies; the workflow checks that these match the canonical package. The former joint 161/162 manuscript remains in Git history, superseded by the two standalone papers.
+## About the archive
 
-Complete mathematical arguments are provided for author review; AI assistance is disclosed. No claim of independent peer review, formal proof-assistant verification, or established publication priority is made. Finite tests supplement the proofs rather than replacing them.
+Each numbered directory contains a standalone manuscript, source audit, pinned dependencies, exact verification scripts and expected output. Where possible, a second computational implementation is supplied. Finite tests complement universal mathematical arguments; they do not prove universal statements or establish priority. Existing root-level files for #179 are retained solely for backward compatibility. See [reproduction guide](REPRODUCE.md) for the canonical paths.
 
-## Additional audit
-
-The [cross-conjecture audit](audit/README.md) independently checks three inequalities, proof constructions, and equality counts on all 995 connected Atlas graphs of orders two through seven. The individual packages provide their own verification. CI checks the expected outputs.
+Corrections, prior proofs and better references are welcome. Cite the exact manuscript and commit, not a purported certified first solution. AI contributions are disclosed; human review and authorship confirmation remain pending where indicated in the manuscripts.

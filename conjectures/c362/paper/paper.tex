@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A Sharp Strengthening of Graffiti.pc Conjecture 362: Total Domination, Support Components and Diameter}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove the archived statement of Graffiti.pc Conjecture 362 and establish stronger diameter and radius bounds using a radius-two covering argument. An infinite family attains the diameter bound and shows the optimality of the asymptotic radius coefficient. The archived entry is marked open; current primary-source status and publication priority are unconfirmed.
+\end{abstract}
+\section{Statement and provenance}
+Let $T$ be a finite simple tree of order at least three. Let $S$ denote the support vertices (vertices adjacent to a leaf), $L$ the leaves, and $q$ the number of components of $T[S\cup L]$. A total dominating set $D$ is a vertex set such that every vertex has a neighbor in $D$; $\gamma_t(T)$ is the least possible order of $D$. Write $d$ and $r$ for the diameter and radius. The archived data \cite{archive} give Conjecture 362, dated February 18, 2009 and marked open, as $\gamma_t(T)\ge q+(1+r)/3$. The current official entry \cite{wow} could not be retrieved. An August 2026 report \cite{screen} records finite screening without a resolution, not a proof of priority.
+\section{Proof}
+\begin{theorem}
+For every such tree,
+\[
+ \gamma_t(T)\ge q+\left\lceil\frac{d+1}{5}\right\rceil
+ \ge q+\left\lceil\frac{2r}{5}\right\rceil,
+ \qquad
+ \gamma_t(T)\ge q+\frac{r+1}{3}.
+\]
+\end{theorem}
+\begin{proof}
+Every support vertex lies in every total dominating set because it is the only neighbor of a leaf. Since the tree has at least three vertices, no leaf is a support vertex, and attaching leaves to $T[S]$ does not change its number of components. Thus $T[S]$ has $q$ components.
+
+Choose one representative from each component to form an independent set $R\subseteq S$. Let $D$ be a minimum total dominating set and $A=D\setminus R$, so $a=|A|=\gamma_t(T)-q$. Every representative has a neighbor in $A$, since $D$ totally dominates itself and $R$ is independent. Since $q\ge1$, this also shows $a\ge1$. Every vertex of $T$ has a neighbor in $D$, either in $A$ or in $R$; in the latter case its distance to some vertex of $A$ is at most two. Therefore the radius-two balls centered at vertices in $A$ cover $V(T)$.
+
+Let $P$ be a diameter path, of order $d+1$. Any two vertices in the intersection of $P$ with one of those balls are at distance at most four by the triangle inequality. Because $P$ is a geodesic, the indices of those vertices along $P$ differ by at most four. Each ball contains at most five vertices of $P$, so $d+1\le5a$. This gives the first bound. In a tree $r=\lceil d/2\rceil$, hence $d+1\ge2r$ and the second bound follows.
+
+Finally $d+1\le5a$ implies $r\le\lfloor5a/2\rfloor$. For integer $a\ge1$, $\lfloor5a/2\rfloor+1=3a-\lceil a/2\rceil+1\le3a$. Thus $r+1\le3a$, proving the archived conjecture.
+\end{proof}
+\section{Sharpness}
+For each integer $m\ge1$ form a path on vertices $0,\ldots,5m-1$ and attach one new leaf at every index congruent to $1$ or $3$ modulo $5$. The support vertices are exactly those $2m$ indices and they are independent, so $q=2m$. The original path is a diameter path: an added leaf attaches at an interior vertex, and the distance between two added leaves is at most $5m-1$ because their attachment indices differ by at most $5m-3$. Hence $d=5m-1$.
+
+Select the three indices $5j+1,5j+2,5j+3$ for every $0\le j<m$. These vertices totally dominate the tree, including all added leaves, and give a set of order $3m$. The lower bound forces $\gamma_t(T)=3m=q+(d+1)/5$. Consequently no coefficient exceeding $1/5$ can replace $1/5$ in the universal diameter bound. Also $r=\lceil(5m-1)/2\rceil$, and $(\gamma_t-q)/r=m/r\to2/5$, proving asymptotic sharpness of the radius coefficient. Equality for the radius bound follows directly for this family.
+\section{Verification and scope}
+A fresh local exact enumeration with NetworkX 3.6.1 checked all 985 nonisomorphic trees of orders three through twelve: 465 equalities for the stronger diameter bound, no violations and identical domination numbers using bitmask and direct subset methods. All 100 constructed sharp examples also passed. The package includes a separate invariant checker; CI and PDF builds are not certified at drafting. Finite checks do not replace the universal proof. No earlier exact resolution was identified in bounded searches, but the current original catalogue entry remains unverified and publication priority is unconfirmed. Generative AI (ChatGPT) assisted in literature review, reasoning, code and drafting using the Conjecture Harness \cite{harness}; human review and authorship confirmation are pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 362 (current original entry unavailable). \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{archive} Kuberwastaken, \emph{c5-k4, archived WOWII conjecture dataset}, entry 362, retrieved November 26, 2026. \url{https://github.com/Kuberwastaken/c5-k4/blob/e2cee93231eefb91c41e35450f7eeb19fd9c8c75/data/wowii-conjectures.json}.
+\bibitem{screen} AI Village News, \emph{WOW II / Graffiti.pc 378 FALSE}, controls and batch screen, August 2026. \url{https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four}.
+\bibitem{harness} KAVentures, \emph{Conjecture Harness}, v0.6.0-preview, commit \texttt{135189ad0a0dffd326a59b0a56dd7e87215f617c}. \url{https://github.com/KAVentures/conjecture-harness}.
+\end{thebibliography}
+\end{document}

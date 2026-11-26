@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "consolidated_on": "2026-11-26",
+  "evidence_labels": {
+    "page_image": "Catalogue: page image checked",
+    "indexed_text": "Catalogue: indexed text checked; image unavailable",
+    "archive_only": "Archived open marker only; current primary entry unverified"
+  },
+  "priority_labels": {
+    "candidate": "Candidate; priority unconfirmed",
+    "prior_implication": "Prior implication; not novel",
+    "prior_related": "Prior-related; excluded from novel count"
+  },
+  "entries": [
+    {
+      "id": 76,
+      "topic": "Induced trees / triangles",
+      "result": "Disproof",
+      "priority": "prior_implication",
+      "source": "indexed_text",
+      "summary": "43-vertex witness and unbounded family; earlier Matoušek–Šámal theorem implies refutation.",
+      "priority_certified": false
+    },
+    {
+      "id": 137,
+      "topic": "Induced paths / path covers",
+      "result": "Proof (n ≥ 2); K1 exception",
+      "priority": "prior_implication",
+      "source": "indexed_text",
+      "summary": "Seinsche’s cograph characterization.",
+      "priority_certified": false
+    },
+    {
+      "id": 138,
+      "topic": "Independent sets / distance",
+      "result": "Disproof",
+      "priority": "candidate",
+      "source": "page_image",
+      "summary": "Infinite subcubic tree family; sharp square-distance coefficient.",
+      "priority_certified": false
+    },
+    {
+      "id": 157,
+      "topic": "Spanning-tree leaves / radial circles",
+      "result": "Proof + strengthening",
+      "priority": "candidate",
+      "source": "page_image",
+      "summary": "Breadth-first spanning tree; sharp integer refinement.",
+      "priority_certified": false
+    },
+    {
+      "id": 161,
+      "topic": "Spanning-tree leaves / local independence",
+      "result": "Proof",
+      "priority": "prior_implication",
+      "source": "page_image",
+      "summary": "Earlier stronger bound and elementary degree bound.",
+      "priority_certified": false
+    },
+    {
+      "id": 162,
+      "topic": "Spanning-tree leaves / support vertices",
+      "result": "Proof",
+      "priority": "prior_related",
+      "source": "indexed_text",
+      "summary": "Related 2024 published exchange argument.",
+      "priority_certified": false
+    },
+    {
+      "id": 166,
+      "topic": "Spanning-tree leaves / degree neighborhoods",
+      "result": "Disproof",
+      "priority": "candidate",
+      "source": "indexed_text",
+      "summary": "22-vertex witness; earlier diamond-chain gadget credited.",
+      "priority_certified": false
+    },
+    {
+      "id": 169,
+      "topic": "Spanning-tree leaves / even distances",
+      "result": "Proof (n ≥ 2); K1 exception",
+      "priority": "candidate",
+      "source": "page_image",
+      "summary": "Singleton convention explicitly documented.",
+      "priority_certified": false
+    },
+    {
+      "id": 171,
+      "topic": "Spanning-tree leaves / boundary distances",
+      "result": "Disproof",
+      "priority": "candidate",
+      "source": "indexed_text",
+      "summary": "Infinite tree counterexample family.",
+      "priority_certified": false
+    },
+    {
+      "id": 177,
+      "topic": "Spanning-tree leaves / induced bipartite subgraphs",
+      "result": "Proof + strengthening",
+      "priority": "candidate",
+      "source": "indexed_text",
+      "summary": "Second-smallest degree; prior weaker theorem credited.",
+      "priority_certified": false
+    },
+    {
+      "id": 179,
+      "topic": "Spanning-tree leaves / domination",
+      "result": "Proof + strengthening",
+      "priority": "candidate",
+      "source": "page_image",
+      "summary": "Both minimum- and maximum-degree interpretations.",
+      "priority_certified": false
+    },
+    {
+      "id": 208,
+      "topic": "Hamiltonian paths / matchings",
+      "result": "Proof",
+      "priority": "candidate",
+      "source": "indexed_text",
+      "summary": "Sharp matching and missing-edge threshold.",
+      "priority_certified": false
+    },
+    {
+      "id": 268,
+      "topic": "Total domination / center distances",
+      "result": "Proof",
+      "priority": "prior_related",
+      "source": "indexed_text",
+      "summary": "2007 diameter estimate and additional center-pair argument.",
+      "priority_certified": false
+    },
+    {
+      "id": 271,
+      "topic": "Total domination / maximum-degree distances",
+      "result": "Proof",
+      "priority": "prior_related",
+      "source": "indexed_text",
+      "summary": "2007 diameter estimate and dominating-edge argument.",
+      "priority_certified": false
+    },
+    {
+      "id": 361,
+      "topic": "Total domination in trees / isolated supports",
+      "result": "Proof + characterization",
+      "priority": "candidate",
+      "source": "archive_only",
+      "summary": "Minimal-excess structural characterization.",
+      "priority_certified": false
+    },
+    {
+      "id": 362,
+      "topic": "Total domination in trees / radius and diameter",
+      "result": "Proof + sharp strengthening",
+      "priority": "candidate",
+      "source": "archive_only",
+      "summary": "Radius-two ball covering; optimal diameter and radius coefficients.",
+      "priority_certified": false
+    },
+    {
+      "id": 365,
+      "topic": "Total domination in trees / degree-two edges",
+      "result": "Proof + sharp strengthening",
+      "priority": "candidate",
+      "source": "archive_only",
+      "summary": "Component-sensitive counting; optimal coefficient.",
+      "priority_certified": false
+    }
+  ]
+}

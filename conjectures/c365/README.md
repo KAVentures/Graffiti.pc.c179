@@ -1,5 +1,9 @@
 # Graffiti.pc Conjecture 365 — isolated supports and degree-two edges
 
+> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Archived open marker only; current primary entry unverified. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 **Candidate resolution and sharp strengthening; priority unconfirmed.** The archived catalogue dataset marks the conjecture open, announced February 18, 2009. A public August 24, 2026 report records screening without a resolution. No earlier proof was identified in bounded searches. Current original entry could not be independently retrieved.
 
 For every tree T of order at least three, let i count isolates in the induced subgraph of support vertices and e2 count edges whose endpoints both have degree two. We prove gamma_t(T) >= i + ceil((e2+1)/3), strengthening the conjectured gamma_t(T) >= i + e2/3. In fact for any total dominating set D with c induced components, e2 <= 2(|D|-i)+c-1. The coefficient 1/3 is optimal: a center with one leaf and m >= 2 paths of length five attached has i=m+1, e2=3m, gamma_t=2m+2.

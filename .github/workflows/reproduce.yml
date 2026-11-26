@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        conjecture: [c76, c137, c138, c157, c161, c162, c166, c169, c171, c177, c179, c208, c268, c271, c361, c365]
+        conjecture: [c76, c137, c138, c157, c161, c162, c166, c169, c171, c177, c179, c208, c268, c271, c361, c362, c365]
     runs-on: ubuntu-24.04
     defaults:
       run:
@@ -30,7 +30,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        conjecture: [c76, c137, c138, c157, c161, c162, c166, c169, c171, c177, c179, c208, c268, c271, c361, c365]
+        conjecture: [c76, c137, c138, c157, c161, c162, c166, c169, c171, c177, c179, c208, c268, c271, c361, c362, c365]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -64,3 +64,11 @@ jobs:
           set -o pipefail
           python audit/audit_all.py | tee /tmp/audit-observed.txt
           diff -u audit/expected.txt /tmp/audit-observed.txt
+  catalogue-consistency:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python audit/check_catalogue.py
