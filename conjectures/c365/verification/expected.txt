@@ -1,0 +1,1 @@
+C365: 985 nonisomorphic trees (orders 3–12); 95 strengthened equality cases; 0 violations

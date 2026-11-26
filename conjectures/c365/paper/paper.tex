@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A Sharp Strengthening of Graffiti.pc Conjecture 365: Total Domination in Trees}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove the lower bound on the total domination number recorded in Graffiti.pc Conjecture 365 and strengthen it by a rounding term. A component-sensitive counting inequality yields the proof, and an infinite family shows the optimality of the coefficient of degree-two edges. Publication priority is unconfirmed.
+\end{abstract}
+\section{Statement and provenance}
+Let $T$ be a finite simple tree of order at least three. Write $S$ for the support vertices (vertices adjacent to a leaf), $I$ for the isolated vertices of the induced graph $T[S]$, $i=|I|$, $D_2$ for the vertices of degree two, and $e_2=|E(T[D_2])|$. A total dominating set $D$ is a set such that every vertex has a neighbor in $D$, and $\gamma_t(T)$ is its minimum possible order. The archived catalogue \cite{archive} records Conjecture 365, dated February 18, 2009, as open with the inequality $\gamma_t(T)\ge i+e_2/3$. Current direct access to the original entry \cite{wow} failed. A public August 2026 report \cite{screen} records finite screening of this entry without a resolution. Related work \cite{related1,related2} gives different total-domination bounds.
+\section{Proof}
+\begin{theorem}
+For every total dominating set $D$ of $T$, writing $a=|D|-i$ and $c$ for the number of components of $T[D]$, one has
+\[
+ e_2\le 2a+c-1\le 3a-1.
+\]
+In particular,
+\[
+ \gamma_t(T)\ge i+\left\lceil\frac{e_2+1}{3}\right\rceil.
+\]
+\end{theorem}
+\begin{proof}
+Every support vertex lies in $D$, as its adjacent leaf has only one neighbor. In particular $I\subseteq D$. The set $I$ is independent and every component of $T[D]$ has at least two vertices because $D$ totally dominates itself. Each component thus contains a vertex of $D\setminus I$, so $c\le a$.
+
+For each vertex outside $D$, choose a neighbor in $D$. Partition $T$ into $c$ blocks, each comprising a component of $T[D]$ and the vertices assigned to its members. Each block induces a connected subtree. Contracting these subtrees gives a tree; equivalently, subtracting their internal edge counts from $|E(T)|$ gives exactly $c-1$ interblock edges.
+
+Consider an edge within a block whose endpoints have degree two in $T$. It cannot have both endpoints outside $D$: their two assignment edges and the path between their assigned neighbors within the selected component would create a cycle (a triangle if the neighbors coincide). If either endpoint is in $D\setminus I$, charge the edge to one such endpoint. Each degree-two vertex in $D\setminus I$ is charged at most twice.
+
+Otherwise one endpoint $s$ belongs to $I$, and the other endpoint is outside $D$ since $I$ is independent. Since $s$ is a support vertex of degree two, and its neighbor on the counted edge has degree two, its other neighbor $\ell$ is a leaf. Total domination of $s$ forces $\ell\in D$. A leaf of a tree of order at least three cannot be a support vertex, hence $\ell\in D\setminus I$. Charge the counted edge to $\ell$. Each such leaf is charged at most once, since it is adjacent to a unique support and that support has at most one incident degree-two edge. Leaf charges are disjoint from the previous degree-two charges. Thus every internal degree-two edge is charged to a vertex of $D\setminus I$ with at most two charges per vertex, yielding at most $2a$ such edges.
+
+There are at most $c-1$ degree-two edges between blocks. Hence $e_2\le2a+c-1\le3a-1$. Choosing a minimum total dominating set and using integrality gives the asserted bound, which implies Conjecture 365.
+\end{proof}
+\section{Sharpness}
+For any integer $m\ge2$, take a vertex $v$ with one pendant leaf $w$ and attach $m$ disjoint five-edge paths at $v$. Label the five new vertices of arm $j$ in order $x_{j,1},\ldots,x_{j,5}$. The support set is $\{v\}\cup\{x_{j,4}:1\le j\le m\}$, which is independent; hence $i=m+1$. The degree-two vertices are positions one through four on each arm, so $e_2=3m$. The set
+\[
+ \{v,w\}\cup\{x_{j,3},x_{j,4}:1\le j\le m\}
+\]
+totally dominates the tree and has order $2m+2$. The lower bound gives $i+\lceil(e_2+1)/3\rceil=2m+2$, proving equality. Also $\gamma_t-i=m+1$ and $e_2=3m$, so for every real $\beta>1/3$, sufficiently large $m$ satisfies $\gamma_t<i+\beta e_2$. Thus the coefficient $1/3$ cannot be increased in a universal bound of this form.
+\section{Verification and scope}
+A fresh local exact enumeration using NetworkX 3.6.1 and two total-domination algorithms (bitmasks and direct subset enumeration) checked all 985 nonisomorphic trees of orders three through twelve: zero violations, identical domination numbers, and 95 equality cases for the strengthened integer bound. The supplied scripts reproduce the census and test the sharp family. Finite verification is supplementary to the proof. CI and PDF compilation have not been certified at drafting. No earlier exact proof or strengthening was identified in bounded searches, but priority and the latest original catalogue status remain unconfirmed. Generative AI (ChatGPT) assisted in literature review, mathematical reasoning, verification code and drafting with the Conjecture Harness \cite{harness}. Human authorship confirmation and review are pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 365 (original entry unavailable in current retrieval). \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{archive} Kuberwastaken, \emph{c5-k4, archived WOWII conjecture dataset}, entry 365, retrieved November 26, 2026. \url{https://github.com/Kuberwastaken/c5-k4/blob/main/data/wowii-conjectures.json}.
+\bibitem{screen} AI Village News, \emph{WOW II / Graffiti.pc 378 FALSE}, controls and batch screen, August 24, 2026. \url{https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four}.
+\bibitem{related1} E. DeLaVi\~na et al., \emph{Graffiti.pc on the total domination of trees}, Theorem 9 and concluding conjectures. \url{https://www.uhd.edu/documents/academics/sciences/boca2009-dlpw.pdf}.
+\bibitem{related2} E. DeLaVi\~na, C. E. Larson, R. Pepper and B. Waller, \emph{On total domination and support vertices of a tree}, Theorem 4. \url{https://math1um.github.io/Research/r08.pdf}.
+\bibitem{harness} KAVentures, \emph{Conjecture Harness}, v0.6.0-preview, commit \texttt{135189ad0a0dffd326a59b0a56dd7e87215f617c}. \url{https://github.com/KAVentures/conjecture-harness}.
+\end{thebibliography}
+\end{document}

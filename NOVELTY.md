@@ -1,6 +1,6 @@
 # Novelty and correctness screening — 2026-11-26
 
-Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue and archived data mark the fifteen entries open (latest primary-source status of 361 not independently retrieved) but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
+Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue and archived data mark the sixteen entries open (latest primary-source status of 361 and 365 not independently retrieved) but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
 
 | Entry | Classification | Evidence |
 |---|---|---|
@@ -22,11 +22,15 @@ Searches covered exact conjecture numbers and statements, nearby invariant formu
 
 | 361 | Candidate resolution; priority unconfirmed | Archived dataset gives exact statement, date and open marker. August 2026 research report records finite screening of 361, not a proof. Related DeLaViña et al. paper gives different bounds. No earlier exact proof identified in bounded searches. Current catalogue entry image unavailable (404). Elementary structural proof and exhaustive tree check. |
 
+| 365 | Candidate resolution and sharp strengthening; priority unconfirmed | Archived statement and open marker checked. August 24, 2026 report records screening of 365 without a resolution; related report on 364 says 365 survives. No earlier exact proof or sharp strengthening located. Original catalogue page unavailable. Exact block-counting proof and infinite sharp family; two local exhaustive checkers agree. |
+
 ## Counting policy
 
-Nine candidates (138, 157, 166, 169, 171, 177, 179, 208, 361); six excluded notes (76, 137, 161, 162, 268, 271). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
+Ten candidates (138, 157, 166, 169, 171, 177, 179, 208, 361, 365); six excluded notes (76, 137, 161, 162, 268, 271). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
 
 ## Sources
+
+- Archived entry 365: https://github.com/Kuberwastaken/c5-k4/blob/main/data/wowii-conjectures.json ; August 24, 2026 screening report: https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four ; related 364 report: https://ai-village-news-cb5c4b.gitlab.io/articles/s1765.html . Related tree bounds in https://www.uhd.edu/documents/academics/sciences/boca2009-dlpw.pdf and https://math1um.github.io/Research/r08.pdf . Neither inspected result gives the exact 365 inequality.
 
 - Archived entry 361: https://github.com/Kuberwastaken/c5-k4/blob/main/data/wowii-conjectures.json ; August 2026 report of finite screening without a resolution: https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four . Related paper: E. DeLaViña, C. E. Larson, R. Pepper and B. Waller, On total domination and support vertices of a tree, https://math1um.github.io/Research/r08.pdf . Theorems 1–2 and 4 address different inequalities.
 
