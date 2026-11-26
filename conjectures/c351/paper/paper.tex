@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\title{An Infinite Counterexample Family for Graffiti.pc Conjecture 351}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We disprove the archived statement of Graffiti.pc Conjecture 351, a lower bound for total domination in trees involving two induced component counts. An explicit family has an unbounded additive violation; its first displayed member has 55 vertices, total domination number 28, and conjectured lower bound 30. Current primary-source status and publication priority remain unconfirmed.
+\end{abstract}
+\section{Statement and provenance}
+Let $T$ be a finite simple tree of order at least three. Write $L$ for the leaves, $S$ for the support vertices (vertices adjacent to leaves), $Q$ for the degree-two vertices, $N(Q)$ for the union of their open neighborhoods, and $c(H)$ for the number of connected components of a graph $H$. A total dominating set is a vertex set $D$ such that every vertex has a neighbor in $D$; its minimum possible order is $\gamma_t(T)$. The archived record \cite{archive} gives Conjecture 351, dated February 18, 2009 and marked open, as
+\[
+ \gamma_t(T)\ge c(T[S\cup L])+c(T[N(Q)\cup Q]).
+\]
+The current original entry \cite{wow} could not be retrieved. An August 2026 report \cite{screen} records finite screening without a violation for entry 351, not a proof of publication priority.
+\section{Construction and exact invariants}
+\begin{theorem}
+For every integer $m\ge3$ there exists a tree $T_m$ of order $18m+1$ for which
+\[
+ c(T_m[S\cup L])=7m,\quad c(T_m[N(Q)\cup Q])=3m,
+ \quad \gamma_t(T_m)=9m+1.
+\]
+Thus Conjecture 351 is false, with additive violation $m-1$.
+\end{theorem}
+\begin{proof}
+Start with a root $r$. For each $1\le i\le m$, attach a new path $r,a_i,u_i,b_i$ and a leaf to $a_i$. For each $j\in\{1,2\}$, attach a path $b_i,c_{ij},d_{ij}$ and a leaf to $c_{ij}$. For each $h\in\{1,2\}$, attach a path $d_{ij},e_{ijh},f_{ijh}$, with $f_{ijh}$ terminal. All vertices introduced by different attachments are new. The resulting graph is a tree, with 18 new vertices per arm and hence order $18m+1$.
+
+The root has degree $m\ge3$. The vertices $a_i,b_i,c_{ij},d_{ij}$ have degree three, while $u_i,e_{ijh}$ have degree two. All other vertices are leaves. The supports are exactly the $a_i,c_{ij},e_{ijh}$, giving $7m$ supports. They form an independent set, and each leaf is adjacent to a single support. Therefore $T_m[S\cup L]$ has $7m$ components.
+
+The degree-two vertices are precisely the $u_i$ and $e_{ijh}$. The closed neighborhood of this set induces the three-vertex path $a_i,u_i,b_i$ for each arm and, separately, the two five-vertex paths $f_{ij1},e_{ij1},d_{ij},e_{ij2},f_{ij2}$ for each arm. Neither $r$ nor any $c_{ij}$ lies in the closed neighborhood. No induced edge links these paths. Thus the second component count is $3m$.
+
+Every total dominating set contains all $7m$ supports, since each is the only neighbor of a leaf. In addition, for each pair $(i,j)$, the support $e_{ij1}$ requires a selected vertex from its open neighborhood $\{d_{ij},f_{ij1}\}$. These $2m$ neighborhoods are pairwise disjoint and disjoint from the support set. Finally $a_1$ requires a selected vertex from $\{r,u_1,\ell_{a_1}\}$, where $\ell_{a_1}$ is the leaf adjacent to $a_1$. This neighborhood is disjoint from the support set and all the preceding neighborhoods. Consequently every total dominating set has order at least $7m+2m+1=9m+1$.
+
+Conversely, select all supports, all $d_{ij}$, and $r$. Each leaf is dominated by its support; each $u_i$ is dominated by $a_i$; each $b_i$ by $c_{i1}$; each $a_i$ by $r$; each $c_{ij}$ and $e_{ijh}$ by $d_{ij}$; each $d_{ij}$ by a selected terminal support; and $r$ by $a_1$. Thus this set totally dominates $T_m$ and has order $9m+1$, establishing equality.
+
+The proposed lower bound is $7m+3m=10m$, exceeding $\gamma_t(T_m)$ by $m-1>0$. This gap is unbounded as $m$ grows.
+\end{proof}
+\section{Verification and scope}
+At $m=3$ the construction gives a 55-vertex counterexample with component counts 21 and 9 and exact total domination number 28. No claim of minimum counterexample order is made. The repository supplies the explicit adjacency-list witness, its total dominating set, a standard-library certificate checker for the lower bound using disjoint neighborhoods, and a tree-DP verification script. Fresh local execution with NetworkX 3.6.1 confirmed the exact formulas and tree-DP values for 100 members, $3\le m\le102$. The universal argument above is independent of enumeration. CI and manuscript compilation have not been certified at drafting.
+
+No earlier exact disproof was identified in bounded searches; the current official catalogue entry remains unverified, and publication priority is unconfirmed. Generative AI (ChatGPT) assisted in literature review, reasoning, code and drafting using the Conjecture Harness \cite{harness}. Human review and authorship confirmation remain pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 351 (current original entry unavailable). \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{archive} Kuberwastaken, \emph{c5-k4, archived WOWII conjecture dataset}, entry 351, retrieved November 26, 2026. \url{https://github.com/Kuberwastaken/c5-k4/blob/e2cee93231eefb91c41e35450f7eeb19fd9c8c75/data/wowii-conjectures.json}.
+\bibitem{screen} AI Village News, \emph{WOW II / Graffiti.pc 378 FALSE}, controls and batch screen, August 2026. \url{https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four}.
+\bibitem{harness} KAVentures, \emph{Conjecture Harness}, v0.6.0-preview, commit \texttt{135189ad0a0dffd326a59b0a56dd7e87215f617c}. \url{https://github.com/KAVentures/conjecture-harness}.
+\end{thebibliography}
+\end{document}

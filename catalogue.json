@@ -148,6 +148,15 @@
       "priority_certified": false
     },
     {
+      "id": 351,
+      "topic": "Total domination in trees / support and degree-two components",
+      "result": "Disproof",
+      "priority": "candidate",
+      "source": "archive_only",
+      "summary": "55-vertex counterexample and infinite family with unbounded violation.",
+      "priority_certified": false
+    },
+    {
       "id": 361,
       "topic": "Total domination in trees / isolated supports",
       "result": "Proof + characterization",

@@ -2,7 +2,7 @@
 
 An AI-assisted research collection of proofs, counterexamples and sharpened bounds for numbered conjectures from *Written on the Wall II* (Graffiti.pc). Manuscripts are drafts for human author and referee review, not peer-reviewed publications.
 
-**18 research packages:** 8 candidate resolutions with primary-catalogue evidence, 4 candidate resolutions with archived-only open evidence, and 6 prior-related notes. **Zero independently certified first resolutions.** All counts distinguish mathematical resolution, catalogue status and publication priority.
+**19 research packages:** 8 candidate resolutions with primary-catalogue evidence, 5 candidate resolutions with archived-only open evidence, and 6 prior-related notes. **Zero independently certified first resolutions.** All counts distinguish mathematical resolution, catalogue status and publication priority.
 
 ## Start here
 
@@ -35,6 +35,7 @@ These proofs and strengthenings are retained, but the latest official primary-so
 | Entry | Topic and result | Open-status evidence | Links |
 |---|---|---|---|
 | **348** | Total domination in trees / degree-two neighborhoods — Proof + strengthening. Component-sensitive incidence counting improves the coefficient from 2/3 to 3/4. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c348/) · [Paper](conjectures/c348/paper/paper.tex) · [Sources](conjectures/c348/SOURCES.md) |
+| **351** | Total domination in trees / support and degree-two components — Disproof. 55-vertex counterexample and infinite family with unbounded violation. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c351/) · [Paper](conjectures/c351/paper/paper.tex) · [Sources](conjectures/c351/SOURCES.md) |
 | **361** | Total domination in trees / isolated supports — Proof + characterization. Minimal-excess structural characterization. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c361/) · [Paper](conjectures/c361/paper/paper.tex) · [Sources](conjectures/c361/SOURCES.md) |
 | **362** | Total domination in trees / radius and diameter — Proof + sharp strengthening. Radius-two ball covering; optimal diameter and radius coefficients. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c362/) · [Paper](conjectures/c362/paper/paper.tex) · [Sources](conjectures/c362/SOURCES.md) |
 | **365** | Total domination in trees / degree-two edges — Proof + sharp strengthening. Component-sensitive counting; optimal coefficient. | Archived open marker only; current primary entry unverified | [Overview](conjectures/c365/) · [Paper](conjectures/c365/paper/paper.tex) · [Sources](conjectures/c365/SOURCES.md) |
