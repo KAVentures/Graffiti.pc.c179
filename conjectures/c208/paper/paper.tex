@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\title{Missing Edges, Matching Number and Hamiltonian Paths: A Proof of Graffiti.pc Conjecture 208}
+\author{Koyar Afrasyab}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove Graffiti.pc Conjecture 208, announced January 12, 2006: a connected simple graph with matching number at least one half plus one third of its number of missing edges has a Hamiltonian path. Equivalently, every connected nontraceable graph has at least three times its matching number minus one missing edges. Chv\'atal's degree-sequence theorem handles all but three small orders, which we resolve by explicit matching arguments. Two graphs show the integer bound is sharp. Exact independent computations supplement the proof.
+\end{abstract}
+\section{Statement}
+Write $n=|V(G)|$, $\mu=\mu(G)$ for the maximum matching cardinality, and $m=|E(\overline G)|$ for the number of missing edges. All graphs are finite, simple, connected and have at least two vertices. A graph is traceable if it contains a Hamiltonian path.
+\begin{theorem}\label{main}
+If $G$ is nontraceable, then $m\ge3\mu-1$.
+\end{theorem}
+Since $m$ and $\mu$ are integers, this is equivalent to traceability whenever $\mu\ge \frac12+\frac13m$, the statement of Conjecture 208 in \emph{Written on the Wall II} \cite{wow}.
+
+\section{Degree-sequence reduction}
+\begin{lemma}\label{degree}
+If $G$ is nontraceable and its degree sequence is $d_1\le\cdots\le d_n$, then for some integer $2\le k\le\lfloor n/2\rfloor$,
+\[
+d_k\le k-1,\qquad d_{n+1-k}\le n-k-1,
+\qquad m\ge \frac{k(2n+1-3k)}2.
+\]
+\end{lemma}
+\begin{proof}
+Adjoin a universal vertex, producing a graph $G^+$ of order $N=n+1$. It is nonhamiltonian, since a Hamiltonian cycle would give a Hamiltonian path in $G$ on deleting the added vertex. By Chv\'atal's degree-sequence theorem \cite{chv}, there is an integer $1\le k<N/2$ such that the ordered degrees of $G^+$ obey $d_k^+\le k$ and $d_{N-k}^+\le N-k-1$. We may order the added universal vertex last, so $d_j^+=d_j+1$ for $j\le n$. This gives the first two inequalities. Connectedness of $G$ excludes $k=1$. The first $k$ vertices have complement degree at least $n-k$, and the next $n+1-2k$ vertices have complement degree at least $k$. Summing these lower bounds and using the handshake identity gives
+\[
+2m\ge k(n-k)+(n+1-2k)k=k(2n+1-3k).
+\]
+\end{proof}
+
+\section{Proof of the theorem}
+Suppose $G$ is nontraceable but $m\le3\mu-2$. Since $\mu\le\lfloor n/2\rfloor$, we have $m\le3\lfloor n/2\rfloor-2$. Graphs of order two or three are traceable. Define $f_n(k)=k(2n+1-3k)/2$. This concave quadratic attains its minimum on $[2,\lfloor n/2\rfloor]$ at an endpoint. If $n=2q\ge10$, the endpoint values are $4q-5$ and $q(q+1)/2$, both greater than $3q-2$. If $n=2q+1\ge9$, the endpoint values are $4q-3$ and $q(q+3)/2$, again both greater than $3q-2$. Thus Lemma \ref{degree} excludes every $n\ge9$. For $n=5,7$, the minima are respectively $5,9$, greater than the corresponding thresholds $4,7$.
+
+It remains to treat orders four, six and eight.
+
+\paragraph{Order four.}
+The lemma gives $m\ge3$, so $\mu=2$ (otherwise $m\le1$). The two edges of a perfect matching cover the vertices. Connectedness guarantees an edge between their endpoint sets, yielding a Hamiltonian path.
+
+\paragraph{Order six.}
+The possible indices are $k=2,3$, with lower bounds $7,6$, respectively. Thus $\mu=3$ and $m\le7$.
+
+If $k=2$, equality in the degree-sum bound forces the degree sequence to be $(1,1,3,3,3,5)$. Both degree-one vertices must be adjacent to the universal vertex, contradicting a perfect matching.
+
+If $k=3$, let $S$ be the four vertices of degree at most two supplied by Lemma \ref{degree}, and let $R$ be the other two vertices. Write $e=|E(G[S])|$, $f$ for the number of missing edges between $S$ and $R$, and $h$ for the number of missing edges in $R$. Then
+\[
+2e+8-f=\sum_{v\in S}d(v)\le8,\qquad
+m=6-e+f+h\ge6+e+h.
+\]
+A perfect matching requires an edge inside $S$ (there are only two vertices in $R$), so $e\ge1$. The bound $m\le7$ forces $e=1$, $f=2$, and $h=0$. Write $ab$ for the single edge in $S$ and $c,d$ for its other two vertices. Each of $a,b$ misses at least one vertex of $R$ by its degree bound, so each misses exactly one, and both $c,d$ are adjacent to both vertices of $R$. Choose $r\in R$ adjacent to $a$ and write $r'$ for the other vertex of $R$. Then $b,a,r,c,r',d$ is a Hamiltonian path, a contradiction.
+
+\paragraph{Order eight.}
+Here the bounds for $k=2,3,4$ are $11,12,10$, respectively, whereas $m\le10$. Hence $k=4$, $m=10$ and $\mu=4$. Let $S$ be five vertices of degree at most three, with remaining set $R$ of order three. Use $e,f,h$ as in the preceding case. Then
+\[
+2e+15-f\le15,\qquad m=10-e+f+h\ge10+e+h.
+\]
+Consequently $e=0$. But a matching can cover at most three members of the independent set $S$, contradicting $\mu=4$.
+
+All possibilities have been excluded, proving Theorem \ref{main}.
+
+\section{Sharpness}
+Take a universal vertex joined to the disjoint union of two isolated vertices and an edge. The resulting graph has order five, matching number two, and five missing edges. Deleting the universal vertex leaves three components, so the graph is nontraceable. Thus $m=3\mu-1$.
+
+A second equality graph is obtained by joining a universal vertex to the disjoint union of an isolated vertex and two edges. It has order six, a perfect matching of cardinality three, and eight missing edges. Again deletion of the universal vertex leaves three components, proving nontraceability. Thus $m=3\mu-1$ also in this graph. These show that the integer threshold cannot be raised by one uniformly.
+
+\section{Prior art and reproducibility}
+The catalogue lists entry 208 as open and records Richard Stong's June 2010 observation that the conjectured hypothesis does not imply Chv\'atal's sufficient degree-sequence condition. Our proof uses that theorem where applicable and separate matching arguments for the exceptions. The classical theorem and the small graph constructions are not claimed as new. A bounded search for the exact entry and inequality did not identify a prior complete resolution; publication priority is not established.
+
+Both verification programs were executed locally with Python 3.13.5 and NetworkX 3.6.1. All 995 connected nonisomorphic Atlas graphs of orders two through seven were examined. Of these, 235 satisfy the original hypothesis and all are traceable; 144 are nontraceable, all satisfying the claimed bound. There are exactly two equality witnesses in this finite census, with graph6 encodings \texttt{D@\{} and \texttt{EtaG}. The first implementation uses NetworkX's maximum matching and memoized Hamiltonian path recursion; the second uses exact matching subset recursion and exhaustive permutations. Finite tests supplement the analytic argument and do not establish the universal result independently. The order-eight case is proved analytically, not claimed to be exhaustively enumerated.
+
+AI-assisted research preprint for author review. No independent peer review, machine-checked formal proof, or exclusive publication priority is claimed.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 208, January 12, 2006, catalogue updated November 5, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{chv} V. Chv\'atal, On Hamilton's ideals, \emph{Journal of Combinatorial Theory, Series B} 12 (1972), 163--168. \url{https://doi.org/10.1016/0095-8956(72)90020-2}.
+\end{thebibliography}
+\end{document}

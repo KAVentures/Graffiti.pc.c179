@@ -1,10 +1,10 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Ten conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 and entry 138 to 12 July 2005.
+Research preprints by Koyar Afrasyab, November 2026. Eleven conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 entry 138 to 12 July 2005, and entry 208 to 12 January 2006.
 
-## Status at a glance (2026-11-25)
+## Status at a glance (2026-11-26)
 
-**Seven candidate resolutions (priority unconfirmed); three prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
+**Eight candidate resolutions (priority unconfirmed); three prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
 
 ## Candidate resolutions — no exact earlier resolution identified in bounded searches
 
@@ -17,6 +17,8 @@ Research preprints by Koyar Afrasyab, November 2026. Ten conjecture packages, ea
 | 171 | Disproof: infinite family of trees | [Research package](conjectures/c171/) · [Paper](conjectures/c171/paper/paper.tex) |
 | 177 | Proof and strengthening: second-smallest degree | [Research package](conjectures/c177/) · [Paper](conjectures/c177/paper/paper.tex) |
 | 179 | Proof of both degree interpretations and two separate strengthenings | [Research package](conjectures/c179/) · [Paper](conjectures/c179/paper/paper.tex) |
+
+| 208 | Proof: sharp matching-number and missing-edge threshold for traceability | [Research package](conjectures/c208/) · [Paper](conjectures/c208/paper/paper.tex) |
 
 ## Prior-related notes — NOT counted as novel resolutions
 

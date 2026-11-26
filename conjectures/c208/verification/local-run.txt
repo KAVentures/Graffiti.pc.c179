@@ -1,0 +1,7 @@
+Python 3.13.5; NetworkX 3.6.1
+Connected graphs: 995
+Hypothesis satisfied: 235
+Nontraceable graphs: 144
+Sharp graph6 witnesses: ['D@{', 'EtaG']
+Violations: 0
+Independent check: 995 graphs, 235 qualifying, 144 nontraceable, 2 sharp witnesses; 0 violations

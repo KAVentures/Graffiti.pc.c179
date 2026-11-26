@@ -1,6 +1,6 @@
-# Novelty and correctness screening — 2026-11-25
+# Novelty and correctness screening — 2026-11-26
 
-Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all ten open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
+Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all eleven open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
 
 | Entry | Classification | Evidence |
 |---|---|---|
@@ -14,12 +14,15 @@ Searches covered exact conjecture numbers and statements, nearby invariant formu
 | 171 | Candidate disproof; priority unconfirmed | Indexed catalogue formula and definitions (pp. 98–99) agree; infinite counterexample family, even among trees. Targeted searches found no earlier exact disproof. Direct PDF image retrieval failed. See c171 source audit. |
 | 177 | Candidate resolution; priority unconfirmed | Catalogue and REGS statement confirmed; DeLaViña–Waller 2008 Theorem 3 proves only the weaker additive 1 bound. New constructive argument proves the degree term and strengthens it to any independent set. No earlier full proof identified. |
 | 179 | Candidate resolution of both readings; priority unconfirmed | Catalogue p. 104 uses delta; West REGS uses Delta. New proof gives Delta+i+lambda and the prior paper's separate additive minimum-degree refinement. Kuberwastaken/c5-k4 reports incomplete trial, not proof. |
+| 208 | Candidate resolution; priority unconfirmed | Catalogue statement and Stong's 2010 comment checked in indexed text; image fetch failed. Proof uses Chvatal's degree criterion plus explicit matching arguments for the small exceptional orders; sharp threshold. No earlier exact resolution found in bounded searches. |
 
 ## Counting policy
 
-Seven candidates (138, 157, 166, 169, 171, 177, 179); three excluded notes (76, 161, 162). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
+Eight candidates (138, 157, 166, 169, 171, 177, 179, 208); three excluded notes (76, 161, 162). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
 
 ## Sources
+
+- V. Chvátal, On Hamilton's ideals (1972), https://doi.org/10.1016/0095-8956(72)90020-2 .
 
 - J. Matoušek and R. Šámal, https://doi.org/10.37236/765 (2008), Lemma 2.2; https://arxiv.org/abs/0711.4829 .
 

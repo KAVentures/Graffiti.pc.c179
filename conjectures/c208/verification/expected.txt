@@ -1,0 +1,5 @@
+Connected graphs: 995
+Hypothesis satisfied: 235
+Nontraceable graphs: 144
+Sharp graph6 witnesses: ['D@{', 'EtaG']
+Violations: 0
