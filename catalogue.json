@@ -59,7 +59,7 @@
     },
     {
       "id": 162,
-      "topic": "Spanning-tree leaves / support vertices",
+      "topic": "Spanning-tree leaves / minimum local independence",
       "result": "Proof",
       "priority": "prior_related",
       "source": "indexed_text",
