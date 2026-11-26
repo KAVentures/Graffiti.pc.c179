@@ -1,10 +1,10 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Eleven conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 entry 138 to 12 July 2005, and entry 208 to 12 January 2006.
+Research preprints by Koyar Afrasyab, November 2026. Twelve conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 entries 137 and 138 to 12 July 2005, and entry 208 to 12 January 2006.
 
 ## Status at a glance (2026-11-26)
 
-**Eight candidate resolutions (priority unconfirmed); three prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
+**Eight candidate resolutions (priority unconfirmed); four prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
 
 ## Candidate resolutions — no exact earlier resolution identified in bounded searches
 
@@ -25,10 +25,11 @@ Research preprints by Koyar Afrasyab, November 2026. Eleven conjecture packages,
 | Entry | Classification | Package |
 |---|---|---|
 | 76 | **Prior implication:** exact 43-vertex disproof and infinite family; Matoušek–Šámal's 2008 construction already implies an asymptotic refutation. | [Research package](conjectures/c76/) · [Paper](conjectures/c76/paper/paper.tex) |
+| 137 | **Prior implication:** proof by Seinsche's 1974 cograph characterization; literal singleton exception and sharp bound documented. | [Research package](conjectures/c137/) · [Paper](conjectures/c137/paper/paper.tex) |
 | 161 | **Not novel:** rediscovery of an implication of a stronger bound recorded in October 2005; also follows from an elementary degree bound. | [Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) |
 | 162 | **Prior-related:** closely related to a 2024 published theorem and its exchange argument. Priority not claimed; excluded from novel count. | [Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) |
 
-These three notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
+These four notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
 
 ## Reproducibility and status
 
