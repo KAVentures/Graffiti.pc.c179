@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\title{A Note on Graffiti.pc Conjecture 271: Total Domination and Distance Between Maximum-Degree Vertices}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We document a proof of Graffiti.pc Conjecture 271, listed as open in the November 2026 catalogue. We apply a classical spanning-tree diameter estimate for total domination and an additional elementary argument. No novelty or publication priority is certified.
+\end{abstract}
+\section{Provenance and notation}
+The catalogue \cite{wow} records the conjecture as announced February 23, 2007. All graphs below are finite, simple, connected and have at least two vertices. Distances are ordinary shortest-path lengths, eccentricity is maximum distance from a vertex, radius is minimum eccentricity and diameter is maximum eccentricity. We reproduce the exact inequality in the theorem.
+\section{Classical structural bound}
+\begin{lemma}
+Let $G$ be a finite simple connected graph of order at least two, and let $k=\gamma_t(G)$, where $\gamma_t$ is the minimum order of a set $S$ such that every vertex has a neighbor in $S$. There exists a spanning tree $T$ of $G$ satisfying
+\[
+ \operatorname{diam}(T)\le k+2\lfloor k/2\rfloor-1\le 2k-1.
+\]
+\end{lemma}
+\begin{proof}
+Choose a minimum total dominating set $S$. Each of the $c$ components of $G[S]$ has at least two vertices, hence $c\le\lfloor k/2\rfloor$. Assign every vertex outside $S$ to an adjacent vertex of $S$ and every vertex of $S$ to itself. Label each vertex by the component of its assigned vertex. The graph on these $c$ labels, joining labels whenever an edge of $G$ joins vertices with those labels, is connected because $G$ is connected. Each label edge gives a path of length at most three between the corresponding components of $G[S]$: follow the assignment edges and the given edge. A spanning tree of the label graph thus connects all components by adding at most $2(c-1)$ vertices to $S$. The resulting vertex set $U$ is connected and dominates $G$ since it contains $S$. Take a spanning tree of $G[U]$ and attach each vertex outside $U$ by one edge to a neighbor in $U$. In the resulting spanning tree $T$, all outside vertices are leaves; every path has at most $|U|+1$ edges, including at most two edges outside the tree on $U$. Therefore $\operatorname{diam}(T)\le |U|+1\le k+2c-1\le k+2\lfloor k/2\rfloor-1$.
+\end{proof}
+The same diameter estimate follows from the spanning-tree construction in DeLaVi\~na et al.\ \cite[Lemmas 2--3, equation (5)]{prior}. We give the preceding self-contained variant for clarity; no novelty is claimed for the bound.
+\section{Proof of the conjecture}
+\begin{theorem}
+For every finite simple connected graph $G$ of order at least two, let $M$ be the set of vertices of maximum degree and $d_M=\max_{u,v\in M}d_G(u,v)$ (zero for a singleton). Then
+\[
+ \gamma_t(G)\ge\lceil\sqrt{2d_M}\rceil .
+\]
+\end{theorem}
+\begin{proof}
+Let $k=\gamma_t(G)\ge2$. If $k\ge4$, the lemma gives $2d_M\le2\operatorname{diam}(G)\le4k-2\le k^2$. If $k=3$, its sharper bound is $\operatorname{diam}(G)\le3+2\lfloor3/2\rfloor-1=4$, so $2d_M\le8<9$. If $k=2$, a minimum total dominating set is an adjacent pair $x,y$ with $N(x)\cup N(y)=V(G)$, where $N$ denotes the open neighborhood. Thus $n\le\deg(x)+\deg(y)\le2\Delta(G)$. If two maximum-degree vertices $u,v$ had distance at least three, their open neighborhoods would be disjoint and exclude both $u$ and $v$. Hence $2\Delta(G)=|N(u)|+|N(v)|\le n-2$, a contradiction. Therefore $d_M\le2$ and $2d_M\le4=k^2$. In every case $2d_M\le k^2$, which is equivalent to the claimed inequality for the positive integer $k$.
+\end{proof}
+The four-cycle attains equality: its total domination number is two, every vertex has maximum degree, and $d_M=2$. The one-vertex graph has no total dominating set and is outside the domain of the invariant.
+\section{Verification and scope}
+A fresh local exact enumeration of 995 connected nonisomorphic graphs of orders two through seven in the NetworkX 3.6.1 Graph Atlas found 372 equality cases and no violations. The supplied verification scripts use exhaustive total dominating set enumeration and integer arithmetic, with a second bitmask and Floyd--Warshall implementation. The finite checks are not a substitute for the universal proof. CI and external human review are not certified at drafting. The classical estimate is credited; no earlier exact numbered resolution was identified in bounded searches, but priority is unconfirmed and this is excluded from the repository's novel count. Generative AI (ChatGPT) assisted with mathematical reasoning, literature review, code and drafting. Human author review and authorship confirmation are pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, catalogue snapshot printed November 6, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{prior} E. DeLaVi\~na, Q. Liu, R. Pepper, B. Waller and D. B. West, \emph{Some conjectures of Graffiti.pc on total domination} (2007), Lemmas 2--3, equation (5), Theorem 3. \url{https://www.uhd.edu/documents/academics/sciences/total-dom-2007.pdf}.
+\bibitem{harness} KAVentures, \emph{Conjecture Harness}, v0.6.0-preview, commit 135189ad0a0dffd326a59b0a56dd7e87215f617c. \url{https://github.com/KAVentures/conjecture-harness}.
+\end{thebibliography}
+\end{document}

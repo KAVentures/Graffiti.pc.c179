@@ -1,0 +1,1 @@
+C268: 995 connected graphs (orders 2–7); 650 equality cases; 0 violations

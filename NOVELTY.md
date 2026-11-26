@@ -1,6 +1,6 @@
 # Novelty and correctness screening — 2026-11-26
 
-Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all twelve open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
+Searches covered exact conjecture numbers and statements, nearby invariant formulations, the current Written on the Wall II snapshot, Douglas West's REGS pages, journal search results, and public research repositories. The catalogue marks all fourteen open but is not an exhaustive index of existing theorems. A bounded search cannot certify novelty.
 
 | Entry | Classification | Evidence |
 |---|---|---|
@@ -17,11 +17,16 @@ Searches covered exact conjecture numbers and statements, nearby invariant formu
 | 179 | Candidate resolution of both readings; priority unconfirmed | Catalogue p. 104 uses delta; West REGS uses Delta. New proof gives Delta+i+lambda and the prior paper's separate additive minimum-degree refinement. Kuberwastaken/c5-k4 reports incomplete trial, not proof. |
 | 208 | Candidate resolution; priority unconfirmed | Catalogue statement and Stong's 2010 comment checked in indexed text; image fetch failed. Proof uses Chvatal's degree criterion plus explicit matching arguments for the small exceptional orders; sharp threshold. No earlier exact resolution found in bounded searches. |
 
+| 268 | Prior-related resolution; excluded from novel count | Catalogue open on 2026-11-06. DeLaVina et al. (2007), Lemmas 2–3, equation (5) and Theorem 3 already provide the spanning-tree machinery. Additional center-pair argument gives the exact floor bound. No earlier exact resolution located in bounded searches. |
+| 271 | Prior-related resolution; excluded from novel count | Catalogue open on 2026-11-06. Same published diameter bound, retaining the component count for k=3, and a dominating-edge degree argument for k=2. No earlier exact resolution located in bounded searches. |
+
 ## Counting policy
 
-Eight candidates (138, 157, 166, 169, 171, 177, 179, 208); four excluded notes (76, 137, 161, 162). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
+Eight candidates (138, 157, 166, 169, 171, 177, 179, 208); six excluded notes (76, 137, 161, 162, 268, 271). None has independently certified priority. An open catalogue status is historical metadata, not a claim that no proof existed before November 2026. A prior implication excludes a conjecture from the novel count even if its catalogue status is stale. Reclassify any candidate if an earlier resolution is identified. For 166, similarly numbered WOW-I entries and unrelated project counters are different statements.
 
 ## Sources
+
+- E. DeLaViña, Q. Liu, R. Pepper, B. Waller and D. B. West, Some conjectures of Graffiti.pc on total domination (2007), Lemmas 2–3, equation (5), Theorem 3, https://www.uhd.edu/documents/academics/sciences/total-dom-2007.pdf . Lemma 3 visually checked on PDF page 4; indexed catalogue statements 268 and 271 checked, page image retrieval failed.
 
 - D. Seinsche, On a property of the class of n-colorable graphs (1974), JCT B 16, 191–193, https://doi.org/10.1016/0095-8956(74)90063-X .
 

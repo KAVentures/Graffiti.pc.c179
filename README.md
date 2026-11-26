@@ -1,10 +1,10 @@
 # Graffiti.pc conjectures — proofs and reproducibility
 
-Research preprints by Koyar Afrasyab, November 2026. Twelve conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 entries 137 and 138 to 12 July 2005, and entry 208 to 12 January 2006.
+Research preprints by Koyar Afrasyab, November 2026. Fourteen conjecture packages, each with its own manuscript, source audit, pinned dependencies, exact verification and reproduction instructions. Eight were announced on 8 August 2005; entry 76 dates to 4 April 2004 entries 137 and 138 to 12 July 2005, entry 208 to 12 January 2006, and entries 268 and 271 to 23 February 2007.
 
 ## Status at a glance (2026-11-26)
 
-**Eight candidate resolutions (priority unconfirmed); four prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
+**Eight candidate resolutions (priority unconfirmed); six prior-related notes excluded from the novel count. Zero independently certified first resolutions.** The November 2026 catalogue labels the entries open, but an open catalogue label is not proof that a result was unknown. See [NOVELTY.md](NOVELTY.md) for evidence and distinctions.
 
 ## Candidate resolutions — no exact earlier resolution identified in bounded searches
 
@@ -29,7 +29,10 @@ Research preprints by Koyar Afrasyab, November 2026. Twelve conjecture packages,
 | 161 | **Not novel:** rediscovery of an implication of a stronger bound recorded in October 2005; also follows from an elementary degree bound. | [Research package](conjectures/c161/) · [Paper](conjectures/c161/paper/paper.tex) |
 | 162 | **Prior-related:** closely related to a 2024 published theorem and its exchange argument. Priority not claimed; excluded from novel count. | [Research package](conjectures/c162/) · [Paper](conjectures/c162/paper/paper.tex) |
 
-These four notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
+| 268 | **Prior-related:** total domination versus average center distance; proof uses a classical spanning-tree bound and its equality case. | [Research package](conjectures/c268/) · [Paper](conjectures/c268/paper/paper.tex) |
+| 271 | **Prior-related:** total domination versus maximum-degree vertex distance; diameter bound and a separate dominating-edge argument. | [Research package](conjectures/c271/) · [Paper](conjectures/c271/paper/paper.tex) |
+
+These six notes remain available for attribution, transparency and reproducibility, not as new solutions to previously unsolved problems.
 
 ## Reproducibility and status
 
