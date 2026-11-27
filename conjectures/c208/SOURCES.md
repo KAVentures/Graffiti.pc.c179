@@ -1,5 +1,7 @@
 # Source and novelty audit — conjecture 208
 
+**Correspondence update (2026-11-27):** Earlier solution submitted by another researcher and pending review, confirmed by the curator on 27 November 2026. Excluded from the candidate novelty count; no first-resolution claim. See [submission audit](../../SUBMISSION-AUDIT.md). The [current official WOWII website](https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/) supersedes the historical temporary PDF cited below.
+
 - E. DeLaViña, Written on the Wall II, entry 208, announced January 12, 2006; catalogue updated November 5, 2026. https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf . Indexed PDF text gives the exact formula and open status; screenshot retrieval returned HTTP 404. The displayed inequality is mu >= (1/2)*[1+(2/3)*|E(complement G)|], equivalent to the manuscript's formula.
 - The same entry records Stong's June 2010 observation that the conjectured condition does not imply Chvatal's sufficient condition. The present proof explicitly treats the remaining cases, not merely an application of the degree criterion.
 - V. Chvátal, On Hamilton's ideals, JCTB 12 (1972), 163–168, https://doi.org/10.1016/0095-8956(72)90020-2 . The degree-sequence theorem is used in its standard contrapositive form on G joined with a universal vertex; it is not a new theorem.
