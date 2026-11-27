@@ -1,5 +1,7 @@
 # Sources and proof audit — 2026-11-26
 
+**Correspondence update (2026-11-27):** Curator provisionally attributes the submitted derivation to this project, pending review (27 November 2026). DeLaViña et al. (2007) are credited for the underlying diameter estimate. No first-resolution or novel underlying-theorem claim. See [submission audit](../../SUBMISSION-AUDIT.md). The [current official WOWII website](https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/) supersedes the historical temporary PDF cited below.
+
 - E. DeLaViña, Written on the Wall II, entry 271, announced February 23, 2007, open in catalogue snapshot printed November 6, 2026. https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf . Indexed PDF text checked; screenshot retrieval returned 404. The exact formula is reproduced in the manuscript. Domain excludes K1 since total domination is undefined there.
 - E. DeLaViña, Q. Liu, R. Pepper, B. Waller, D. B. West, Some conjectures of Graffiti.pc on total domination (2007), https://www.uhd.edu/documents/academics/sciences/total-dom-2007.pdf . Lemma 2 and Lemma 3, equation (5), visually inspected on PDF page 4; Theorem 3 gives gamma_t >= radius. The known bound diam(T) <= k+2c-1 <= 2k-1 is explicitly credited. The additional argument in this note addresses the exact catalogue entry; no priority claimed.
 - Harness v0.6.0-preview, commit 135189ad0a0dffd326a59b0a56dd7e87215f617c, https://github.com/KAVentures/conjecture-harness/tree/135189ad0a0dffd326a59b0a56dd7e87215f617c .
