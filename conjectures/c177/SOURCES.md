@@ -1,5 +1,7 @@
 # Source and proof audit — conjecture 177
 
+**Correspondence update (2026-11-27):** Earlier solution submitted by another researcher and pending review, confirmed by the curator on 27 November 2026. Excluded from the candidate novelty count. Our independent derivation and any strengthening are retained without a priority claim. See [submission audit](../../SUBMISSION-AUDIT.md). The [current official WOWII website](https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/) supersedes the historical temporary PDF cited below.
+
 - Ermelinda DeLaViña, Written on the Wall II, conjecture 177, August 8, 2005. Catalogue updated November 5, 2026: https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf . Indexed PDF text gives the formula and open status; the screenshot fetch failed with HTTP 404. Formula corroborated by the following two independent sources.
 - Douglas West, Some Conjectures of Graffiti.pc (REGS 2009), https://dwest.web.illinois.edu/regs/graffiti.html . Confirms L+b >= 2 alpha + second-smallest degree, multiplicity counted.
 - E. DeLaViña and B. Waller, Spanning Trees with Many Leaves and Average Distance, Electronic Journal of Combinatorics 15 (2008), R33, https://doi.org/10.37236/757 . Theorem 3 proves L+b >= 2 alpha + 1, explicitly noting the stronger conjecture is open. The proof is re-used with attribution for the case sigma_A=1, and its component method is extended for higher degrees.
