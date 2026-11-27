@@ -1,6 +1,6 @@
 # Graffiti.pc Conjecture 177
 
-> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+> **Current research status:** Earlier solution submitted by another researcher and pending review, confirmed by the curator on 27 November 2026. Excluded from the candidate novelty count. Our independent derivation and any strengthening are retained without a priority claim. Historical catalogue evidence is recorded in [SOURCES.md](SOURCES.md). See the [submission audit](../../SUBMISSION-AUDIT.md).
 
 [All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
 
@@ -31,4 +31,4 @@ pdflatex -interaction=nonstopmode -halt-on-error paper.tex
 
 Primary and independent algorithms ran locally with Python 3.13.5, NetworkX 3.6.1: 995 connected Atlas graphs, 147 equality cases, 13,067 constructive witness domains and 845 maximum-independent-set choices where the refinement uses a strictly larger degree. Zero violations. The universal proof does not rely on these finite checks.
 
-**Status:** candidate novel resolution of the stated conjecture. No earlier full proof identified in bounded searches; independent peer review, formal certification and exclusive publication priority are not established. CI PDF compilation and execution for the new revision are unconfirmed.
+**Status:** earlier submission reported; no first-resolution claim. independent peer review, formal certification and exclusive publication priority are not established. CI PDF compilation and execution for the new revision are unconfirmed.
