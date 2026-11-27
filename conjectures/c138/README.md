@@ -1,6 +1,6 @@
 # Graffiti.pc Conjecture 138 — disproof and sharp coefficient
 
-> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: page image checked. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+> **Current research status:** Candidate counterexample, independently proof-read on 27 November 2026. The curator mentioned #135, not #138; numbering and individual status remain unconfirmed. Do not equate the two. Historical catalogue evidence is recorded in [SOURCES.md](SOURCES.md). See the [submission audit](../../SUBMISSION-AUDIT.md).
 
 [All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
 
