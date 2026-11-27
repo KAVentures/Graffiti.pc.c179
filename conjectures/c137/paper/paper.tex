@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{A Note on Graffiti.pc Conjecture 137: Induced Paths and Complement Path Covers}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We record a resolution of Graffiti.pc Conjecture 137 for connected graphs of order at least two. The inequality is an immediate consequence of the classical cograph characterization, for which we include an elementary proof. The singleton is a literal exception. We claim neither a new theorem nor established priority for this catalogue resolution.
+\end{abstract}
+\section{Statement}
+All graphs are finite, simple, and nonempty. Let $L(G)$ be the order of a longest induced path and $p(H)$ the minimum number of vertex-disjoint ordinary paths (including singletons) covering $V(H)$. The catalogue \cite{wow} lists Conjecture 137, announced July 12, 2005, as open in its November 6, 2026 snapshot, with statement $L(G)\ge 4/p(\overline G)$ for connected $G$. Literally $K_1$ violates the inequality, since both parameters equal one. We prove the nontrivial version.
+\section{Proof}
+\begin{lemma}[Classical; Seinsche \cite{seinsche}]
+If $G$ has order at least two and both $G$ and $\overline G$ are connected, then $G$ contains an induced $P_4$.
+\end{lemma}
+\begin{proof}
+Induct on order. For order two there is no graph satisfying both connectivity hypotheses. At larger order, take a leaf $v$ of a spanning tree, so $G-v$ is connected. If $\overline{G-v}$ is connected, induction applies. Otherwise let $A_1,\ldots,A_t$ be its components, where $t\ge2$. Every vertex in one component is adjacent in $G$ to every vertex in another component. Connectivity of $\overline G$ implies that $v$ has a nonneighbor in $G$ in each $A_i$. Connectivity of $G$ implies that $v$ has a neighbor in some $A_i$. A path in the complement within that $A_i$ from a neighbor of $v$ to a nonneighbor supplies consecutive vertices $x,y$ with $vx\in E(G)$, $vy\notin E(G)$, and $xy\notin E(G)$. Choose a nonneighbor $z$ of $v$ in a different component. In the order $v,x,z,y$, the consecutive pairs are edges and all three nonconsecutive pairs are nonedges of $G$. This is an induced $P_4$.
+\end{proof}
+\begin{theorem}
+Every connected graph $G$ of order at least two satisfies $L(G)p(\overline G)\ge4$. For order at least three, $p(\overline G)=2$ implies $L(G)\ge3$.
+\end{theorem}
+\begin{proof}
+Write $k=p(\overline G)$. If $k\ge2$, any edge of $G$ gives $L(G)\ge2$, hence $kL(G)\ge4$. If $k=1$, the complement has a spanning path, so is connected; the lemma gives $L(G)\ge4$. If $k=2$ and $|V(G)|\ge3$, $G$ is not complete (otherwise the complement needs one singleton path per vertex). A shortest path between two nonadjacent vertices has an induced three-vertex initial segment. This proves the strengthening. The constant $4$ is sharp at $P_4$, which is self-complementary and has a spanning path.
+\end{proof}
+\section{Scope and reproducibility}
+The classical implication predates the 2005 conjecture; no separately documented earlier resolution of the exact entry was located in bounded searches. The proof does not depend on computational verification. The primary exact check of the 995 connected Atlas graphs of orders two through seven found 304 equalities and no violations. The package supplies a subset dynamic program and a separate permutation-based path-cover checker with an induced-path depth-first search; CI and external human review are not certified at drafting. No additional open problem is claimed solved. Generative AI (ChatGPT) assisted in literature search, mathematical reasoning, verification code and drafting. Human author review and authorship confirmation are pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVina, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 137, printed p. 79, snapshot printed November 6, 2026. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{seinsche} D. Seinsche, On a property of the class of n-colorable graphs, \emph{Journal of Combinatorial Theory, Series B} 16 (1974), 191--193. \url{https://doi.org/10.1016/0095-8956(74)90063-X}.
+\bibitem{harness} KAVentures, \emph{Conjecture Harness}, v0.6.0-preview, commit 135189ad0a0dffd326a59b0a56dd7e87215f617c. \url{https://github.com/KAVentures/conjecture-harness}.
+\end{thebibliography}
+\end{document}

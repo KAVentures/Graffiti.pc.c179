@@ -1,5 +1,9 @@
 # Conjecture 161 — maximum local independence of the complement
 
+> **Research status:** Prior implication; not novel. **Open-status evidence:** Catalogue: page image checked. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 **Status: NOT NOVEL — rediscovery of a previously implied bound. Excluded from the novel-resolution count.** See [novelty audit](../../NOVELTY.md).
 
 Source: *Written on the Wall II*, conjecture 161, announced 2005-08-08; catalogue dated 2026-11-05, printed p. 92. See [source audit](SOURCES.md).

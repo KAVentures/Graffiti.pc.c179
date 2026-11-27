@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A Strengthening of Graffiti.pc Conjecture 348: Total Domination and Degree-Two Neighborhoods}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove the archived statement of Graffiti.pc Conjecture 348 and strengthen its coefficient from $2/3$ to $3/4$ with an additive correction. The proof uses a component-sensitive incidence count in trees. The archived entry is marked open; current primary-source status and publication priority remain unconfirmed. Optimality of the strengthened coefficient is not asserted.
+\end{abstract}
+\section{Statement and provenance}
+Let $T$ be a finite simple tree on at least three vertices, let $Q=\{v:\deg_T(v)=2\}$, and define $B=N_T(Q)\setminus Q$ and $b=|B|$, where $N_T(Q)$ is the union of open neighborhoods of vertices in $Q$. A total dominating set $D$ is a vertex set such that every vertex has a neighbor in $D$; its minimum possible order is $\gamma_t(T)$. The archived record \cite{archive} gives Conjecture 348, dated February 18, 2009 and marked open, as $\gamma_t(T)\ge 2b/3$. The current official entry \cite{wow} could not be retrieved. DeLaVi\~na et al.\ \cite[Lemmas 8 and 10, Theorem 9]{related} use related acyclicity and degree-two arguments for different bounds. We explicitly credit those antecedents.
+\section{Component-sensitive bound}
+\begin{theorem}
+For every total dominating set $D$ of $T$, writing $k=|D|$ and $c$ for the number of components of $T[D]$, one has
+\[
+ 3b\le 3k+2c-2\le 4k-2.
+\]
+In particular,
+\[
+ \gamma_t(T)\ge \left\lceil\frac{3b+2}{4}\right\rceil
+ \ge \frac{2b}{3}.
+\]
+\end{theorem}
+\begin{proof}
+Every component of $T[D]$ has at least two vertices because $D$ totally dominates itself. Hence $2c\le k$. Assign each vertex outside $D$ to one of its neighbors in $D$, and partition $V(T)$ into blocks consisting of a component of $T[D]$ and the vertices assigned to its members. Each block induces a connected subtree. Contracting the blocks yields a tree, so there are exactly $c-1$ interblock edges.
+
+Each vertex outside $D$ has exactly one neighbor in its own block. Indeed, it has at least its assigned neighbor. Two neighbors in the selected component would create a cycle. An edge to another unselected vertex in the same block would also create a cycle using their assignment edges and the path between the assigned vertices in the component (a triangle when the assigned vertices coincide).
+
+Partition $B$ into the following disjoint sets: $B_0=B\cap D$, $B_1$ consisting of unselected members with a selected neighbor in $Q$, and $Z=B\setminus(B_0\cup B_1)$. Write $z=|Z|$. Every selected degree-two vertex has a selected neighbor and therefore at most one unselected neighbor. Assigning each vertex in $B_1$ to a selected degree-two neighbor gives an injection into $Q\cap D$. Since $B_0$ is disjoint from $Q\cap D$,
+\[
+ |B_0|+|B_1|\le |B_0|+|Q\cap D|\le k.
+\]
+
+Every vertex $v$ of $Z$ is unselected, has a degree-two neighbor, and has no selected degree-two neighbor. It cannot be a leaf: a leaf's unique neighbor belongs to every total dominating set. Nor can it have degree two, by the definition of $B$. Thus $\deg_T(v)\ge3$. Exactly one incident edge lies within its own block, so $v$ contributes at least two incidences of interblock edges.
+
+In addition, choose for each $v\in Z$ one neighbor $u_v\in Q$. This neighbor is unselected by the definition of $Z$, so $vu_v$ is an interblock edge: there are no edges between two unselected vertices within a block. Count the incidence of $vu_v$ at $u_v$. These $z$ incidences are pairwise distinct, even if some $u_v$ coincide, because the edges have different endpoints in $Z$ and $Z\cap Q=\varnothing$. None of these incidences is one of the previously counted incidences at vertices of $Z$.
+
+Each of the $c-1$ interblock edges has exactly two incidences. The preceding counts thus give
+\[
+ 3z\le 2(c-1).
+\]
+Since $b=|B_0|+|B_1|+z$, we conclude that
+\[
+ 3b\le 3k+3z\le 3k+2c-2\le 4k-2.
+\]
+Taking $D$ to be a minimum total dominating set and using integrality gives the strengthened bound. For $b\ge0$, $(3b+2)/4-2b/3=(b+6)/12>0$, so the original conjecture follows.
+\end{proof}
+\section{Verification and scope}
+A tree dynamic program checked all 2,286 nonisomorphic trees of orders three through thirteen with NetworkX 3.6.1: 103 equality cases for the stronger integer bound and no violations. Direct exhaustive bitmask enumeration independently reproduced the total domination numbers for all 985 trees of orders three through twelve. For the dynamic program, each subtree stores minimum costs for four states given selection of the root and its parent. The root is dominated if the parent is selected or at least one child is selected; the recurrence tracks whether any child is selected. The actual tree root has no selected parent. The supplied scripts reproduce the finite checks. The universal proof does not depend on them.
+
+No earlier exact resolution or implication was identified in bounded searches, but the latest official catalogue entry remains unverified, publication priority is unconfirmed, and the optimality of $3/4$ is not established. CI and PDF compilation have not been certified at drafting. Generative AI (ChatGPT) assisted in literature review, reasoning, code and drafting using the Conjecture Harness \cite{harness}. Human review and authorship confirmation remain pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 348 (current original entry unavailable). \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{archive} Kuberwastaken, \emph{c5-k4, archived WOWII conjecture dataset}, entry 348, retrieved November 26, 2026. \url{https://github.com/Kuberwastaken/c5-k4/blob/e2cee93231eefb91c41e35450f7eeb19fd9c8c75/data/wowii-conjectures.json}.
+\bibitem{related} E. DeLaVi\~na, C. E. Larson, R. Pepper and B. Waller, \emph{Graffiti.pc on the total domination number of a tree}, Congressus Numerantium 195 (2009), 5--18. \url{https://www.uhd.edu/documents/academics/sciences/boca2009-dlpw.pdf}.
+\bibitem{harness} KAVentures, \emph{Conjecture Harness}, v0.6.0-preview, commit \texttt{135189ad0a0dffd326a59b0a56dd7e87215f617c}. \url{https://github.com/KAVentures/conjecture-harness}.
+\end{thebibliography}
+\end{document}

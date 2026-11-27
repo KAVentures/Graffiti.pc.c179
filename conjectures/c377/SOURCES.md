@@ -1,0 +1,14 @@
+# Source and proof audit — 2026-11-26
+
+- Pinned archived statement: https://github.com/Kuberwastaken/c5-k4/blob/e2cee93231eefb91c41e35450f7eeb19fd9c8c75/data/wowii-conjectures.json . Entry 377 dated February 18, 2009; open marker O; trees n>2. Statement: total domination number at least the number of isolates in the induced maximum-degree set plus the upper median of the degree sequence.
+- Official catalogue: https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf . Indexed retrieval did not locate the current numbered entry. Current official open status is unverified.
+- **Unresolved prior-art lead:** Hongxing Jiang, Some conjectures of Graffiti.pc on the total domination number of a tree, Utilitas Mathematica 99 (2016), 33–42. Publisher volume contents: https://combinatorialpress.com/um/vol99/ . Bibliographic record verified; full text not retrieved. It may contain these results. This is a material limitation of the novelty audit.
+- Related work: DeLaViña et al., Graffiti.pc on the total domination number of a tree, https://www.uhd.edu/documents/academics/sciences/boca2009-dlpw.pdf . The archived note to entry 379 credits an earlier lower bound by the number of components of the maximum-degree subgraph plus one. We do not claim priority for a basic excess-one bound or for the tree-block technique; the present argument establishes the additional equality-case condition.
+- August 2026 screening report: https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four . The controls explicitly list both 376 and 377 among entries screened on 81,132 trees without violations. This does not establish novelty.
+- Targeted exact-number and title searches on 2026-11-26 found no earlier exact proof in accessible sources. The Jiang paper is unresolved; first priority cannot be certified.
+
+## Proof and computational review
+
+The manuscript proves a component-sensitive bound for isolates of the maximum-degree subgraph when maximum degree is at least three, using independent isolated vertices and disjoint interblock edge counts. The excess-one case forces a selected star with all unselected vertices leaves. The median criterion follows from the edge difference of distance sums; the upper median degree is at most two by the degree sum. The exceptional tree has a unique distance median and a strict majority of leaves. Paths are handled separately.
+
+Fresh local enumeration with NetworkX 3.6.1 used exact bitmask and direct subset algorithms for total domination; 985 trees, 54 equalities for this entry, no violations, and no disagreement on domination numbers. Both exceptional-case conclusions checked for all 35 excess-one instances. The supplied scripts reproduce the finite checks. No independent human or formal verification, CI success, or novelty certification is claimed.

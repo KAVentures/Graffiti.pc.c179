@@ -1,0 +1,1 @@
+C271: 995 connected graphs (orders 2–7); 372 equality cases; 0 violations

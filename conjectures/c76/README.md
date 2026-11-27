@@ -1,5 +1,9 @@
 # Graffiti.pc Conjecture 76 — exact counterexample; prior implication
 
+> **Research status:** Prior implication; not novel. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 Announced April 4, 2004; still labelled open in the November 2026 catalogue.
 
 The bound `tree(G) >= freq(T_max)/floor(avg_degree(G))` is false. A 43-vertex bipartite cactus has 56 edges, every vertex attains the triangle-count maximum zero, floor(avg_degree)=2, and largest induced tree order 21. Thus 21 < 43/2. A symmetric infinite family has n=2(3^(h+1)-1), m=8*3^h-4 and t=3(2^(h+1)-1); for h>=2 the violation grows without bound.

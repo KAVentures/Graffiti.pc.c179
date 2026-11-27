@@ -1,5 +1,9 @@
 # Graffiti.pc Conjecture 177
 
+> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+
+[All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
+
 **The Second-Smallest Degree, Independence, and Spanning-Tree Leaves: A Proof of Graffiti.pc Conjecture 177** — Koyar Afrasyab, November 2026 (AI-assisted preprint for author review).
 
 For a finite simple connected graph with at least two vertices, the paper proves

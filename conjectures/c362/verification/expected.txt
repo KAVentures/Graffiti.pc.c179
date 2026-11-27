@@ -1,0 +1,1 @@
+C362: 985 nonisomorphic trees (orders 3–12); 465 strengthened equality cases; 0 violations; 100 sharp examples

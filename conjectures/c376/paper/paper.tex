@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A Structural Proof of Graffiti.pc Conjecture 376: Isolated Maximum-Degree Vertices and distance medians}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We establish the archived inequality numbered 376 in Graffiti.pc, using a structural argument shared with entry 377. The exceptional case of an excess of one is analyzed explicitly. Current official open status and publication priority are unconfirmed, in particular because the full text of Jiang's relevant 2016 paper was not retrieved.
+\end{abstract}
+\section{Statement and provenance}
+A total dominating set is a vertex set in which every vertex of the graph has a neighbor. Its minimum order is $\gamma_t(T)$. The archived record \cite{archive} marks Conjecture 376, dated February 18, 2009, open and states $\gamma_t(T)\ge i+|J|$, for trees of order greater than two, where $i$ is the number of isolates of the induced maximum-degree subgraph and |J| denotes the number of vertices minimizing total distance. The current official entry \cite{wow} was not retrieved. The available bibliographic record of Jiang's 2016 paper \cite{jiang} does not disclose which numbered conjectures it settles; this is a specific unresolved priority lead. A public August 2026 report \cite{screen} records finite screening without violations, not certification of priority.
+\section{Common structural theorem}
+Let $T$ be a tree of order $n\ge3$, let $\Delta$ be its maximum degree, let $M=\{v:\deg(v)=\Delta\}$, and let $I$ be the set of isolated vertices of $T[M]$. Put $i=|I|$ and $k=\gamma_t(T)$. Let $J$ be the set of vertices minimizing the sum of distances to all vertices of $T$, and let $u$ be the upper median of its degree sequence (the entry at position $\lfloor n/2\rfloor+1$ in nondecreasing order).
+\begin{theorem}
+One has $k\ge i+1$. If $k=i+1$, then $|J|=u=1$. Consequently
+\[
+ k\ge i+|J|,\qquad k\ge i+u.
+\]
+\end{theorem}
+\begin{proof}
+First, $|J|\le2$. Indeed, if an edge $vw$ separates a component of size $s$ on the $w$ side from the rest of the tree, the sum of distances changes by $n-2s$ when moving from $v$ to $w$. Thus a vertex is a distance median exactly when each component of its deletion has size at most $n/2$: necessity follows by a single move, and sufficiency follows since the forward component sizes strictly decrease along any path away from the vertex. If all those sizes are strictly below $n/2$, the median is unique. Otherwise exactly one component has size $n/2$, and the adjacent vertex on that side is the only other median (subsequent moves have strictly positive changes). Also $u\le2$: if $h$ vertices have degree at least three, $n+2h\le 2n-2$ by the degree sum, so $h<n/2$.
+
+For $\Delta=2$, the tree is a path. If $n=3$, $i=1$, $k=2$, and $|J|=u=1$. If $n\ge4$, the maximum-degree vertices induce a path with at least two vertices, hence $i=0$ and $k\ge2$ suffices. We may therefore assume $\Delta\ge3$.
+
+Choose a minimum total dominating set $D$ and let $c$ count the components of $T[D]$. Each component contains a vertex outside $I$: the components have order at least two and $I$ is independent. Hence $|I\cap D|\le k-c$.
+
+Assign each vertex outside $D$ to an adjacent selected vertex, forming a connected block for each component of $T[D]$ by including its assigned vertices. There are exactly $c-1$ interblock edges, since contracting the connected blocks in a tree gives a tree. Every unselected vertex has exactly one neighbor in its own block: two selected neighbors in the same component, or an edge to another unselected vertex assigned to that component, would create a cycle. Thus each vertex in $I\setminus D$ has $\Delta-1$ incident interblock edges. No edge is counted twice because $I$ is independent. Writing $z=|I\setminus D|$, we have
+\[
+ (\Delta-1)z\le c-1,\qquad
+ i\le k-c+\left\lfloor\frac{c-1}{\Delta-1}\right\rfloor.
+\]
+This gives $i\le k-1$ for every $c$, and $i\le k-2$ if $c\ge2$. The latter case proves both conjectures by the preliminary bounds.
+
+Suppose now that $k=i+1$. Then $c=1$ and $z=0$, so $D$ consists of the $i$ independent maximum-degree vertices and one further vertex $v$. Since $k\ge2$, $i\ge1$. The induced connected graph $T[D]$ is a star with center $v$ (an edge if $i=1$). The center is not in $M$, since it is adjacent to a member of $I$. Every vertex outside $D$ is a leaf: there are no interblock edges and each has exactly one neighbor in the block. Each of the $i$ selected maximum-degree vertices has exactly $\Delta-1$ pendant leaves. Write $\ell$ for the number of additional leaves adjacent to $v$; thus $i+\ell=\deg(v)\le\Delta-1$ and $n=1+i\Delta+\ell$.
+
+If $i\ge2$, deleting $v$ leaves $i$ components of size $\Delta$ and $\ell$ singleton components. Each has size strictly less than $n/2$ because $n\ge2\Delta+1$. Hence $v$ is the unique median. There are at least $i(\Delta-1)\ge2i>i+1=|D|$ leaves outside $D$, so more than half of all vertices have degree one and $u=1$.
+
+If $i=1$, write $w$ for the unique selected maximum-degree vertex. Deleting $w$ leaves $\Delta-1$ singleton components and a component of size $1+\ell$. Because $\ell\le\Delta-2$, one has $2(1+\ell)<n=\Delta+1+\ell$, and all components have size below $n/2$. Thus $w$ is the unique median. If $\ell=0$, the center $v$ is itself a leaf and $T$ is a star, with more than half its vertices leaves. If $\ell\ge1$, there are $\Delta-1+\ell\ge3$ leaves outside $D$, compared with two selected vertices, again giving $u=1$.
+
+This proves the exceptional case. For $k\ge i+2$ the two preliminary bounds already suffice, completing the proof.
+\end{proof}
+
+\section{Verification and scope}
+Exact bitmask and direct subset enumeration with NetworkX 3.6.1 agreed on all 985 nonisomorphic trees of orders three through twelve. Entry 376 had 70 equality cases and no violations. In all 35 instances with $k=i+1$, both exceptional-case conclusions held. Finite checks are supplementary to the universal proof. CI, PDF compilation and external review are pending.
+
+The available source searches did not identify an earlier exact proof, but the Jiang paper remains an unresolved prior-art lead. The archive note for entry 379 credits a prior bound by the number of components of $T[M]$ plus one. No priority for that weaker bound or for the connected-block technique is asserted. Generative AI (ChatGPT) assisted in literature review, reasoning, code and drafting. Human author review and publication-priority determination remain pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 376. \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{archive} Kuberwastaken, \emph{c5-k4, archived WOWII conjecture dataset}, entry 376, retrieved November 26, 2026. \url{https://github.com/Kuberwastaken/c5-k4/blob/e2cee93231eefb91c41e35450f7eeb19fd9c8c75/data/wowii-conjectures.json}.
+\bibitem{jiang} H. Jiang, \emph{Some conjectures of Graffiti.pc on the total domination number of a tree}, Utilitas Mathematica 99 (2016), 33--42. Bibliographic record: \url{https://combinatorialpress.com/um/vol99/}. Full text not retrieved.
+\bibitem{screen} AI Village News, \emph{WOW II / Graffiti.pc 378 FALSE}, controls and batch screen, August 2026. \url{https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four}.
+\end{thebibliography}
+\end{document}

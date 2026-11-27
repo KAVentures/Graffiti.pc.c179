@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A Proof of Graffiti.pc Conjecture 361: Isolated Support Vertices and Tree Centers}
+\author{Research draft for author review}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove the lower bound on the total domination number of a tree in terms of its isolated support vertices and center size recorded as Graffiti.pc Conjecture 361. We also characterize the positive-isolated-support trees attaining a minimal excess of one. No publication priority is certified.
+\end{abstract}
+\section{Statement and provenance}
+Let $T$ be a finite simple tree of order at least three. A support vertex is a vertex adjacent to a leaf. Write $S$ for the set of support vertices, $i$ for the number of isolated vertices of the induced subgraph $T[S]$, and $C$ for the center of $T$, the set of vertices of minimum eccentricity. The total domination number $\gamma_t(T)$ is the minimum order of a vertex set $D$ such that every vertex has a neighbor in $D$. The archived dataset \cite{archive} records the conjecture $\gamma_t(T)\ge i+|C|$ as announced February 18, 2009 and open. The original catalogue entry \cite{wow} could not be retrieved in the current search. Related work \cite{related} gives different total-domination bounds involving isolated supports. A public August 2026 report \cite{screen} records finite screening of entry 361, not a proof.
+\section{Proof and structural refinement}
+\begin{theorem}
+For every such tree $T$,
+\[
+\gamma_t(T)\ge i+|C|.
+\]
+Furthermore, if $i>0$, then $\gamma_t(T)=i+1$ holds precisely for stars and trees formed from a star with at least two outer vertices by attaching at least one new leaf to each outer vertex.
+\end{theorem}
+\begin{proof}
+Every total dominating set contains every support vertex, because a leaf has exactly one neighbor. Let $D$ be a minimum total dominating set. If $i=0$, then $|D|\ge2\ge |C|$, as a tree has at most two centers.
+
+Suppose $i>0$. An isolated support vertex must have a neighbor in $D\setminus S$. Therefore $|D|\ge |S|+1\ge i+1$. If $|D|=i+1$, both inequalities are equalities: $S$ is independent and $D=S\cup\{x\}$ for one vertex $x\notin S$. Every support vertex is adjacent to $x$ by total domination. Hence $T[D]$ is a star. Every vertex outside $D$ has a neighbor in $D$. It has exactly one such neighbor, since two would give a cycle using the connected subtree $T[D]$. No two outside vertices can be adjacent, because their edges to $D$, together with the path in $T[D]$ between their attachment points (possibly the same point), would give a cycle. Thus every outside vertex is a leaf. None can be adjacent to $x$, since $x$ is not a support vertex.
+
+If $i=1$, the tree is a star with its sole support as center. If $i\ge2$, each support is adjacent to $x$ and at least one leaf, and there are no other vertices or edges. This tree has diameter four and unique center $x$. Conversely, for a star its center and any leaf constitute a total dominating set of order two; for the second family the original star vertices constitute a total dominating set of order $i+1$. The preceding lower bound ensures optimality in both cases.
+
+In particular, whenever $i>0$ and $|C|=2$, the equality $|D|=i+1$ is impossible, so $|D|\ge i+2$. If $|C|=1$, the earlier bound suffices. This proves both assertions.
+\end{proof}
+\section{Reproducibility and novelty}
+A local exact bitmask enumeration with NetworkX 3.6.1 checked the inequality for all 985 nonisomorphic trees of orders three through twelve, with 179 equality cases and no violations. The supplied primary verifier additionally checks the structural characterization; a second implementation uses subset enumeration and Floyd--Warshall distances. CI and external human review are not certified at drafting. Finite checks do not replace the universal proof. A bounded search found no earlier proof of the exact archived statement; current original catalogue access remains incomplete, and novelty is unconfirmed. Generative AI (ChatGPT) assisted in literature search, reasoning, code and drafting using the Conjecture Harness \cite{harness}. Human author review and authorship confirmation are pending.
+\begin{thebibliography}{9}
+\bibitem{wow} E. DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry 361 (original entry unavailable in current retrieval). \url{https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf}.
+\bibitem{archive} Kuberwastaken, \emph{c5-k4, archived WOWII conjecture dataset}, entry 361, retrieved November 26, 2026. \url{https://github.com/Kuberwastaken/c5-k4/blob/main/data/wowii-conjectures.json}.
+\bibitem{related} E. DeLaVi\~na, C. E. Larson, R. Pepper and B. Waller, \emph{On total domination and support vertices of a tree}, Theorems 1, 2 and 4. \url{https://math1um.github.io/Research/r08.pdf}.
+\bibitem{screen} AI Village News, \emph{WOW II / Graffiti.pc 378 FALSE}, controls and batch screen, August 2026. \url{https://grok-ai-village-news-496089.gitlab.io/articles/opus5-wow2-conj378-false-one-hundred-sixty-four}.
+\bibitem{harness} KAVentures, \emph{Conjecture Harness}, v0.6.0-preview, commit \texttt{135189ad0a0dffd326a59b0a56dd7e87215f617c}. \url{https://github.com/KAVentures/conjecture-harness}.
+\end{thebibliography}
+\end{document}
