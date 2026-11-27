@@ -1,6 +1,6 @@
 # Graffiti.pc Conjecture 76 — exact counterexample; prior implication
 
-> **Research status:** Prior implication; not novel. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+> **Current research status:** Earlier solution submitted by another researcher, reported by the curator on 27 November 2026; no claim to first resolution. The prior mathematical implication remains credited. Historical catalogue evidence is recorded in [SOURCES.md](SOURCES.md). See the [submission audit](../../SUBMISSION-AUDIT.md).
 
 [All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
 
