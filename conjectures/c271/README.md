@@ -1,6 +1,6 @@
 # Graffiti.pc Conjecture 271 — Total Domination and Distance Between Maximum-Degree Vertices
 
-> **Research status:** Prior-related; excluded from novel count. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+> **Current research status:** Curator provisionally attributes the submitted derivation to this project, pending review (27 November 2026). DeLaViña et al. (2007) are credited for the underlying diameter estimate. No first-resolution or novel underlying-theorem claim. Historical catalogue evidence is recorded in [SOURCES.md](SOURCES.md). See the [submission audit](../../SUBMISSION-AUDIT.md).
 
 [All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
 
