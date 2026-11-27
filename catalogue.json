@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "consolidated_on": "2026-11-26",
+  "consolidated_on": "2026-11-27",
   "evidence_labels": {
     "page_image": "Catalogue: page image checked",
     "indexed_text": "Catalogue: indexed text checked; image unavailable",
@@ -9,7 +9,8 @@
   "priority_labels": {
     "candidate": "Candidate; priority unconfirmed",
     "prior_implication": "Prior implication; not novel",
-    "prior_related": "Prior-related; excluded from novel count"
+    "prior_related": "Prior-related; excluded from novel count",
+    "earlier_submission": "Earlier solution submitted by another researcher; no first-resolution claim"
   },
   "entries": [
     {
@@ -19,7 +20,8 @@
       "priority": "prior_implication",
       "source": "indexed_text",
       "summary": "43-vertex witness and unbounded family; earlier Matoušek–Šámal theorem implies refutation.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "earlier_submission_reported"
     },
     {
       "id": 137,
@@ -28,7 +30,8 @@
       "priority": "prior_implication",
       "source": "indexed_text",
       "summary": "Seinsche’s cograph characterization.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 138,
@@ -37,7 +40,8 @@
       "priority": "candidate",
       "source": "page_image",
       "summary": "Infinite subcubic tree family; sharp square-distance coefficient.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 157,
@@ -46,7 +50,8 @@
       "priority": "candidate",
       "source": "page_image",
       "summary": "Breadth-first spanning tree; sharp integer refinement.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 161,
@@ -55,7 +60,8 @@
       "priority": "prior_implication",
       "source": "page_image",
       "summary": "Earlier stronger bound and elementary degree bound.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 162,
@@ -64,7 +70,8 @@
       "priority": "prior_related",
       "source": "indexed_text",
       "summary": "Related 2024 published exchange argument.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 166,
@@ -73,7 +80,8 @@
       "priority": "candidate",
       "source": "indexed_text",
       "summary": "22-vertex witness; earlier diamond-chain gadget credited.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "closure_by_counterexample_announced"
     },
     {
       "id": 169,
@@ -82,7 +90,8 @@
       "priority": "candidate",
       "source": "page_image",
       "summary": "Singleton convention explicitly documented.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 171,
@@ -91,34 +100,38 @@
       "priority": "candidate",
       "source": "indexed_text",
       "summary": "Infinite tree counterexample family.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 177,
       "topic": "Spanning-tree leaves / induced bipartite subgraphs",
       "result": "Proof + strengthening",
-      "priority": "candidate",
+      "priority": "earlier_submission",
       "source": "indexed_text",
       "summary": "Second-smallest degree; prior weaker theorem credited.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "earlier_submission_pending_review"
     },
     {
       "id": 179,
       "topic": "Spanning-tree leaves / domination",
       "result": "Proof + strengthening",
-      "priority": "candidate",
+      "priority": "earlier_submission",
       "source": "page_image",
       "summary": "Both minimum- and maximum-degree interpretations.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "earlier_submission_reported"
     },
     {
       "id": 208,
       "topic": "Hamiltonian paths / matchings",
       "result": "Proof",
-      "priority": "candidate",
+      "priority": "earlier_submission",
       "source": "indexed_text",
       "summary": "Sharp matching and missing-edge threshold.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "earlier_submission_pending_review"
     },
     {
       "id": 268,
@@ -127,7 +140,8 @@
       "priority": "prior_related",
       "source": "indexed_text",
       "summary": "2007 diameter estimate and additional center-pair argument.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "provisional_attribution_pending_review"
     },
     {
       "id": 271,
@@ -136,7 +150,8 @@
       "priority": "prior_related",
       "source": "indexed_text",
       "summary": "2007 diameter estimate and dominating-edge argument.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "provisional_attribution_pending_review"
     },
     {
       "id": 348,
@@ -145,7 +160,8 @@
       "priority": "candidate",
       "source": "archive_only",
       "summary": "Component-sensitive incidence counting improves the coefficient from 2/3 to 3/4.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 351,
@@ -154,7 +170,8 @@
       "priority": "candidate",
       "source": "archive_only",
       "summary": "55-vertex counterexample and infinite family with unbounded violation.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 361,
@@ -163,7 +180,8 @@
       "priority": "candidate",
       "source": "archive_only",
       "summary": "Minimal-excess structural characterization.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 362,
@@ -172,7 +190,8 @@
       "priority": "candidate",
       "source": "archive_only",
       "summary": "Radius-two ball covering; optimal diameter and radius coefficients.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 365,
@@ -181,7 +200,8 @@
       "priority": "candidate",
       "source": "archive_only",
       "summary": "Component-sensitive counting; optimal coefficient.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed"
     },
     {
       "id": 376,
@@ -190,7 +210,9 @@
       "priority": "candidate",
       "source": "archive_only",
       "summary": "Isolated maximum-degree count plus distance medians; exceptional excess-one case classified.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed",
+      "priority_caveat": "Jiang 2016 full text unresolved"
     },
     {
       "id": 377,
@@ -199,7 +221,29 @@
       "priority": "candidate",
       "source": "archive_only",
       "summary": "Isolated maximum-degree count plus upper median degree; exceptional excess-one case classified.",
-      "priority_certified": false
+      "priority_certified": false,
+      "curator_status": "individual_status_unconfirmed",
+      "priority_caveat": "Jiang 2016 full text unresolved"
     }
-  ]
+  ],
+  "curator_correspondence": {
+    "date": "2026-11-27",
+    "official_url": "https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/",
+    "earlier_submissions": [
+      76,
+      177,
+      179,
+      208
+    ],
+    "closure_announced": [
+      135,
+      166
+    ],
+    "numbering_discrepancy": "135 has no package; do not assume it means 138 without confirmation.",
+    "individual_pending_status": "Most submissions pending review, specific entries not enumerated; public changes not verified.",
+    "provisional_attribution": [
+      268,
+      271
+    ]
+  }
 }
