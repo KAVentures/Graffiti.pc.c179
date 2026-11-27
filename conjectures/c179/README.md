@@ -1,6 +1,6 @@
 # Graffiti.pc Conjecture 179
 
-> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: page image checked. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+> **Current research status:** Earlier solution submitted by another researcher, confirmed by the curator on 27 November 2026. Excluded from the candidate novelty count. Our independent derivations and refinements are retained without a priority claim. Historical catalogue evidence is recorded in [SOURCES.md](SOURCES.md). See the [submission audit](../../SUBMISSION-AUDIT.md).
 
 [All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
 
