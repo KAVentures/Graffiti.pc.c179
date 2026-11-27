@@ -1,10 +1,10 @@
 # Conjecture 166 — disproof by a 22-vertex graph
 
-> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+> **Current research status:** Curator announced closure by counterexample on 27 November 2026; public catalogue update not yet verified. Priority and independent human review are not certified. Historical catalogue evidence is recorded in [SOURCES.md](SOURCES.md). See the [submission audit](../../SUBMISSION-AUDIT.md).
 
 [All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
 
-**Status: candidate disproof, priority unconfirmed.** No earlier disproof of the exact WOW-II statement was identified in a bounded search. Craig Foster's 2005 diamond-chain construction under conjecture 165 is credited as prior related work; the diamond gadget itself is not claimed as novel. See [source audit](SOURCES.md) and [repository novelty audit](../../NOVELTY.md).
+**Status: closure by counterexample announced; priority unconfirmed.** No earlier disproof of the exact WOW-II statement was identified in a bounded search. Craig Foster's 2005 diamond-chain construction under conjecture 165 is credited as prior related work; the diamond gadget itself is not claimed as novel. See [source audit](SOURCES.md) and [repository novelty audit](../../NOVELTY.md).
 
 Conjecture 166, announced 2005-08-08, asserts that the maximum spanning-tree leaf number is at least the number of vertices outside but adjacent to the maximum-degree set, divided by the square root of the radius.
 
