@@ -1,5 +1,7 @@
 # Source and novelty audit — C166
 
+**Correspondence update (2026-11-27):** Curator announced closure by counterexample on 27 November 2026; public catalogue update not yet verified. Priority and independent human review are not certified. See [submission audit](../../SUBMISSION-AUDIT.md). The [current official WOWII website](https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/) supersedes the historical temporary PDF cited below.
+
 - E. DeLaViña, Written on the Wall II, entry 166, announced 2005-08-08, indexed catalogue snapshot printed 2026-11-06, p. 95. https://www.uhd.edu/academics/sciences/mathematics-statistics/wowii/files/wowiiaii.pdf
 - The indexed statement uses maximum-degree vertices M, the open neighborhood union N(M), set difference N(M)-M, and division by the square root of the radius. The entry is labelled open. The singleton has zero radius, so the expression is defined only for order at least two. Direct PDF page image retrieval returned HTTP 404; indexed extracted text was available and checked.
 - The preceding entry 165, pp. 94–95, explicitly attributes diamond-chain examples to Craig Foster's summer 2005 UHD student research project. The present three-arm construction is related; no priority for the diamond gadget is claimed.
