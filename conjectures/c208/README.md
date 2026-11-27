@@ -1,10 +1,10 @@
 # Graffiti.pc Conjecture 208 — proof and sharp threshold
 
-> **Research status:** Candidate; priority unconfirmed. **Open-status evidence:** Catalogue: indexed text checked; image unavailable. See [source audit](SOURCES.md) and [repository status policy](../../STATUS.md).
+> **Current research status:** Earlier solution submitted by another researcher and pending review, confirmed by the curator on 27 November 2026. Excluded from the candidate novelty count; no first-resolution claim. Historical catalogue evidence is recorded in [SOURCES.md](SOURCES.md). See the [submission audit](../../SUBMISSION-AUDIT.md).
 
 [All conjectures](../README.md) · [Main index](../../README.md) · [Reproduction guide](../../REPRODUCE.md)
 
-Candidate resolution, priority unconfirmed. Announced January 12, 2006; listed open in the November 2026 catalogue.
+Independent derivation; earlier submission reported. Announced January 12, 2006; listed open in the November 2026 catalogue.
 
 For every connected nontraceable simple graph with at least two vertices, the number of missing edges m satisfies m >= 3*mu-1, where mu is maximum matching size. Equivalently the graph is traceable if mu >= 1/2 + m/3. Chvatal's degree-sequence theorem reduces the proof to explicit matching arguments at orders 4, 6, and 8. Two equality graphs of orders 5 and 6 show sharpness.
 
